@@ -1,0 +1,33 @@
+{
+  "collectionName": "components_experience_experience_s",
+  "info": {
+    "displayName": "Experience ",
+    "icon": "stack",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "companyName": {
+      "type": "string"
+    },
+    "city": {
+      "type": "string"
+    },
+    "state": {
+      "type": "string"
+    },
+    "startDate": {
+      "type": "string"
+    },
+    "endDate": {
+      "type": "string"
+    },
+    "workSummery": {
+      "type": "text"
+    }
+    
+  }
+}
