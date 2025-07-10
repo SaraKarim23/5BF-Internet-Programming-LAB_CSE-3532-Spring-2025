@@ -1,3 +1,6 @@
+/*Inquiry part by C231466
+Feedback part by C231465*/
+
 import React, { useState, useEffect } from "react";
 import Swal from "sweetalert2";
 
