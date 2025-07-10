@@ -10,11 +10,11 @@ Built with Next.js and React, My-ChatGpt-Clone focuses on a smooth, optimized fr
 
 ---
 
-## 👤 Team Member (Solo Developer)  
+## 👤 Team Member
 
-| Name               | Role       | ID       | Semester | Section |
-|--------------------|------------|----------|----------|---------|
-| 👩‍💻 Nazrana Nahreen | Developer | C231444  | 5th      | 5BF     |
+| Name               | Role       | ID       | Semester | Section | Team Type |
+|--------------------|------------|----------|----------|---------|-----------|
+| 👩‍💻 Nazrana Nahreen | Developer | C231444  | 5th      | 5BF     | Solo      |
 
 ---
 
