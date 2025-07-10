@@ -22,15 +22,15 @@ The Online Education System provides a simple interface for teachers to manage c
 - Provide a system for teachers to manage course content.
 - Let students like, comment, and bookmark content.
 - Ensure secure login and data handling.
-- 
+  
 
 
 ## 🌟 Features
 
-- 🔐 Admin, Tutor, and Student login systems.
-- 📁 Tutors can add/update/delete video content and playlists.
-- 💬 Students can like, comment, and bookmark content.
-- 🧑 Admin dashboard to view total uploads, likes, and comments.
+-  Admin, Tutor, and Student login systems.
+-  Tutors can add/update/delete video content and playlists.
+-  Students can like, comment, and bookmark content.
+-  Admin dashboard to view total uploads, likes, and comments.
   
 
 
