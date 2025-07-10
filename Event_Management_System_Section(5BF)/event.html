@@ -1,0 +1,964 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Event Management System</title>
+  <style>
+    /*
+     * Global Reset and Base Styles
+     * Resets default browser margins/paddings and sets box-sizing to border-box
+     * for easier layout management. Defines basic font and scroll behavior.
+     */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+      scroll-behavior: smooth; /* Smooth scrolling for anchor links */
+    }
+
+    body {
+      background: #000; /* Dark background */
+      color: white; /* Light text for contrast */
+    }
+
+    /*
+     * Header Styling
+     * Fixed header at the top, spanning full width.
+     * Uses flexbox for alignment of logo and navigation.
+     */
+    header {
+      width: 100%;
+      background: rgba(0, 0, 0, 0.9); /* Slightly transparent dark background */
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px 50px;
+      position: fixed; /* Keeps header visible on scroll */
+      top: 0;
+      left: 0;
+      z-index: 1000; /* Ensures header is above other content */
+    }
+
+    .logo {
+      font-size: 1.8rem;
+      font-weight: bold;
+      color: #fff347; /* Yellow accent color for logo */
+      cursor: default; /* Indicates it's not clickable */
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin: 0 15px;
+      font-size: 1.2rem;
+      transition: 0.3s; /* Smooth transition for hover effects */
+      padding: 8px;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    nav a:hover {
+      background-color: #ff4757; /* Red accent color on hover */
+    }
+
+    /*
+     * Section Base Styling
+     * Common padding and text alignment for all main sections.
+     */
+    .section {
+      padding-top: 100px; /* Offset for fixed header */
+      padding-bottom: 60px;
+      text-align: center;
+    }
+
+    /*
+     * Home Section Styling
+     * Full viewport height with a background image.
+     * Uses flexbox to center content vertically and horizontally.
+     */
+    #home {
+      background: url('back.jpeg') no-repeat center center/cover; /* Background image */
+      min-height: 100vh; /* Full viewport height */
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .home-content {
+      background: rgba(0, 0, 0, 0.6); /* Semi-transparent dark overlay for readability */
+      padding: 50px;
+      border-radius: 10px;
+      max-width: 600px;
+    }
+
+    .home-content h1 {
+      font-size: 3.5rem;
+      color: #ffe600; /* Yellow accent for main heading */
+      margin-bottom: 20px;
+      line-height: 1.2;
+    }
+
+    .home-content p {
+      font-size: 2rem;
+      background: #0026ff; /* Blue background for slogan */
+      color: #e0f3f3; /* Light text for slogan */
+      margin-bottom: 30px;
+      display: inline-block; /* Allows padding and background to wrap content */
+      padding: 10px 20px;
+      border-radius: 5px;
+    }
+
+    /*
+     * Button Styling (General)
+     * Applies to primary action buttons like "Get Started" and "Submit Booking".
+     */
+    .btn {
+      display: inline-block;
+      padding: 12px 30px;
+      background: #ff4757; /* Red accent color */
+      color: white;
+      text-decoration: none;
+      font-size: 1.3rem;
+      border-radius: 5px;
+      transition: 0.3s; /* Smooth transition for hover effects */
+      cursor: pointer;
+      border: none;
+      font-weight: bold;
+      box-shadow: 0 4px 8px rgba(255,71,87,0.6); /* Soft shadow */
+    }
+
+    .btn:hover {
+      background: #e84118; /* Darker red on hover */
+      box-shadow: 0 6px 12px rgba(232,65,24,0.8); /* More prominent shadow on hover */
+    }
+
+    /*
+     * Events Section Styling
+     * Background image with fixed attachment for a parallax-like effect.
+     */
+    #events {
+      background: url('events-bg.jpeg') no-repeat center center/cover;
+      background-attachment: fixed; /* Parallax effect */
+      padding: 100px 50px 60px;
+      color: white;
+      text-shadow: 1px 1px 4px black; /* Text shadow for readability on busy background */
+    }
+
+    #events h2 {
+      font-size: 2.8rem;
+      margin-bottom: 40px;
+    }
+
+    .event-grid {
+      display: grid;
+      /* Responsive grid: columns adjust to fit, minimum 300px, max 1 fraction unit */
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 30px; /* Space between grid items */
+    }
+
+    .event-card {
+      background: white;
+      color: black;
+      border-radius: 10px;
+      overflow: hidden; /* Ensures content stays within rounded corners */
+      box-shadow: 0 0 15px rgba(0,0,0,0.3);
+      transition: transform 0.3s; /* Smooth transition for hover effect */
+      cursor: pointer;
+      animation: bounceIn 0.8s ease-in-out; /* Animation for cards on load */
+      animation-fill-mode: both; /* Ensures animation stays at end state */
+    }
+
+    .event-card:hover {
+      transform: translateY(-5px); /* Slight lift effect on hover */
+    }
+
+    .event-card img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover; /* Crops image to cover area without distortion */
+    }
+
+    .event-card h3 {
+      margin: 0;
+      padding: 15px;
+      font-size: 1.5rem;
+    }
+
+    .sub-events {
+      display: none; /* Hidden by default, toggled by JS */
+      padding: 15px;
+      background: #f4f4f4; /* Light background for sub-events */
+      animation: fadeIn 0.5s ease-in-out; /* Fade-in animation when shown */
+    }
+
+    .sub-event {
+      display: flex;
+      align-items: center;
+      margin-bottom: 15px;
+      cursor: pointer;
+      padding: 10px;
+      border-radius: 5px;
+      color: black;
+      transition: background-color 0.3s, color 0.3s; /* Smooth transition for hover */
+    }
+
+    .sub-event:hover {
+      background-color: #ff4757; /* Red background on hover */
+      color: white; /* White text on hover */
+    }
+
+    .sub-event img {
+      width: 80px;
+      height: 80px;
+      object-fit: cover;
+      margin-right: 15px;
+      border-radius: 5px;
+      transition: transform 0.3s ease; /* Smooth transition for image hover */
+    }
+
+    .sub-event img:hover {
+      transform: scale(1.1); /* Slight zoom effect on image hover */
+    }
+
+    .sub-event span {
+      font-size: 1.1rem;
+    }
+
+    /* Keyframe Animations */
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(10px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes bounceIn {
+      0% { transform: scale(0.9); opacity: 0; }
+      50% { transform: scale(1.05); }
+      100% { transform: scale(1); opacity: 1; }
+    }
+
+    /*
+     * Footer Styling
+     * Dark background, centered text.
+     */
+    footer {
+      width: 100%;
+      padding: 20px;
+      background: rgba(0, 0, 0, 0.9);
+      text-align: center;
+      font-size: 1rem;
+      color: white;
+      position: relative; /* Needed for z-index */
+      z-index: 100;
+    }
+
+    /*
+     * Modal Overlay Styling (Login/Signup/Forgot Password)
+     * Covers the entire screen with a semi-transparent dark background.
+     */
+    .modal {
+      display: none; /* Hidden by default */
+      position: fixed;
+      z-index: 2000; /* Ensures modal is on top of everything */
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0,0,0,0.7); /* Semi-transparent black overlay */
+      overflow-y: auto; /* Allows scrolling if modal content is too tall */
+      padding: 40px 0; /* Vertical padding */
+    }
+
+    /*
+     * Modal Content Box Styling
+     * Centered, styled box within the modal overlay.
+     */
+    .modal-content {
+      background: #1e1e2f; /* Dark blue-grey background */
+      margin: 0 auto; /* Centers horizontally */
+      padding: 30px 30px 40px;
+      border-radius: 10px;
+      width: 350px; /* Fixed width */
+      max-width: 90%; /* Ensures responsiveness on smaller screens */
+      color: white;
+      text-align: center;
+      box-shadow: 0 0 20px #ff4757; /* Glowing red shadow */
+      position: relative;
+      font-size: 1rem;
+    }
+
+    /* Close button for modals */
+    .close {
+      color: white;
+      position: absolute;
+      right: 15px;
+      top: 15px;
+      font-size: 28px;
+      font-weight: bold;
+      cursor: pointer;
+      user-select: none; /* Prevents text selection on button */
+      transition: color 0.3s;
+    }
+    .close:hover {
+      color: #ff6f6f; /* Lighter red on hover */
+    }
+
+    /* Form input styling within modals */
+    .modal-content input[type="email"],
+    .modal-content input[type="password"],
+    .modal-content input[type="text"] {
+      width: 90%;
+      padding: 12px 10px;
+      margin: 12px 0;
+      border: none;
+      border-radius: 6px;
+      font-size: 1rem;
+      background: #333; /* Darker input background */
+      color: #fff;
+      transition: box-shadow 0.3s;
+    }
+    .modal-content input:focus {
+      outline: none;
+      box-shadow: 0 0 8px #ff4757; /* Red glow on focus */
+      background: #222; /* Even darker on focus */
+    }
+
+    .modal-content button {
+      width: 95%;
+      padding: 12px 0;
+      margin-top: 20px;
+      background: #ff4757; /* Red button */
+      border: none;
+      border-radius: 6px;
+      color: white;
+      font-size: 1.2rem;
+      font-weight: bold;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+    .modal-content button:hover {
+      background: #e84118; /* Darker red on hover */
+    }
+
+    .modal-content .link-btn {
+      background: none;
+      border: none;
+      color: #52a8ff; /* Blue link color */
+      cursor: pointer;
+      margin-top: 10px;
+      font-size: 0.95rem;
+      text-decoration: underline;
+    }
+    .modal-content .link-btn:hover {
+      color: #1f6feb; /* Darker blue on hover */
+    }
+
+    /* Hide signup and forgot password forms initially */
+    #signup-form, #forgot-password-form {
+      display: none;
+    }
+
+    /*
+     * Booking Section Styling
+     * Specific background and padding for the booking form area.
+     */
+    #booking {
+      background-color: #1e1e2f; /* Dark blue-grey background */
+      color: #fff;
+      padding: 60px 20px;
+    }
+
+    #booking h2 {
+      text-align: center;
+      margin-bottom: 40px;
+      font-size: 2.5rem;
+      color: #ffe600; /* Yellow accent for heading */
+    }
+
+    #booking-form {
+      max-width: 700px;
+      margin: 0 auto; /* Centers the form */
+      background: rgba(255, 255, 255, 0.05); /* Very light transparent background */
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px #ff4757; /* Red glow for the form container */
+      font-size: 1rem;
+    }
+
+    .form-group {
+      margin-bottom: 20px;
+      text-align: left; /* Aligns labels and inputs to the left */
+    }
+
+    .form-group label {
+      display: block; /* Makes label take full width for proper stacking */
+      margin-bottom: 8px;
+      font-weight: bold;
+      color: #ffe600; /* Yellow accent for labels */
+    }
+
+    .form-group input,
+    .form-group select,
+    .form-group textarea {
+      width: 100%;
+      padding: 12px;
+      border: none;
+      border-radius: 6px;
+      font-size: 1rem;
+      background: #333; /* Dark input background */
+      color: #fff;
+      transition: box-shadow 0.3s;
+      resize: vertical; /* Allows vertical resizing for textareas */
+    }
+
+    .form-group input:focus,
+    .form-group select:focus,
+    .form-group textarea:focus {
+      outline: none;
+      box-shadow: 0 0 8px #ff4757; /* Red glow on focus */
+      background: #222; /* Even darker on focus */
+    }
+
+    .form-group button {
+      width: 100%; /* Full width button */
+      padding: 15px;
+      background: #ff4757; /* Red button */
+      border: none;
+      border-radius: 6px;
+      color: white;
+      font-size: 1.3rem;
+      font-weight: bold;
+      cursor: pointer;
+      transition: background 0.3s;
+      box-shadow: 0 4px 8px rgba(255,71,87,0.6); /* Soft shadow */
+    }
+
+    .form-group button:hover {
+      background: #e84118; /* Darker red on hover */
+      box-shadow: 0 6px 12px rgba(232,65,24,0.8); /* More prominent shadow on hover */
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="logo">Event Planner</div>
+    
+    <nav aria-label="Main Navigation">
+      <a href="#home">Home</a>
+      <a href="#events">Events</a>
+      <a href="#booking">Book</a>
+      <a href="#" onclick="openLogin()" aria-haspopup="dialog">Login</a>
+      <a href="#" onclick="openSignup()" aria-haspopup="dialog">Sign Up</a>
+    </nav>
+    
+  </header>
+
+  <section id="home" class="section">
+    <div class="home-content">
+      <h1>Welcome to Our <br>The Circle Communication</h1>
+      <p>Our Business is Making Memories</p><br />
+      <button class="btn" onclick="openLogin()">Get Started</button>
+    </div>
+  </section>
+  <section id="team" class="section" style="background:#000; padding:60px 20px;">
+  <h2 style="color:#ffe600; font-size:2.5rem; margin-bottom:30px;">Meet Our Team</h2>
+  <div style="display:flex; flex-wrap:wrap; gap:30px; justify-content:center;">
+    <div style="text-align:center; background:#1e1e2f; padding:20px; border-radius:10px; width:220px;">
+      <img src="sanzida.jpeg" alt="Sanzida" style="width:100px; height:100px; border-radius:50%; object-fit:cover;">
+      <h3 style="color:#ffe600; margin-top:10px;">Sanzida Nishat</h3>
+      <p>Frontend & Modals</p>
+    </div>
+    <div style="text-align:center; background:#1e1e2f; padding:20px; border-radius:10px; width:220px;">
+      <img src="saima.jpeg" alt="Saima" style="width:100px; height:100px; border-radius:50%; object-fit:cover;">
+      <h3 style="color:#ffe600; margin-top:10px;">Saima Binte Soyeb</h3>
+      <p>Homepage & Event Logic</p>
+    </div>
+  </div>
+</section>
+<section id="testimonials" class="section" style="background:#111; padding:60px 20px;">
+  <h2 style="color:#ffe600; font-size:2.5rem; margin-bottom:30px;">What Our Clients Say</h2>
+  <div style="display: flex; flex-wrap: wrap; gap: 30px; justify-content: center;">
+    <div style="background:#222; color:white; padding:20px; border-radius:10px; width:300px; box-shadow: 0 0 10px rgba(255,71,87,0.4);">
+      <p>"Amazing service! The event was exactly how we dreamed."</p>
+      <h4 style="margin-top:10px; color:#ffe600;">— Farzana Akter</h4>
+    </div>
+    <div style="background:#222; color:white; padding:20px; border-radius:10px; width:300px; box-shadow: 0 0 10px rgba(255,71,87,0.4);">
+      <p>"Very professional team. Everything went smoothly!"</p>
+      <h4 style="margin-top:10px; color:#ffe600;">— Rashedul Hasan</h4>
+    </div>
+    <div style="background:#222; color:white; padding:20px; border-radius:10px; width:300px; box-shadow: 0 0 10px rgba(255,71,87,0.4);">
+      <p>"Highly recommend for weddings and social events!"</p>
+      <h4 style="margin-top:10px; color:#ffe600;">— Nusrat Nishi</h4>
+    </div>
+  </div>
+</section>
+<section class="section" style="background:#111; color:white; text-align:center; padding:60px 20px;">
+  <h2 style="color:#ffe600; font-size:2.5rem; margin-bottom:30px;">Our Achievements</h2>
+  <div style="display:flex; justify-content:center; gap:40px;">
+    <div>
+      <h1 id="count-events" style="font-size:3rem;">0</h1>
+      <p>Total Events</p>
+    </div>
+    <div>
+      <h1 id="count-clients" style="font-size:3rem;">0</h1>
+      <p>Happy Clients</p>
+    </div>
+    <div>
+      <h1 id="count-bookings" style="font-size:3rem;">0</h1>
+      <p>Bookings</p>
+    </div>
+  </div>
+</section>
+
+
+  <section id="events" class="section">
+    <h2>Our Event Categories</h2>
+    <div class="event-grid">
+      <div class="event-card" onclick="toggleSubEvents(this)">
+        <img src="social.jpeg" alt="Social Events" />
+        <h3>Social Events</h3>
+        <div class="sub-events">
+          <!-- Added data-event-name and data-venue attributes -->
+          <div class="sub-event" data-event-name="Wedding" data-venue="Grand Ballroom"><img src="wedding.jpeg" alt="Wedding" /><span>Wedding</span></div>
+          <div class="sub-event" data-event-name="Birthday Party" data-venue="Community Hall"><img src="birthday.jpeg" alt="Birthday" /><span>Birthday</span></div>
+          <div class="sub-event" data-event-name="Anniversary Celebration" data-venue="Rooftop Garden"><img src="anniversary.jpeg" alt="Anniversary" /><span>Anniversary</span></div>
+        </div>
+      </div>
+      <div class="event-card" onclick="toggleSubEvents(this)">
+        <img src="corporate.jpeg" alt="Corporate Events" />
+        <h3>Corporate Events</h3>
+        <div class="sub-events">
+          <div class="sub-event" data-event-name="Office Party" data-venue="Company Lounge"><img src="party.jpeg" alt="Party" /><span>Party</span></div>
+          <div class="sub-event" data-event-name="Business Seminar" data-venue="Conference Center"><img src="seminar.jpeg" alt="Seminar" /><span>Seminar</span></div>
+          <div class="sub-event" data-event-name="Annual Conference" data-venue="Convention Hall"><img src="conference.jpeg" alt="Conference" /><span>Conference</span></div>
+        </div>
+      </div>
+      <div class="event-card" onclick="toggleSubEvents(this)">
+        <img src="educational.jpeg" alt="Educational Events" />
+        <h3>Educational Events</h3>
+        <div class="sub-events">
+          <div class="sub-event" data-event-name="Technical Workshop" data-venue="University Auditorium"><img src="workshop.jpeg" alt="Workshop" /><span>Workshop</span></div>
+          <div class="sub-event" data-event-name="Cultural Fest" data-venue="School Ground"><img src="fest.jpeg" alt="Fest" /><span>Fest</span></div>
+          <div class="sub-event" data-event-name="Debate/Quiz Competition" data-venue="College Auditorium"><img src="quiz.jpeg" alt="Debate/Quiz" /><span>Debate/Quiz</span></div>
+        </div>
+      </div>
+      <div class="event-card" onclick="toggleSubEvents(this)">
+        <img src="political.jpeg" alt="Political Events" />
+        <h3>Political Events</h3>
+        <div class="sub-events">
+          <div class="sub-event" data-event-name="Political Rally" data-venue="Public Square"><img src="rally.jpeg" alt="Rally" /><span>Rally</span></div>
+          <div class="sub-event" data-event-name="Political Meeting" data-venue="Party Headquarters"><img src="meeting.jpeg" alt="Meeting" /><span>Meeting</span></div>
+        </div>
+      </div>
+      <div class="event-card" onclick="toggleSubEvents(this)">
+        <img src="sports.jpeg" alt="Sports Events" />
+        <h3>Sports Events</h3>
+        <div class="sub-events">
+          <div class="sub-event" data-event-name="Sports Tournament" data-venue="City Stadium"><img src="tournament.jpeg" alt="Tournament" /><span>Tournament</span></div>
+          <div class="sub-event" data-event-name="Friendly Match" data-venue="Local Sports Club"><img src="match.jpeg" alt="Match" /><span>Match</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- Example Modal Code for Sub-Event Details -->
+<!-- Add this inside <body> after booking section or near the bottom -->
+<div id="subEventModal" class="modal" style="display:none; position:fixed; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.7); z-index:3000;">
+  <div style="background:white; color:black; margin:5% auto; padding:30px; border-radius:10px; width:90%; max-width:600px; position:relative;">
+    <span onclick="closeSubEventModal()" style="position:absolute; top:10px; right:20px; font-size:24px; cursor:pointer;">&times;</span>
+    <h2 id="modalEventName">Event Name</h2>
+    <p id="modalVenue">Venue: ...</p>
+    <p id="modalDetails">This event includes catering, photography, and guest management. It's perfect for your special day with fully customizable options.</p>
+    <div id="modalGallery" style="margin-top:20px; display:flex; gap:10px; overflow-x:auto;">
+      <img src="wedding1.jpeg" style="width:150px; border-radius:5px;">
+      <img src="wedding2.jpeg" style="width:150px; border-radius:5px;">
+      <img src="wedding3.jpeg" style="width:150px; border-radius:5px;">
+    </div>
+  </div>
+</div>
+
+<script>
+  // Sub-event modal open function
+  document.querySelectorAll('.sub-event').forEach(subEvent => {
+    subEvent.addEventListener('click', function(e) {
+      const eventName = this.dataset.eventName;
+      const venue = this.dataset.venue;
+
+      // Autofill booking form (existing logic)
+      document.getElementById('eventName').value = eventName;
+      document.getElementById('venue').value = venue;
+      document.getElementById('booking').scrollIntoView({ behavior: 'smooth' });
+
+      // Show sub-event modal with extra info
+      document.getElementById('modalEventName').innerText = eventName;
+      document.getElementById('modalVenue').innerText = "Venue: " + venue;
+      document.getElementById('subEventModal').style.display = 'block';
+    });
+  });
+
+  function closeSubEventModal() {
+    document.getElementById('subEventModal').style.display = 'none';
+  }
+</script>
+
+
+  <section id="booking" class="section">
+    <h2>Book Your Event</h2>
+    <div id="booking-form">
+      <form onsubmit="handleBooking(event)">
+        <div class="form-group">
+          <label for="name">Name *</label>
+          <input type="text" id="name" name="name" placeholder="Your full name" required />
+        </div>
+        <div class="form-group">
+          <label for="phone">Phone *</label>
+          <input type="tel" id="phone" name="phone" placeholder="Phone number" required pattern="[0-9+ -]{7,15}" />
+        </div>
+        <div class="form-group">
+          <label for="email">Email *</label>
+          <input type="email" id="email" name="email" placeholder="Your email" required />
+        </div>
+        <div class="form-group">
+          <label for="eventName">Event Name *</label>
+          <!-- Event name dropdown field -->
+          <select id="eventName" name="eventName" required>
+            <option value="">Select an Event</option>
+            <!-- Options will be populated by JavaScript -->
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="eventDate">Event Date *</label>
+          <input type="date" id="eventDate" name="eventDate" required />
+        </div>
+        <div class="form-group">
+          <label for="venue">Venue *</label>
+          <!-- Venue dropdown field -->
+          <select id="venue" name="venue" required>
+            <option value="">Select a Venue</option>
+            <!-- Options will be populated by JavaScript -->
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="budget">Budget (Approx.)</label>
+          <input type="text" id="budget" name="budget" placeholder="Estimated budget" />
+        </div>
+        <div class="form-group">
+          <label for="details">Additional Details *</label>
+          <textarea id="details" name="details" rows="4" placeholder="Any other details" required></textarea>
+        </div>
+        <div class="form-group">
+          <button type="submit" class="btn">Submit Booking</button>
+        </div>
+      </form>
+    </div>
+  </section>
+  <section id="contact" class="section" ...>
+  <h2>Contact Us</h2>
+  <form> <!-- এই form এর ভেতরে Name, Email, Message -->
+    ...
+    <button type="submit">Send Message</button>
+  </form>
+</section>
+<button onclick="scrollToTop()">↑</button>
+
+<script>
+  function scrollToTop() {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }
+</script>
+
+
+  <footer>
+    <p>&copy; 2025 Event Management System. All rights reserved.</p>
+  </footer>
+    <!-- Login/Signup Modal -->
+    <div id="auth-modal" class="modal" aria-hidden="true">
+      <div class="modal-content" role="dialog" aria-modal="true" aria-labelledby="auth-title">
+        <span class="close" onclick="closeModal()" aria-label="Close">&times;</span>
+
+  
+
+      <!-- Login Form -->
+      <form id="login-form" action="login.php" method="post">
+        <h2 >Login</h2>
+        <input type="email" id="login-email" placeholder="Email" required />
+        <input type="password" id="login-password" placeholder="Password" required />
+        <button type="submit">Login</button>
+        <button type="button" class="link-btn" onclick="showForgotPassword()">Forgot Password?</button>
+        <p style="margin-top: 12px;">
+          Don't have an account? 
+          <button type="button" class="link-btn" onclick="switchToSignup()">Sign Up</button>
+        </p>
+      </form>
+
+      <!-- Signup Form -->
+      <form action="signup.php" method="POST">
+        <input type="text" id="signup-name" name="name" placeholder="Full Name" required />
+        <input type="email" id="signup-email" name="email" placeholder="Email" required />
+        <input type="password" id="signup-password" name="password" placeholder="Password" required />
+        <input type="password" id="signup-password-confirm" name="confirm_password" placeholder="Confirm Password" required />
+        <button type="submit">Sign Up</button>
+      </form>
+      
+      
+      
+      
+
+      <!-- Forgot Password Form -->
+      <form id="forgot-password-form" style="display:none;">
+        <h2>Forgot Password</h2>
+        <input type="email" id="forgot-email" placeholder="Enter your registered email" required />
+        <button type="submit">Reset Password</button>
+        <p style="margin-top: 12px;">
+          Remembered your password? 
+          <button type="button" class="link-btn" onclick="switchToLogin()">Login</button>
+        </p>
+      </form>
+    </div>
+  </div>
+
+  <script>
+    // Toggles the visibility of sub-events within an event card.
+    // Closes any currently open sub-event lists before opening the new one.
+    function toggleSubEvents(card) {
+      const subEvents = card.querySelector('.sub-events');
+      if (!subEvents) return; // Exit if no sub-events container found
+
+      // Check if the clicked card's sub-events are already visible
+      if (subEvents.style.display === 'block') {
+        subEvents.style.display = 'none'; // Hide if already visible
+      } else {
+        // Hide all other sub-event lists to ensure only one is open at a time
+        document.querySelectorAll('.sub-events').forEach(se => se.style.display = 'none');
+        subEvents.style.display = 'block'; // Show the clicked card's sub-events
+      }
+    }
+
+    // Function to populate booking form dropdowns when a sub-event is clicked
+    document.querySelectorAll('.sub-event').forEach(subEvent => {
+      subEvent.addEventListener('click', function() {
+        const eventName = this.dataset.eventName;
+        const venue = this.dataset.venue;
+        
+        // Set the selected option in the dropdowns
+        document.getElementById('eventName').value = eventName;
+        document.getElementById('venue').value = venue;
+
+        // Smoothly scroll to the booking section for better user experience
+        document.getElementById('booking').scrollIntoView({ behavior: 'smooth' });
+      });
+    });
+
+    // Function to dynamically populate the event and venue dropdowns on page load
+    document.addEventListener('DOMContentLoaded', function() {
+      const eventNameSelect = document.getElementById('eventName');
+      const venueSelect = document.getElementById('venue');
+      
+      const uniqueEventNames = new Set();
+      const uniqueVenues = new Set();
+
+      // Collect all unique event names and venues from sub-events
+      document.querySelectorAll('.sub-event').forEach(subEvent => {
+        uniqueEventNames.add(subEvent.dataset.eventName);
+        uniqueVenues.add(subEvent.dataset.venue);
+      });
+
+      // Populate Event Name dropdown
+      uniqueEventNames.forEach(name => {
+        const option = document.createElement('option');
+        option.value = name;
+        option.textContent = name;
+        eventNameSelect.appendChild(option);
+      });
+
+      // Populate Venue dropdown
+      uniqueVenues.forEach(venue => {
+        const option = document.createElement('option');
+        option.value = venue;
+        option.textContent = venue;
+        venueSelect.appendChild(option);
+      });
+    });
+
+    // Opens the login modal and displays the login form.
+    function openLogin() {
+      document.getElementById('auth-modal').style.display = 'block';
+      document.getElementById('login-form').style.display = 'block';
+      document.getElementById('signup-form').style.display = 'none';
+      document.getElementById('forgot-password-form').style.display = 'none';
+      document.getElementById('auth-modal').setAttribute('aria-hidden', 'false'); // For accessibility
+    }
+
+    // Opens the signup modal and displays the signup form.
+    function openSignup() {
+      document.getElementById('auth-modal').style.display = 'block';
+      document.getElementById('login-form').style.display = 'none';
+      document.getElementById('signup-form').style.display = 'block';
+      document.getElementById('forgot-password-form').style.display = 'none';
+      document.getElementById('auth-modal').setAttribute('aria-hidden', 'false'); // For accessibility
+    }
+
+    // Closes the authentication modal and clears all form fields within it.
+    function closeModal() {
+      document.getElementById('auth-modal').style.display = 'none';
+      document.getElementById('auth-modal').setAttribute('aria-hidden', 'true'); // For accessibility
+      clearAuthForms();
+    }
+
+    // Switches the modal content to show the signup form.
+    function switchToSignup() {
+      document.getElementById('login-form').style.display = 'none';
+      document.getElementById('signup-form').style.display = 'block';
+      document.getElementById('forgot-password-form').style.display = 'none';
+    }
+
+    // Switches the modal content to show the login form.
+    function switchToLogin() {
+      document.getElementById('login-form').style.display = 'block';
+      document.getElementById('signup-form').style.display = 'none';
+      document.getElementById('forgot-password-form').style.display = 'none';
+    }
+
+    // Switches the modal content to show the forgot password form.
+    function showForgotPassword() {
+      document.getElementById('login-form').style.display = 'none';
+      document.getElementById('signup-form').style.display = 'none';
+      document.getElementById('forgot-password-form').style.display = 'block';
+    }
+
+    // Clears the input values of all authentication forms within the modal.
+    function clearAuthForms() {
+      document.querySelectorAll('#auth-modal input').forEach(input => input.value = '');
+    }
+
+    // Closes the modal if the user clicks outside of its content area.
+    window.onclick = function(event) {
+      const modal = document.getElementById('auth-modal');
+      if (event.target === modal) {
+        closeModal();
+      }
+    };
+
+    // Handles the submission of the login form.
+    // Currently uses a simple alert and closes the modal.
+    document.getElementById('login-form').addEventListener('submit', function(e) {
+      e.preventDefault(); // Prevent default form submission behavior
+      const email = document.getElementById('login-email').value.trim();
+      const password = document.getElementById('login-password').value.trim();
+      if (!email || !password) {
+        // In a real application, consider a custom, non-blocking message box
+        // alert('Please fill all login fields.');
+        console.error('Login Error: Please fill all login fields.');
+        return;
+      }
+      // TODO: Implement actual login authentication logic here (e.g., API call)
+      // alert(`Logged in as ${email}`); // Replace with a custom success message
+      console.log(`User ${email} attempting to log in.`);
+      closeModal();
+    });
+
+    // Handles the submission of the signup form.
+    // Performs client-side validation for fields and password match/length.
+    document.getElementById('signup-form').addEventListener('submit', function(e) {
+      e.preventDefault(); // Prevent default form submission behavior
+      const name = document.getElementById('signup-name').value.trim();
+      const email = document.getElementById('signup-email').value.trim();
+      const password = document.getElementById('signup-password').value;
+      const confirmPassword = document.getElementById('signup-password-confirm').value;
+
+      if (!name || !email || !password || !confirmPassword) {
+        // alert('Please fill all sign up fields.');
+        console.error('Signup Error: Please fill all sign up fields.');
+        return;
+      }
+      if (password !== confirmPassword) {
+        // alert('Passwords do not match.');
+        console.error('Signup Error: Passwords do not match.');
+        return;
+      }
+      if (password.length < 6) {
+        // alert('Password should be at least 6 characters.');
+        console.error('Signup Error: Password should be at least 6 characters.');
+        return;
+      }
+      // TODO: Implement actual signup logic here (e.g., API call to register user)
+      // alert(`Account created for ${name} (${email})`);
+      console.log(`Account creation requested for ${name} (${email}).`);
+      closeModal();
+    });
+   
+    fetch('signup.php', {
+    method: 'POST',
+    body: formData
+  })
+  .then(response => response.text())
+  .then(data => {
+    alert(data); // Show server response (e.g., success or error)
+    closeModal(); // Close modal if signup is successful
+  })
+  .catch(error => {
+    alert('Signup failed.');
+    console.error(error);
+  });
+
+
+    // Handles the submission of the forgot password form.
+    // Currently simulates sending a reset link.
+    document.getElementById('forgot-password-form').addEventListener('submit', function(e) {
+      e.preventDefault(); // Prevent default form submission behavior
+      const email = document.getElementById('forgot-email').value.trim();
+      if (!email) {
+        // alert('Please enter your registered email.');
+        console.error('Forgot Password Error: Please enter your registered email.');
+        return;
+      }
+      // TODO: Implement forgot password logic (e.g., API call to send reset email)
+      // alert(`Password reset link sent to ${email}`);
+      console.log(`Password reset requested for ${email}.`);
+      closeModal();
+    });
+
+    // Handles the submission of the booking form.
+    // Performs client-side validation and then simulates a booking confirmation.
+    function handleBooking(event) {
+      event.preventDefault(); // Prevent default form submission behavior
+      const form = event.target;
+      const name = form.name.value.trim();
+      const phone = form.phone.value.trim();
+      const email = form.email.value.trim();
+      const eventName = form.eventName.value; // Get value from select
+      const eventDate = form.eventDate.value;
+      const venue = form.venue.value; // Get value from select
+      const details = form.details.value.trim();
+
+      // Basic validation for dropdowns
+      if (eventName === "" || venue === "") {
+        // alert('Please select an Event Name and Venue.');
+        console.error('Booking Error: Please select an Event Name and Venue from the dropdowns.');
+        return;
+      }
+
+      if (!name || !phone || !email || !eventDate || !details) {
+        // alert('Please fill all required fields.');
+        console.error('Booking Error: Please fill all required fields (excluding dropdowns, which have their own check).');
+        return;
+      }
+      // Basic phone pattern validation
+      if (!/^[0-9+ -]{7,15}$/.test(phone)) {
+        // alert('Please enter a valid phone number.');
+        console.error('Booking Error: Please enter a valid phone number.');
+        return;
+      }
+      // TODO: Implement actual booking form submission logic here (e.g., send data to server)
+      // alert(`Thank you, ${name}! Your booking for ${eventName} on ${eventDate} at ${venue} is received.`);
+      console.log(`Booking received for ${eventName} by ${name} on ${eventDate} at ${venue}.`);
+      form.reset(); // Clear the form fields after successful submission
+      // Scroll to top or booking section after submission if needed
+      window.scrollTo({top: 0, behavior: 'smooth'});
+    }
+  </script>
+
+</body>
+</html>
