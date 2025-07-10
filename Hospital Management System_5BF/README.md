@@ -71,7 +71,7 @@ With a clean frontend powered by HTML, CSS, and JavaScript — **SmartCare** del
 
 #### 🛠️ Tools & Environment  
 - **Git & GitHub** — seamless version control and team collaboration  
-- **Visual Studio Code** — your cozy IDE for coding and debugging with love 💖  
+- **Visual Studio Code** —  IDE for coding and debugging   
  
 
 
