@@ -1,4 +1,4 @@
-# 🚀 My-ChatGpt-Clone
+# 🚀 My-ChatGpt-Clone  
 A ChatGPT Clone Using Google’s Gemini API for Conversational AI
 
 ---
@@ -6,14 +6,15 @@ A ChatGPT Clone Using Google’s Gemini API for Conversational AI
 ## 📌 About This Project  
 My-ChatGpt-Clone is an AI-powered chatbot web application inspired by ChatGPT. It leverages Google’s Gemini API as the backend for advanced conversational AI capabilities, delivering engaging and natural language interactions.
 
-Built with Next.js and React, Pickachu-GPT focuses on a smooth, optimized frontend experience with automatic image optimization and responsive design.
+Built with Next.js and React, My-ChatGpt-Clone focuses on a smooth, optimized frontend experience with automatic image optimization and responsive design.
 
 ---
 
 ## 👤 Team Member (Solo Developer)  
-| Name               | Role      | ID      |  
-|--------------------|-----------|---------|  
-| 👩‍💻 Nazrana Nahreen | Developer | C231444 |
+
+| Name               | Role       | ID       | Semester | Section |
+|--------------------|------------|----------|----------|---------|
+| 👩‍💻 Nazrana Nahreen | Developer | C231444  | 5th      | 5BF     |
 
 ---
 
@@ -73,4 +74,3 @@ npm run dev
 # Build for production
 npm run build
 npm run start
-
