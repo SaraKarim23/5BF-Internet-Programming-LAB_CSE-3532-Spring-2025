@@ -6,6 +6,8 @@ A responsive and user-friendly Blood Bank Management System designed to facilita
 
 ✅ User Authentication (Register & Login)
 
+✅ Secure Private Routes for Sensitive Information
+
 ✅ Donor Details
 
 ✅ Patient Details
@@ -27,7 +29,8 @@ A responsive and user-friendly Blood Bank Management System designed to facilita
 
 **Frontend:**
 - HTML
-- Tailwind CSS
+- CSS
+- Tailwind 
 - JavaScript
 - React
 - Firebase Databese for Authentification
