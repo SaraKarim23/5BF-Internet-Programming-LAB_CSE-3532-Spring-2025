@@ -1,0 +1,92 @@
+.doctor-appointments-container {
+  margin-left: 250px;
+  padding: 40px;
+  max-width: 1200px;
+  margin-top: 75px;
+}
+
+.doctor-appointments-title {
+  font-size: 28px;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 30px;
+}
+
+.doctor-appointments-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.doctor-appointments-table thead {
+  background-color: #f5f5f5;
+}
+
+.doctor-appointments-table th,
+.doctor-appointments-table td {
+  padding: 12px 16px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+.doctor-appointments-table th {
+  font-weight: 600;
+  color: #444;
+}
+
+.doctor-appointments-table td {
+  color: #555;
+}
+
+.patient-info {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.patient-avatar {
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.accptandcan {
+  display: flex;
+  gap: 10px;
+}
+
+.accptandcan button {
+  padding: 6px 12px;
+  border: none;
+  border-radius: 4px;
+  font-size: 13px;
+  cursor: pointer;
+  color: #fff;
+}
+
+.accptandcan button:first-child {
+  background-color: #e74c3c;
+}
+
+.accptandcan button:last-child {
+  background-color: #27ae60;
+}
+
+.accptandcan button:hover {
+  opacity: 0.9;
+}
+
+.completed {
+  color: rgba(0, 128, 0, 0.802);
+  font-size: 16px;
+}
+
+.cancelled {
+  color: #e74c3c;
+  font-size: 16px;
+}
+.doctor-appointments-table tbody tr:hover {
+  background-color: #f0f8ff; 
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
