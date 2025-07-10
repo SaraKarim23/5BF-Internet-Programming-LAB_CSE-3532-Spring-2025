@@ -46,5 +46,16 @@ The Online Education System provides a simple interface for teachers to manage c
 | XAMPP      | Local development environment    |
 
 
+## 📅 Development Roadmap
+
+- Phase 1 – UI & Design Setup  
+- Phase 2 – Login & Registration  
+- Phase 3 – Content Management  
+- Phase 4 – Admin Dashboard  
+- Phase 5 – Final Testing & Deployment  
+
+
+
+
 
 
