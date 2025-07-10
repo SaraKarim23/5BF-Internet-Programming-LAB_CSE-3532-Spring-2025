@@ -1,0 +1,53 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:background="#FAF9F6"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:padding="20dp">
+
+    <ImageView
+        android:src="@drawable/ic_crime"
+        android:layout_width="100dp"
+        android:layout_height="100dp" />
+
+    <TextView
+        android:id="@+id/welcomeText"
+        android:text="Welcome to crime reporting app!"
+        android:textSize="25sp"
+        android:textStyle="bold"
+        android:textColor="#B71C5A"
+        android:layout_marginBottom="30dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <Button
+        android:id="@+id/reportBtn"
+        android:text="Report Emergency"
+        android:backgroundTint="#C2185B"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <Button
+        android:id="@+id/viewReportsBtn"
+        android:text="View Reports"
+        android:backgroundTint="#C2185B"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <Button
+        android:id="@+id/emergencyContactsBtn"
+        android:text="Emergency Contacts"
+        android:backgroundTint="#C2185B"
+        android:layout_marginTop="16dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <Button
+        android:id="@+id/logoutBtn"
+        android:text="Logout"
+        android:backgroundTint="#C2185B"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+</LinearLayout>
