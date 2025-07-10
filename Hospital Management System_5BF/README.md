@@ -79,15 +79,16 @@ With a clean frontend powered by HTML, CSS, and JavaScript — **SmartCare** del
 
 ### 🗼️ **Screenshots:**
 
-[Screenshot 2025-06-27 205358]
----
-[Screenshot 2025-06-27 205238]
+<img width="1483" height="647" alt="Screenshot 2025-06-27 205238" src="https://github.com/user-attachments/assets/7fd81dd7-7935-4dcb-8dfe-ee7dc8e16e85" />
 
 ---
-![Screenshot 2025-06-27 205123](https://github.com/user-attachments/assets/b710836c-f83c-4147-9e0f-113dfb359678)
+
 
 ---
-![Screenshot 2025-06-27 204909](https://github.com/user-attachments/assets/465b09c6-5d7e-4d30-96c9-bc8fd2f7a2ce)
+
+
+---
+
 
 ---
 ![WhatsApp Image 2025-07-04 at 01 02 06_3366777d](https://github.com/user-attachments/assets/1e526b33-dd21-4e1d-a283-329e3504d9a7)
