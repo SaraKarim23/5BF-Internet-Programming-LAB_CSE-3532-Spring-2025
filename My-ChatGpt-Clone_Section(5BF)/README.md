@@ -1,6 +1,11 @@
 # 🚀 My-ChatGpt-Clone  
 A ChatGPT Clone Using Google’s Gemini API for Conversational AI
 
+### 💬 Chat UI Preview
+![Chat UI Screenshot](./project%20ss.png)
+
+### 📱 Responsive View
+![Responsive Screenshot](./project%20ss%202.png)
 ---
 
 ## 📌 About This Project  
