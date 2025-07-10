@@ -85,11 +85,17 @@ With a clean frontend powered by HTML, CSS, and JavaScript — **SmartCare** del
 <img width="1483" height="647" alt="Screenshot 2025-06-27 205238" src="https://github.com/user-attachments/assets/b5400319-15e3-41d6-a7e3-6176f2dd46d9" />
 
 ---
-<img width="1113" height="890" alt="Screenshot 2025-06-27 205123" src="https://github.com/user-attachments/assets/33558bcf-3daa-461c-aee3-a59dcc4d865e" />
+![WhatsApp Image 2025-07-10 at 20 11 14_8f7708aa](https://github.com/user-attachments/assets/a4aa81d1-f567-44f3-8c8b-d8ffa06524dd)
 
 ---
 
+<img width="1113" height="890" alt="Screenshot 2025-06-27 205123" src="https://github.com/user-attachments/assets/33558bcf-3daa-461c-aee3-a59dcc4d865e" />
+
+---
 <img width="1885" height="913" alt="Screenshot 2025-06-27 204909" src="https://github.com/user-attachments/assets/32636bf5-9fa7-4259-8068-05ec5889bb0a" />
+
+---
+![WhatsApp Image 2025-07-10 at 20 22 12_800fa5ba](https://github.com/user-attachments/assets/5603d92c-0ea4-498c-ac0d-b0bb07690b7c)
 
 ---
 ![WhatsApp Image 2025-07-04 at 01 02 06_37e60c3d](https://github.com/user-attachments/assets/eb1c9269-77e2-4932-aecd-d4875be4ded7)
