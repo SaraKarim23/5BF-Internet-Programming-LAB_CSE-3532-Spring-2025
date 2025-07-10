@@ -1,0 +1,51 @@
+.sidbar-container {
+  list-style: none;
+  padding: 20px;
+  margin: 0;
+  margin-top:20px;
+  background-color: #ffffff;
+  height: 100vh;
+  width: 220px;
+  box-shadow: 2px 0 10px rgba(0, 0, 0, 0.08);
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  position: fixed;
+  transition: all 0.3s ease;
+  top:75px;
+}
+
+.sidbar-container a {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: #333;
+  padding: 12px 15px;
+  border-radius: 10px;
+  font-weight: 500;
+  font-size: 16px;
+  transition: background-color 0.3s ease, color 0.3s ease, transform 0.2s ease;
+}
+
+.sidbar-container a:hover {
+  background-color: #f5ebff;
+  color: blueviolet;
+  transform: translateX(4px);
+}
+
+.sidbar-container a.active {
+  background-color: blueviolet;
+  color: white;
+  box-shadow: inset 4px 0 0 0 #fff;
+}
+
+.sidbar-container img {
+  width: 24px;
+  height: 24px;
+  margin-right: 12px;
+  transition: transform 0.3s ease;
+}
+
+.sidbar-container a:hover img {
+  transform: scale(1.1);
+}
