@@ -1,4 +1,5 @@
-<h1 align="center">🚀 AI Resume Builder</h1>
+<h1 align="center">🚀 AI Resume Builder 📋</h1>
+
 
 <p align="center">
   <b>Smart, AI-powered resume creation tool built with React, Strapi, PostgreSQL & Gemini API.</b><br/>
@@ -12,6 +13,12 @@
   <img src="https://img.shields.io/badge/AI-Gemini%20API-yellow?style=flat-square"/>
   <img src="https://img.shields.io/badge/database-PostgreSQL-blue?style=flat-square"/>
 </p>
+
+<p align="center" style="margin: 20px 0;">
+ <img src="Frontend-Namira(C231450)/ai-resume-builder/Website_preview/3.HomePage-1.png" alt="AI Resume Builder" width="800"/>
+</p>
+<p align="center"><i>Preview of the AI Resume Builder Homepage</i></p>
+
 
 ---
 
