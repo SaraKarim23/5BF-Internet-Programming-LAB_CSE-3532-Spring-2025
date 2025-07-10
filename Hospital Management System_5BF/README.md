@@ -104,4 +104,3 @@ With a clean frontend powered by HTML, CSS, and JavaScript — **SmartCare** del
 
 
 
-
