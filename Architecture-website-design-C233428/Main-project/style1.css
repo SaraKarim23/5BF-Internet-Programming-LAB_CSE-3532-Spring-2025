@@ -1,0 +1,467 @@
+.projects-section,
+.team-section {
+    padding: 20px;
+    text-align: center;
+    background-color: #fff;
+    border-radius: 8px;
+}
+
+.project-buttons {
+    display: flex;
+    /* Using flexbox for alignment */
+    justify-content: center;
+    /* Centering buttons */
+    gap: 20px;
+    /* Spacing between buttons */
+    margin-bottom: 20px;
+    /* Space between buttons and project details */
+}
+
+.project-buttons button {
+    background-color: #b38355;
+    /* Coffee color */
+    color: white;
+    /* Text color */
+    border: none;
+    /* Removing border */
+    padding: 10px 20px;
+    /* Padding for buttons */
+    border-radius: 5px;
+    /* Rounded corners */
+    cursor: pointer;
+    /* Pointer on hover */
+    font-size: 16px;
+    /* Font size */
+    transition: background-color 0.3s;
+    /* Smooth transition */
+}
+
+.project-buttons button:hover {
+    background-color: #a37147;
+    /* Darker shade on hover */
+}
+
+#project-details {
+    /* Styles for the project details section */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.project-buttons {
+    margin-bottom: 20px;
+}
+
+.project-buttons button {
+    width: 150px;
+    height: 80px;
+    font-size: 1.2em;
+    margin: 10px;
+    padding: 10px;
+    border: none;
+    border-radius: 8px;
+    background-color: #b38355;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.project-buttons button:hover {
+    background-color: #b38355;
+}
+
+#project-details img {
+    max-width: 30%;
+    border-radius: 8px;
+    margin: 5px;
+}
+
+.team-member {
+    display: inline-block;
+    margin: 10px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    width: 200px;
+    text-align: center;
+}
+
+.team-member img {
+    width: 200%;
+    border-radius: 50%;
+}
+
+.social-icons a {
+    display: flex;
+    /* Use flex for proper centering */
+    justify-content: center;
+    /* Center the logo */
+    align-items: center;
+    /* Center vertically */
+    transition: transform 0.3s ease;
+    text-decoration: none;
+    /* Remove underline from links */
+    color: black;
+    /* Set icon color to black */
+}
+
+.team-member h4 {
+    margin: 10px 0 5px;
+}
+
+.team-member p {
+    color: #666;
+    font-size: 0.9em;
+}
+
+.team-section {
+    padding: 50px 0;
+    background-color: #f9f9f9;
+    text-align: center;
+}
+
+.team-section h2 {
+    margin-bottom: 40px;
+    font-size: 2.5em;
+    color: #333;
+}
+
+.team-members {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.team-member {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    text-align: center;
+    transition: transform 0.3s ease;
+    width: calc(25% - 20px);
+    /* Adjust for 4 in a row */
+}
+
+.team-member:hover {
+    transform: translateY(-5px);
+}
+
+.image-container {
+    position: relative;
+    overflow: hidden;
+    border-radius: 8px 8px 0 0;
+}
+
+.image-container img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+h3 {
+    margin: 15px 0 5px;
+    font-size: 1.5em;
+    color: #f1eaea;
+}
+
+p {
+    margin-bottom: 15px;
+    color: #777;
+}
+
+.social-icons {
+    margin-top: 10px;
+    display: flex;
+    /* Use flexbox to align items */
+    justify-content: center;
+    /* Center align icons */
+    gap: 10px;
+    /* Space between icons */
+}
+
+.social-icons a {
+    display: flex;
+    /* Use flex for proper centering */
+    justify-content: center;
+    /* Center the logo */
+    align-items: center;
+    /* Center vertically */
+    transition: transform 0.3s ease;
+    text-decoration: none;
+    /* Remove underline from links */
+}
+
+.social-icons a:hover {
+    transform: scale(1.1);
+    /* Slightly enlarge the icon on hover */
+}
+
+.social-logo {
+    width: 30px;
+    /* Adjust size as needed */
+    height: auto;
+    filter: brightness(0) invert(1);
+    /* Invert colors for white backgrounds */
+}
+
+.social-icons a:hover .social-logo {
+    filter: drop-shadow(0 0 2px #b38355);
+    /* Coffee color hover effect */
+}
+
+
+/* Testimonials Section */
+
+.testimonials-section {
+    text-align: center;
+    padding: 50px;
+    background-color: #f5f5f5;
+}
+
+.testimonials-section h2 {
+    font-size: 2.5em;
+    color: #333;
+}
+
+.carousel-container {
+    position: relative;
+    overflow: hidden;
+}
+
+.carousel-items {
+    display: flex;
+    transition: transform 1s ease-in-out;
+}
+
+.carousel-item {
+    width: 100%;
+    flex-shrink: 0;
+    padding: 20px;
+    text-align: center;
+}
+
+.carousel-item img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+}
+
+.testimonial-text {
+    font-style: italic;
+}
+
+
+/* Modal Styles */
+
+#clientModal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+}
+
+.modal-content {
+    background: white;
+    padding: 20px;
+    margin: 10% auto;
+    width: 60%;
+    text-align: center;
+}
+
+#modal-img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+}
+
+button {
+    margin-top: 10px;
+}
+
+
+/* Modal Styles */
+
+#clientModal {
+    display: none;
+    /* Hidden by default */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    /* Semi-transparent background */
+    z-index: 1000;
+    /* Make sure it appears above other elements */
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    /* This ensures the modal content is centered */
+}
+
+
+/* Content of the Modal */
+
+.modal-content {
+    background: white;
+    padding: 20px;
+    margin: 10% auto;
+    width: 60%;
+    text-align: center;
+    border-radius: 8px;
+    /* Optional: for rounded corners */
+}
+
+#modal-img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    /* Optional: for rounded images */
+}
+
+button {
+    margin-top: 10px;
+}
+
+.client {
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 20px;
+    background-color: #f9f9f9;
+    width: 300px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.client img {
+    width: 100%;
+    border-radius: 8px;
+}
+
+.client-text {
+    font-size: 14px;
+    color: #555;
+    margin-top: 10px;
+    line-height: 1.5;
+    height: 60px;
+    /* To ensure 3 lines */
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.rating {
+    font-size: 18px;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+.property-rating {
+    font-size: 14px;
+    color: #888;
+    margin-top: 5px;
+}
+
+
+/* Style for the orange rating */
+
+.rating {
+    color: orange;
+}
+
+
+/* Slider Container */
+
+.slider {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+
+/* Slides Wrapper */
+
+.slides {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+
+/* Individual Slide */
+
+.slide {
+    min-width: 100%;
+    box-sizing: border-box;
+    text-align: center;
+    background: #f4f4f4;
+    padding: 20px;
+}
+
+
+/* Navigation Arrows */
+
+.slider-controls {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    transform: translateY(-50%);
+}
+
+.slider-controls span {
+    cursor: pointer;
+    background: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 50%;
+    font-size: 18px;
+    user-select: none;
+}
+
+.slider-controls span:hover {
+    background: #000;
+}
+
+.hero-section {
+    background: #f5f5f5;
+    padding: 20px 0;
+}
+
+.carousel-item {
+    height: 500px;
+    /* Adjust height */
+}
+
+.carousel-item img {
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+}
+
+.hero-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: white;
+    text-shadow: 0px 2px 4px rgba(0, 0, 0, 0.7);
+}
+
+.hero-text h2 {
+    font-size: 2.5rem;
+    font-weight: bold;
+}
+
+.hero-text h3 {
+    font-size: 1.5rem;
+}

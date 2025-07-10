@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SSL Architecture and Interior Design</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body,
+        html {
+            height: 100%;
+            font-family: Arial, sans-serif;
+        }
+        
+        .slider-container {
+            position: relative;
+            width: 100%;
+            height: 100vh;
+            overflow: hidden;
+        }
+        
+        .slider {
+            display: flex;
+            transition: transform 0.5s ease-in-out;
+            width: 400%;
+        }
+        
+        .slide {
+            position: relative;
+            width: 100vw;
+            height: 100vh;
+        }
+        
+        .slider img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center;
+        }
+        
+        .content {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+            color: white;
+            font-family: Arial, sans-serif;
+            font-weight: bold;
+            padding: 20px;
+            background: rgba(0, 0, 0, 0.5);
+            border-radius: 10px;
+        }
+        
+        .content h2 {
+            font-size: 3rem;
+        }
+        
+        .content p {
+            font-size: 1.5rem;
+            margin-top: 10px;
+        }
+        
+        .controls {
+            position: absolute;
+            top: 50%;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            transform: translateY(-50%);
+        }
+        
+        .control-btn {
+            background-color: rgba(0, 0, 0, 0.5);
+            color: white;
+            padding: 10px;
+            border: none;
+            cursor: pointer;
+            font-size: 24px;
+        }
+        
+        .control-btn:hover {
+            background-color: rgba(0, 0, 0, 0.8);
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="slider-container">
+        <div class="slider">
+            <!-- Slide 1: Introduction to SSL Architecture -->
+            <div class="slide">
+                <img src="wp11.jpg" alt="Architecture Image 1">
+                <div class="content">
+                    <h2>Introduction to SSL Architecture</h2>
+                    <p>SSL Architecture combines innovative design with functional spaces, creating environments that inspire.</p>
+                </div>
+            </div>
+            <!-- Slide 2: Interior Design Services -->
+            <div class="slide">
+                <img src="wp3.jpeg" alt="Interior Design Image 2">
+                <div class="content">
+                    <h2>Interior Design Services</h2>
+                    <p>We provide comprehensive interior design services for both residential and commercial spaces.</p>
+                </div>
+            </div>
+            <!-- Slide 3: Project Portfolio -->
+            <div class="slide">
+                <img src="wp8.jpg" alt="Portfolio Image 3">
+                <div class="content">
+                    <h2>Project Portfolio</h2>
+                    <p>Take a look at our portfolio showcasing the best of our design work, blending aesthetics with practicality.</p>
+                </div>
+            </div>
+            <!-- Slide 4: Contact Information -->
+            <div class="slide">
+                <img src="wp2.jpg" alt="Contact Image 4">
+                <div class="content">
+                    <h2>Contact Us</h2>
+                    <p>Get in touch with us to discuss your next project. We are here to bring your vision to life.</p>
+                </div>
+            </div>
+        </div>
+        <div class="controls">
+            <button class="control-btn" id="prev">❮</button>
+            <button class="control-btn" id="next">❯</button>
+        </div>
+    </div>
+
+    <script>
+        let currentIndex = 0;
+        const slides = document.querySelectorAll('.slider .slide');
+        const slider = document.querySelector('.slider');
+
+        const nextButton = document.getElementById('next');
+        const prevButton = document.getElementById('prev');
+
+        function changeSlide(index) {
+            if (index < 0) {
+                currentIndex = slides.length - 1;
+            } else if (index >= slides.length) {
+                currentIndex = 0;
+            } else {
+                currentIndex = index;
+            }
+            slider.style.transform = `translateX(-${currentIndex * 100}vw)`; // Move slider based on index
+        }
+
+        nextButton.addEventListener('click', () => changeSlide(currentIndex + 1));
+        prevButton.addEventListener('click', () => changeSlide(currentIndex - 1));
+
+        // Automatically change slides every 3 seconds
+        setInterval(() => {
+            changeSlide(currentIndex + 1);
+        }, 3000);
+    </script>
+
+</body>
+
+</html>
