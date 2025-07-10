@@ -1,0 +1,103 @@
+.add-doctor-container {
+  margin-left: 270px;
+  margin-top: 75px;
+  padding: 20px;
+  width: calc(100% - 270px);
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.add-doctor-container .title {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.add-doctor-form {
+  background-color: #fff;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+.add-doctor-img {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.add-doctor-img img {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin-bottom: 10px;
+  cursor: pointer;
+}
+
+
+
+.add-doctor-img p {
+  font-size: 14px;
+  color: #222;
+  text-align: center;
+}
+
+.add-doctor-form-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  margin-bottom: 20px;
+}
+
+.add-doctor-form-column {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.add-doctor-form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.add-doctor-form-group input,
+.add-doctor-form-group select,
+.add-doctor-form-group textarea {
+  padding: 10px 12px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 14px;
+  outline: none;
+}
+
+.add-doctor-form-group input:focus,
+.add-doctor-form-group select:focus,
+.add-doctor-form-group textarea:focus {
+  border-color: blueviolet;
+}
+
+.add-doctor-form-group textarea {
+  resize: vertical;
+}
+
+.add-doctor-form button {
+  padding: 12px 20px;
+  background-color: blueviolet;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+  width: fit-content;
+  margin-top: 15px;
+}
+
+.add-doctor-form button:hover {
+  background-color: darkviolet;
+}
