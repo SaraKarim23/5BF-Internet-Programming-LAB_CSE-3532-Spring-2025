@@ -1,0 +1,720 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Kabir's Events</title>
+
+  <!--swiper css-->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+
+  <!--font awesome-->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" />
+
+  <!--css file-->
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+  <!-- header section -->
+  <header class="header">
+    <a href="#" class="logo"><span>k</span>abir</a>
+
+    <nav class="navbar">
+      <a href="#home">home</a>
+      <a href="#service">service</a>
+      <a href="#about">about</a>
+      <a href="#gallery">gallery</a>
+      <a href="#price">price</a>
+      <a href="#review">review</a>
+      <a href="#contact">contact</a>
+    </nav>
+
+    <div class="auth-links">
+      <a href="#" id="loginBtn">Login</a> |
+      <a href="#" id="signupBtn">Sign Up</a>
+    </div>
+
+    <div id="menu-bars" class="fas fa-bars"></div>
+  </header>
+
+  <!-- Login Modal -->
+  <div id="loginModal" class="modal">
+    <div class="modal-content">
+      <span class="close" id="loginClose">&times;</span>
+      <h2>Login</h2>
+      <form action="login.php" method="post">
+        <input type="text" name="username" placeholder="Username" required />
+        <input type="password" name="password" placeholder="Password" required />
+        <input type="submit" value="Login" class="btn" />
+      </form>
+    </div>
+  </div>
+
+  <!-- Signup Modal -->
+  <div id="signupModal" class="modal">
+    <div class="modal-content">
+      <span class="close" id="signupClose">&times;</span>
+      <h2>Sign Up</h2>
+      <form action="register.php" method="post">
+        <input type="text" name="username" placeholder="Username" required />
+        <input type="email" name="email" placeholder="Email" required />
+        <input type="password" name="password" placeholder="Password" required />
+        <input type="submit" value="Sign Up" class="btn" />
+      </form>
+    </div>
+  </div>
+<!-- home section starts  -->
+  <section class="home" id="home">
+    <div class="content">
+      <h3>
+        where your ideas take off
+        <span> Kabir's events </span>
+      </h3>
+      <a href="#" class="btn">get quote</a>
+    </div>
+
+    <div class="swiper-container home-slider">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide">
+          <img src="images/home1.jpg" alt="" />
+        </div>
+        <div class="swiper-slide">
+          <img src="images/home2.jpg" alt="" />
+        </div>
+        <div class="swiper-slide">
+          <img src="images/home3.jpg" alt="" />
+        </div>
+        <div class="swiper-slide">
+          <img src="images/home4.jpg" alt="" />
+        </div>
+        <div class="swiper-slide">
+          <img src="images/home5.jpg" alt="" />
+        </div>
+        <div class="swiper-slide">
+          <img src="images/home6.jpg" alt="" />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- service section starts  -->
+  <section class="service" id="service">
+    <h1 class="heading">our <span>services</span></h1>
+
+    <div class="box-container">
+      <div class="box">
+        <i class="fas fa-envelope"></i>
+        <h3>invitation card design</h3>
+        <p>
+          Create beautifully crafted invitation cards tailored to match the theme and style of your event.
+        </p>
+      </div>
+
+      <div class="box">
+        <i class="fas fa-photo-video"></i>
+        <h3>photos and videos</h3>
+        <p>
+          Capture every special moment with professional photography and videography services.
+        </p>
+      </div>
+
+      <div class="box">
+        <i class="fas fa-music"></i>
+        <h3>entertainment</h3>
+        <p>
+          Provide engaging entertainment options to ensure a lively and enjoyable atmosphere.
+        </p>
+      </div>
+
+      <div class="box">
+        <i class="fas fa-car"></i>
+        <h3>event vehicles</h3>
+        <p>
+          Arrange transportation services to and from the event venue for guests and participants.
+        </p>
+      </div>
+
+      <div class="box">
+        <i class="fas fa-map-marker-alt"></i>
+        <h3>venue selection</h3>
+        <p>
+          Assist in selecting the perfect venue that aligns with your event's size, style, and location preferences.
+        </p>
+      </div>
+
+      <div class="box">
+        <i class="fas fa-birthday-cake"></i>
+        <h3>food catering</h3>
+        <p>
+          Deliver exquisite catering services featuring delicious menus designed to delight your guests.
+        </p>
+      </div>
+    </div>
+    <!-- Food Catering Modal -->
+  <div id="foodMenuModal" class="modal">
+    <div class="modal-content">
+      <span class="close" id="foodMenuClose">&times;</span>
+      <h2>Wedding Food Menu</h2>
+      <ul style="line-height: 2;">
+        <li>Chicken Biryani</li>
+        <li>Beef Rezala</li>
+        <li>Kacchi</li>
+        <li>Mutton Curry</li>
+        <li>Firni & Jorda</li>
+        <li>Mineral Water</li>
+        <li>Cold Drinks</li>
+      </ul>
+    </div>
+  </div>
+<button class="btn" id="showMenuBtn">View Wedding Menu</button>
+<!-- Vehicle Modal -->
+  <div id="vehicleMenuModal" class="modal">
+    <div class="modal-content">
+      <span class="close" id="vehicleMenuClose">&times;</span>
+      <h2>Wedding Vehicles</h2>
+      <ul style="line-height: 2;">
+        <li>🚗 Luxury Cars (Mercedes, BMW, Audi)</li>
+        <li>🚙 SUV for Family</li>
+        <li>🚐 Decorated Minibus for Guests</li>
+        <li>🚘 Vintage Car for Bride & Groom</li>
+        <li>🚖 AC Microbus / Wedding Van</li>
+      </ul>
+    </div>
+  </div>
+<button class="btn" id="showVehicleBtn">View Wedding Vehicles</button>
+  </section>
+
+  <!-- about section starts  -->
+  <section class="about" id="about">
+    <h1 class="heading"><span>about</span> us</h1>
+
+    <div class="row">
+      <div class="image">
+        <img src="images/about.jpg" alt="" />
+      </div>
+
+      <div class="content">
+        <h3>your occasion deserves our careful planning</h3>
+        <p>
+          Welcome to Kabir's Event,where we specialize in creating unforgettable experiences.
+          Our passion lies in meticulously planning and executing events that leave a lasting impression. From corporate
+          gatherings to private celebrations, we handle every detail with precision and care.
+        </p>
+
+        <p>
+          At Kabir's Event, we embrace challenges and thrive on bringing ideas to life. Our approach is collaborative
+          and client-focused, ensuring a seamless and enjoyable experience from start to finish. Whether you're planning
+          a gala, conference, wedding, or any special occasion, trust us to make it extraordinary.
+
+          Join us in creating moments that matter. Contact us today to begin planning your next event with Kabir's
+          Events.
+        </p>
+        <a href="#" class="btn">reach us</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- gallery section starts  -->
+  <section class="gallery" id="gallery">
+    <h1 class="heading">our gallery<span>& feature</span></h1>
+
+    <div class="box-container">
+      <div class="box">
+        <img src="images/gallery1.jpg" alt="" />
+        <h3 class="title">best events</h3>
+        <div class="icons">
+          <a href="#" class="fas fa-heart"></a>
+          <a href="#" class="fas fa-share"></a>
+          <a href="#" class="fas fa-eye"></a>
+        </div>
+      </div>
+
+      <div class="box">
+        <img src="images/gallery2.jpg" alt="" />
+        <h3 class="title">best events</h3>
+        <div class="icons">
+          <a href="#" class="fas fa-heart"></a>
+          <a href="#" class="fas fa-share"></a>
+          <a href="#" class="fas fa-eye"></a>
+        </div>
+      </div>
+
+      <div class="box">
+        <img src="images/gallery3.jpg" alt="" />
+        <h3 class="title">best events</h3>
+        <div class="icons">
+          <a href="#" class="fas fa-heart"></a>
+          <a href="#" class="fas fa-share"></a>
+          <a href="#" class="fas fa-eye"></a>
+        </div>
+      </div>
+
+      <div class="box">
+        <img src="images/gallery4.jpg" alt="" />
+        <h3 class="title">best events</h3>
+        <div class="icons">
+          <a href="#" class="fas fa-heart"></a>
+          <a href="#" class="fas fa-share"></a>
+          <a href="#" class="fas fa-eye"></a>
+        </div>
+      </div>
+
+      <div class="box">
+        <img src="images/gallery5.jpg" alt="" />
+        <h3 class="title">best events</h3>
+        <div class="icons">
+          <a href="#" class="fas fa-heart"></a>
+          <a href="#" class="fas fa-share"></a>
+          <a href="#" class="fas fa-eye"></a>
+        </div>
+      </div>
+
+      <div class="box">
+        <img src="images/gallery6.jpg" alt="" />
+        <h3 class="title">best events</h3>
+        <div class="icons">
+          <a href="#" class="fas fa-heart"></a>
+          <a href="#" class="fas fa-share"></a>
+          <a href="#" class="fas fa-eye"></a>
+        </div>
+      </div>
+
+      <div class="box">
+        <img src="images/gallery7.jpg" alt="" />
+        <h3 class="title">best events</h3>
+        <div class="icons">
+          <a href="#" class="fas fa-heart"></a>
+          <a href="#" class="fas fa-share"></a>
+          <a href="#" class="fas fa-eye"></a>
+        </div>
+      </div>
+
+      <div class="box">
+        <img src="images/gallery8.jpg" alt="" />
+        <h3 class="title">best events</h3>
+        <div class="icons">
+          <a href="#" class="fas fa-heart"></a>
+          <a href="#" class="fas fa-share"></a>
+          <a href="#" class="fas fa-eye"></a>
+        </div>
+      </div>
+
+      <div class="box">
+        <img src="images/gallery9.jpg" alt="" />
+        <h3 class="title">best events</h3>
+        <div class="icons">
+          <a href="#" class="fas fa-heart"></a>
+          <a href="#" class="fas fa-share"></a>
+          <a href="#" class="fas fa-eye"></a>
+        </div>
+      </div>
+
+      <div class="box">
+        <img src="images/gallery10.webp" alt="" />
+        <h3 class="title">best events</h3>
+        <div class="icons">
+          <a href="#" class="fas fa-heart"></a>
+          <a href="#" class="fas fa-share"></a>
+          <a href="#" class="fas fa-eye"></a>
+        </div>
+      </div>
+
+      <div class="box">
+        <img src="images/gallery11.jpg" alt="" />
+        <h3 class="title">best events</h3>
+        <div class="icons">
+          <a href="#" class="fas fa-heart"></a>
+          <a href="#" class="fas fa-share"></a>
+          <a href="#" class="fas fa-eye"></a>
+        </div>
+      </div>
+
+      <div class="box">
+        <img src="images/gallery12.jpg" alt="" />
+        <h3 class="title">best events</h3>
+        <div class="icons">
+          <a href="#" class="fas fa-heart"></a>
+          <a href="#" class="fas fa-share"></a>
+          <a href="#" class="fas fa-eye"></a>
+        </div>
+      </div>
+
+      <div class="box">
+        <img src="images/gallery13.jpg" alt="" />
+        <h3 class="title">best events</h3>
+        <div class="icons">
+          <a href="#" class="fas fa-heart"></a>
+          <a href="#" class="fas fa-share"></a>
+          <a href="#" class="fas fa-eye"></a>
+        </div>
+      </div>
+
+      <div class="box">
+        <img src="images/gallery14.webp" alt="" />
+        <h3 class="title">best events</h3>
+        <div class="icons">
+          <a href="#" class="fas fa-heart"></a>
+          <a href="#" class="fas fa-share"></a>
+          <a href="#" class="fas fa-eye"></a>
+        </div>
+      </div>
+
+      <div class="box">
+        <img src="images/gallery15.jpg" alt="" />
+        <h3 class="title">best events</h3>
+        <div class="icons">
+          <a href="#" class="fas fa-heart"></a>
+          <a href="#" class="fas fa-share"></a>
+          <a href="#" class="fas fa-eye"></a>
+        </div>
+      </div>
+
+      <div class="box">
+        <img src="images/gallery16.png" alt="" />
+        <h3 class="title">best events</h3>
+        <div class="icons">
+          <a href="#" class="fas fa-heart"></a>
+          <a href="#" class="fas fa-share"></a>
+          <a href="#" class="fas fa-eye"></a>
+        </div>
+      </div>
+
+      <div class="box">
+        <img src="images/gallery17.webp" alt="" />
+        <h3 class="title">best events</h3>
+        <div class="icons">
+          <a href="#" class="fas fa-heart"></a>
+          <a href="#" class="fas fa-share"></a>
+          <a href="#" class="fas fa-eye"></a>
+        </div>
+      </div>
+
+      <div class="box">
+        <img src="images/gallery18.jpg" alt="" />
+        <h3 class="title">best events</h3>
+        <div class="icons">
+          <a href="#" class="fas fa-heart"></a>
+          <a href="#" class="fas fa-share"></a>
+          <a href="#" class="fas fa-eye"></a>
+        </div>
+      </div>
+
+
+    </div>
+  </section>
+
+  <!-- price section starts  -->
+  <section class="price" id="price">
+    <h1 class="heading">our <span>pricing</span></h1>
+
+    <div class="box-container">
+      <div class="box">
+        <h3 class="title">basic</h3>
+        <h3 class="amount">70k</h3>
+        <ul>
+          <li><i class="fas fa-check"></i>full services</li>
+          <li><i class="fas fa-check"></i> decorations</li>
+          <li><i class="fas fa-check"></i> music and photos</li>
+          <li><i class="fas fa-check"></i> food and drinks</li>
+          <li><i class="fas fa-check"></i> invitation card</li>
+        </ul>
+        <a href="#" class="btn">check out</a>
+      </div>
+
+      <div class="box">
+        <h3 class="title">prime</h3>
+        <h3 class="amount">55k</h3>
+        <ul>
+          <li><i class="fas fa-check"></i>full services</li>
+          <li><i class="fas fa-check"></i> decorations</li>
+          <li><i class="fas fa-check"></i> music and photos</li>
+          <li><i class="fas fa-check"></i> food and drinks</li>
+          <li><i class="fas fa-check"></i> invitation card</li>
+        </ul>
+        <a href="#" class="btn">check out</a>
+      </div>
+
+      <div class="box">
+        <h3 class="title">luxury</h3>
+        <h3 class="amount">40k</h3>
+        <ul>
+          <li><i class="fas fa-check"></i>full services</li>
+          <li><i class="fas fa-check"></i> decorations</li>
+          <li><i class="fas fa-check"></i> music and photos</li>
+          <li><i class="fas fa-check"></i> food and drinks</li>
+          <li><i class="fas fa-check"></i> invitation card</li>
+        </ul>
+        <a href="#" class="btn">check out</a>
+      </div>
+
+      <div class="box">
+        <h3 class="title">ultra</h3>
+        <h3 class="amount">120k</h3>
+        <ul>
+          <li><i class="fas fa-check"></i>full services</li>
+          <li><i class="fas fa-check"></i> decorations</li>
+          <li><i class="fas fa-check"></i> music and photos</li>
+          <li><i class="fas fa-check"></i> food and drinks</li>
+          <li><i class="fas fa-check"></i> invitation card</li>
+        </ul>
+        <a href="#" class="btn">check out</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- review section starts  -->
+  <section class="reivew" id="review">
+    <h1 class="heading">client's <span>review</span></h1>
+
+    <div class="review-slider swiper-container">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide box">
+          <i class="fas fa-quote-right"></i>
+          <div class="user">
+            <img src="images/img1.jpg" alt="" />
+            <div class="user-info">
+              <h3>nayana</h3>
+              <span>happy customer</span>
+            </div>
+          </div>
+          <p>
+            The venue selection service provided by Kabir's events was exceptional. They found the perfect location that
+            matched our vision and accommodated all our needs."
+          </p>
+        </div>
+
+
+        <div class="swiper-slide box">
+          <i class="fas fa-quote-right"></i>
+          <div class="user">
+            <img src="images/img5.jpg" alt="" />
+            <div class="user-info">
+              <h3>Rafi</h3>
+              <span>happy customer</span>
+            </div>
+          </div>
+          <p>
+            "I am so glad we chose Kabir's Event for our company's annual gala. The entertainment they provided was
+            top-notch, and their professionalism was outstanding. Thank you!"
+          </p>
+        </div>
+
+        <div class="swiper-slide box">
+          <i class="fas fa-quote-right"></i>
+          <div class="user">
+            <img src="images/img2.jpg" alt="" />
+            <div class="user-info">
+              <h3>Jarin</h3>
+              <span>happy customer</span>
+            </div>
+          </div>
+          <p>
+            "The team at Kabir's Event did an incredible job with our event. From start to finish, they were
+            professional, creative, and attentive to every detail. Highly recommended!"
+          </p>
+        </div>
+
+
+        <div class="swiper-slide box">
+          <i class="fas fa-quote-right"></i>
+          <div class="user">
+            <img src="images/img7.jpg" alt="" />
+            <div class="user-info">
+              <h3>Niloy</h3>
+              <span>happy customer</span>
+            </div>
+          </div>
+          <p>
+            From the elegant invitation cards to the delicious catering, Kabir's Event exceeded our expectations. They
+            made our anniversary celebration truly memorable.!"
+          </p>
+        </div>
+
+        <div class="swiper-slide box">
+          <i class="fas fa-quote-right"></i>
+          <div class="user">
+            <img src="images/img6.jpg" alt="" />
+            <div class="user-info">
+              <h3>Hasan</h3>
+              <span>happy customer</span>
+            </div>
+          </div>
+          <p>
+            "The food catering by Kabir's Event was delicious and beautifully presented. Our guests are still raving
+            about it. Thank you for making our event memorable!"
+          </p>
+        </div>
+
+        <div class="swiper-slide box">
+          <i class="fas fa-quote-right"></i>
+          <div class="user">
+            <img src="images/img3.jpg" alt="" />
+            <div class="user-info">
+              <h3>Neela</h3>
+              <span>happy customer</span>
+            </div>
+          </div>
+          <p>
+            "I was blown away by the invitation card design and overall coordination provided by Kabir's Event. They
+            truly made our event special and unforgettable."
+          </p>
+        </div>
+
+
+
+        <div class="swiper-slide box">
+          <i class="fas fa-quote-right"></i>
+          <div class="user">
+            <img src="images/img4.jpg" alt="" />
+            <div class="user-info">
+              <h3>saima</h3>
+              <span>happy customer</span>
+            </div>
+          </div>
+          <p>
+            "The photos and videos captured by Kabir's Event exceeded our expectations. They perfectly captured the
+            essence and joy of our celebration. Thank you!"
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- contact section -->
+  <section class="contact" id="contact">
+    <h1 class="heading"><span>contact</span> us</h1>
+
+    <form action="contact.php" method="post">
+      <div class="inputBox">
+        <input type="text" name="name" placeholder="name" required />
+        <input type="email" name="email" placeholder="email" required />
+      </div>
+      <div class="inputBox">
+        <input type="tel" name="phone" placeholder="number" required />
+        <input type="text" name="subject" placeholder="subject" required />
+      </div>
+      <textarea name="message" placeholder="message" cols="30" rows="10" required></textarea>
+      <input type="submit" value="send message" class="btn" />
+    </form>
+  </section>
+
+  <!-- footer section -->
+  <section class="footer">
+    <div class="credit">
+      created by <span>Kabir</span> | all rights reserved
+    </div>
+  </section>
+<!-- theme toggler  -->
+  <div class="theme-toggler">
+    <div class="toggle-btn">
+      <i class="fas fa-cog"></i>
+    </div>
+
+    <h3>choose color</h3>
+
+    <div class="buttons">
+      <div class="theme-btn" style="background: #ccff33"></div>
+      <div class="theme-btn" style="background: #d35400"></div>
+      <div class="theme-btn" style="background: #f39c12"></div>
+      <div class="theme-btn" style="background: #1abc9c"></div>
+      <div class="theme-btn" style="background: #3498db"></div>
+      <div class="theme-btn" style="background: #9b59b6"></div>
+    </div>
+  </div>
+  <!-- modal styles -->
+  <style>
+    .modal {
+      display: none;
+      position: fixed;
+      z-index: 1000;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      overflow: auto;
+      background-color: rgba(0, 0, 0, 0.5);
+    }
+
+    .modal-content {
+      background-color: #fff;
+      margin: 10% auto;
+      padding: 20px;
+      border-radius: 10px;
+      max-width: 400px;
+      position: relative;
+    }
+
+    .modal-content input {
+      display: block;
+      width: 100%;
+      margin: 10px 0;
+      padding: 10px;
+    }
+
+    .close {
+      position: absolute;
+      right: 15px;
+      top: 10px;
+      font-size: 24px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    .auth-links a {
+      color: #fff;
+      margin-left: 15px;
+      cursor: pointer;
+      font-weight: bold;
+      text-decoration: none;
+    }
+
+    .auth-links a:hover {
+      text-decoration: underline;
+    }
+  </style>
+
+  <!-- modal script -->
+  <script>
+    const loginModal = document.getElementById('loginModal');
+    const signupModal = document.getElementById('signupModal');
+    const loginBtn = document.getElementById('loginBtn');
+    const signupBtn = document.getElementById('signupBtn');
+    const loginClose = document.getElementById('loginClose');
+    const signupClose = document.getElementById('signupClose');
+
+    loginBtn.onclick = function (e) {
+      e.preventDefault();
+      loginModal.style.display = 'block';
+    }
+    signupBtn.onclick = function (e) {
+      e.preventDefault();
+      signupModal.style.display = 'block';
+    }
+
+    loginClose.onclick = function () {
+      loginModal.style.display = 'none';
+    }
+    signupClose.onclick = function () {
+      signupModal.style.display = 'none';
+    }
+
+    window.onclick = function (event) {
+      if (event.target == loginModal) {
+        loginModal.style.display = 'none';
+      }
+      if (event.target == signupModal) {
+        signupModal.style.display = 'none';
+      }
+    }
+  </script>
+
+  <!-- swiper js -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+  <!-- custom js -->
+  <script src="app.js"></script>
+</body>
+
+</html>

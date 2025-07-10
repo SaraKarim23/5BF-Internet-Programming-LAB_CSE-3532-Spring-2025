@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Login & Sign Up Modal</title>
+  <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" />
+  <style>
+    body { font-family:Arial,sans-serif; margin:0; padding:0; }
+    .modal { display:none; position:fixed; z-index:10; left:0; top:0;
+      width:100%; height:100%; overflow:auto;
+      background:rgba(0,0,0,0.6); justify-content:center; align-items:center; }
+    .modal-content { background:#fff; padding:20px; border-radius:8px; width:320px; position:relative; }
+    .close { position:absolute; top:10px; right:15px; font-size:22px; cursor:pointer; }
+    .tabs { display:flex; margin-bottom:15px; }
+    .tabs button { flex:1; padding:10px; border:none; background:#eee; cursor:pointer; }
+    .tabs button.active { background:#ddd; font-weight:bold; }
+    .form { display:none; flex-direction:column; gap:10px; }
+    .form.active { display:flex; }
+    .form input { padding:8px; width:100%; box-sizing:border-box; }
+    .form button { padding:10px; border:none; background:#28a745; color:#fff; cursor:pointer; }
+    .error { color:red; font-size:0.9em; }
+  </style>
+</head>
+<body>
+
+  <button id="open-modal" style="margin:20px;padding:10px 20px;">Login / Sign Up</button>
+
+  <div id="modal" class="modal">
+    <div class="modal-content">
+      <span class="close" id="close-modal">&times;</span>
+      <div class="tabs">
+        <button id="tab-login" class="active">Login</button>
+        <button id="tab-signup">Sign Up</button>
+      </div>
+      <form id="login-form" class="form active">
+        <input type="email" id="login-email" placeholder="Email" required />
+        <input type="password" id="login-pass" placeholder="Password" required />
+        <div class="error" id="err-login"></div>
+        <button type="button" onclick="doLogin()">Login</button>
+      </form>
+      <form id="signup-form" class="form">
+        <input type="text" id="signup-user" placeholder="Username" required />
+        <input type="email" id="signup-email" placeholder="Email" required />
+        <input type="password" id="signup-pass" placeholder="Password" required />
+        <div class="error" id="err-signup"></div>
+        <button type="button" onclick="doSignUp()">Sign Up</button>
+      </form>
+    </div>
+  </div>
+
+  <script>
+    const modal = document.getElementById('modal');
+    document.getElementById('open-modal').onclick = () => modal.style.display = 'flex';
+    document.getElementById('close-modal').onclick = () => modal.style.display = 'none';
+    window.onclick = e => { if(e.target===modal) modal.style.display='none'; };
+
+    document.getElementById('tab-login').onclick = () => toggleTab('login');
+    document.getElementById('tab-signup').onclick = () => toggleTab('signup');
+
+    function toggleTab(tab) {
+      ['login','signup'].forEach(t=>{
+        document.getElementById(tab-${t}).classList.toggle('active', t===tab);
+        document.getElementById(${t}-form).classList.toggle('active', t===tab);
+      });
+      document.getElementById('err-login').textContent = '';
+      document.getElementById('err-signup').textContent = '';
+    }
+
+    function doLogin() {
+      const e=document.getElementById('login-email').value.trim(),
+            p=document.getElementById('login-pass').value,
+            err=document.getElementById('err-login');
+      err.textContent = (!e||!p) ? 'সব ফিল্ড পূরণ করুন।' : Logged in: ${e};
+    }
+    function doSignUp() {
+      const u=document.getElementById('signup-user').value.trim(),
+            e=document.getElementById('signup-email').value.trim(),
+            p=document.getElementById('signup-pass').value,
+            err=document.getElementById('err-signup');
+      err.textContent = (!u||!e||!p) ? 'সব ফিল্ড পূরণ করুন।' : Sign up: ${u};
+    }
+  </script>
+</body>
+</html>
