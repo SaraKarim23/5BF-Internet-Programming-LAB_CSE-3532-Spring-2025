@@ -6,7 +6,7 @@ import { initializeApp } from "firebase/app";
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
-  apiKey: "AIzaSyBlp5WHC-AuEHFvtCW-Rf3IrnL9gKVTOMU",
+  apiKey: "AIzaSyBlp5WHC-AuEHFvtCW-Rf3IrnL1gKVTOMU",
   authDomain: "blood-donation-e0029.firebaseapp.com",
   projectId: "blood-donation-e0029",
   storageBucket: "blood-donation-e0029.appspot.com",
