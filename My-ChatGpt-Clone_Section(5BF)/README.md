@@ -17,7 +17,7 @@ Built with Next.js and React, Pickachu-GPT focuses on a smooth, optimized fronte
 
 ---
 
-## 🛠 Tech Stack
+## 🛠 Used Technology
 
 - Programming Language – TypeScript & JavaScript  
 - Framework – Next.js 15.3  
