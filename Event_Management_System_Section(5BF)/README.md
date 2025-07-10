@@ -51,22 +51,20 @@
 
 ## ✨ Key Features
 
-✅ Animated and attractive homepage
-✅ Multiple event categories and sub-events
-✅ Easy booking form
-✅ User authentication (login/signup)
-✅ Team section and testimonials
-✅ Achievement counters
-✅ Responsive design
+✅ Animated and attractive homepage  
+✅ Multiple event categories and sub-events  
+✅ Easy booking form  
+✅ User authentication (login/signup)  
+✅ Team section and testimonials  
+✅ Achievement counters  
+✅ Responsive design  
 
-
+---
 
 ## 📅 Development Roadmap
 
-✔ **Phase 1** – Design homepage and main UI
-✔ **Phase 2** – Add event categories and sub-events
-✔ **Phase 3** – Build booking form and user authentication
-✔ **Phase 4** – Connect to database and integrate backend
-✔ **Phase 5** – Testing and final polish
-
-
+✔️ **Phase 1** – Design homepage and main UI  
+✔️ **Phase 2** – Add event categories and sub-events  
+✔️ **Phase 3** – Build booking form and user authentication  
+✔️ **Phase 4** – Connect to database and integrate backend  
+✔️ **Phase 5** – Testing and final polish
