@@ -2,6 +2,10 @@
 
 A responsive and user-friendly Blood Bank Management System designed to facilitate blood donations and requests efficiently.
 
+## 📋 Project Overview
+
+A modern and intuitive Blood Bank Management System designed to efficiently link blood donors with recipients. The platform features secure user registration and login, an admin dashboard for managing user data and donation records, and dedicated pages for contact and support. Protected routes safeguard sensitive information, ensuring privacy. Endorsements from notable individuals add credibility and inspire user trust.
+
 ## 🌟 Features
 
 ✅ User Authentication (Register & Login)
