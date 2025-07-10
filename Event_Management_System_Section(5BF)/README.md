@@ -50,6 +50,7 @@
 
 
 ## ✨ Key Features
+
 ✅ Animated and attractive homepage
 ✅ Multiple event categories and sub-events
 ✅ Easy booking form
@@ -58,9 +59,10 @@
 ✅ Achievement counters
 ✅ Responsive design
 
----
+
 
 ## 📅 Development Roadmap
+
 ✔ **Phase 1** – Design homepage and main UI
 ✔ **Phase 2** – Add event categories and sub-events
 ✔ **Phase 3** – Build booking form and user authentication
