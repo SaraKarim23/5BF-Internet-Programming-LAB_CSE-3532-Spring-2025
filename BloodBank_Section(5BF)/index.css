@@ -1,0 +1,8 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+.text-gradient {
+    @apply bg-gradient-to-r from-cyan-800 to-cyan-600 text-transparent hover:bg-gradient-to-r hover:from-cyan-600 hover:to-cyan-800 bg-clip-text
+}
