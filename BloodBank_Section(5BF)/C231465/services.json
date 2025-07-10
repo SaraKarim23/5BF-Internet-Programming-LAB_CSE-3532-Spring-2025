@@ -1,0 +1,38 @@
+[
+  {
+    "id": 1,
+    "name": "Blood Donation Center",
+    "description": "Welcome to our Blood Donation Center, where you can make a lifesaving impact by donating blood. We are dedicated to ensuring a safe and comfortable donation experience for our donors. Your generosity can help save lives and make a positive difference in the community.",
+    "image": "https://i.ibb.co/kmXhg4g/Donor-Center-Campus.jpg"
+  },
+  {
+    "id": 2,
+    "name": "Mobile Blood Drives",
+    "description": "Participate in our Mobile Blood Drives to conveniently donate blood at various locations. Our team organizes regular drives across the city, making it easy for you to contribute to this noble cause. Your donation can provide crucial support to those in need during emergencies and medical treatments.",
+    "image": "https://i.ibb.co/WVLCt9X/download-1.jpg"
+  },
+  {
+    "id": 3,
+    "name": "Blood Donation Events",
+    "description": "Join our Blood Donation Events for a collective effort to save lives. These events create a sense of community and solidarity as we come together to address the ongoing need for blood. Whether you're a first-time donor or a regular contributor, your commitment is invaluable.",
+    "image": "https://i.ibb.co/bm8Q3rR/1.jpg"
+  },
+  {
+    "id": 4,
+    "name": "Donor Rewards Program",
+    "description": "Enroll in our Donor Rewards Program to acknowledge and appreciate your commitment to saving lives. Earn points with each donation, and redeem them for various rewards. Your continuous support helps maintain a stable blood supply for medical treatments and emergencies.",
+    "image": "https://i.ibb.co/WnmNB9S/download-2.jpg"
+  },
+  {
+    "id": 5,
+    "name": "Educational Workshops",
+    "description": "Stay informed and empowered by attending our Educational Workshops on blood donation. Learn about the impact of your contribution, the importance of regular donations, and how blood is used to support various medical conditions. Knowledge is a powerful tool for making a difference.",
+    "image": "https://i.ibb.co/tML8YFt/11995262-0899-47cd-8.jpg"
+  },
+  {
+    "id": 6,
+    "name": "Community Outreach",
+    "description": "Engage in our Community Outreach programs to spread awareness about the critical need for blood donations. By becoming a volunteer or supporter, you can help create a culture of giving and encourage others to contribute to the well-being of our community.",
+    "image": "https://i.ibb.co/QrXcT1F/download-3.jpg"
+  }
+]
