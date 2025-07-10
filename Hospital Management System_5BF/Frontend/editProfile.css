@@ -1,0 +1,63 @@
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: url("Images/loginpic.jpg") no-repeat center center;
+  background-size: cover;
+  height: 165vh;
+}
+
+.edit-container {
+  width: 500px;
+  text-align: center;
+  background: transparent;
+  border: none;
+  border-radius: 12px;
+  padding: 30px 40px;
+  backdrop-filter: blur(2px);
+  box-shadow: 0 4px 10px black;
+  margin: 30px;
+}
+
+.edit-container h1 {
+  font-size: 40px;
+  color: white;
+}
+
+.box {
+  margin-bottom: 15px;
+}
+
+.box input {
+  width: 100%;
+  outline: none;
+  border: 2px solid #ddcece;
+  border-radius: 40px;
+  border-style: outset;
+  font-size: 15px;
+  padding: 20px 45px 20px 20px;
+  background: transparent;
+}
+
+.box input::placeholder {
+  color: rgb(15, 64, 82);
+}
+
+.bt {
+  width: 50%;
+  height: 45px;
+  background: #2b8f91;
+  border: none;
+  border-radius: 40px;
+  cursor: pointer;
+  font-size: 20px;
+  color: white;
+  font-weight: 650;
+  margin-top: 15px;
+}
+
+.bt:hover {
+  background-color: #037589;
+  transform: translateY(4px);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+}

@@ -1,0 +1,118 @@
+.services-container {
+  width: 1500px;
+  padding: 50px;
+  margin-left: 80px;
+}
+.service {
+  padding: 30px;
+  align-items: center;
+  height: 400px;
+  display: flex;
+  justify-content: center;
+}
+.service-image {
+  width: 40%;
+}
+.service-image img {
+  width: 450px;
+  box-shadow: 0 4px 10px black;
+}
+.service-info {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+.service-info button {
+  width: 80px;
+  color: black;
+  font-size: 15px;
+  font-weight: bold;
+}
+.service-info button:hover {
+  color: white;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+}
+hr {
+  border: 1px solid #808080;
+  margin: 40px;
+  margin-left: 80px;
+}
+
+.bookingModal {
+  display: none;
+  position: fixed;
+  z-index: 1; 
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.5); 
+}
+.modal-content {
+  background-color: #fefefe;
+  margin: 5% auto;
+  padding: 25px;
+  border: none;
+  border-radius: 20px;
+  width: 80%;
+  max-width: 500px;
+}
+
+/* Header styles */
+.model-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 10px;
+}
+
+/* Close button */
+.close {
+  font-size: 30px;
+  color: #aaa;
+  cursor: pointer;
+}
+
+/* Close button on hover */
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* Footer buttons */
+.modal-footer {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.modal-body input {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.btn-primary,
+.btn-secondary {
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.btn-primary {
+  background-color: #4caf50;
+  color: white;
+}
+
+.btn-secondary {
+  background-color: #f44336;
+  color: white;
+}

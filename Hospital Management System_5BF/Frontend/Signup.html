@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Signup</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="signup.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    />
+  </head>
+  <body>
+    <header>
+      <nav class="navbar">
+        <div class="logo-container">
+          <img height="45px" src="Images/stethoscope 1.png" alt="" />
+          <h3 style="font-size: 28px">𝓢𝓶𝓪𝓻𝓽𝓒𝓪𝓻𝓮</h3>
+        </div>
+        <ul class="nav-menu">
+          <li class="nav-item">
+            <a href="index.html" class="nav-link">Home</a>
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link">Services</a>
+          </li>
+          <li class="nav-item">
+            <a href="doctors.html" class="nav-link">Our Doctors</a>
+          </li>
+          <li class="nav-item">
+            <a href="index.html#blog-container" class="nav-link">Blog</a>
+          </li>
+          <li class="nav-item">
+            <a href="contact.html" class="nav-link">Contact us</a>
+          </li>
+          <li class="nav-item">
+            <a
+              href="login.html"
+              class="nav-link"
+              style="color: whitesmoke; background-color: #037589"
+              >Login</a
+            >
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <div class="signup-container">
+        <form action="" id="register-form" onsubmit="handleregistration(event)">
+          <h1>Sign Up</h1>
+          <div class="input-box">
+            <label class="label-text">Username</label><br />
+            <input
+              type="text"
+              id="username"
+              placeholder="Type your username"
+              required
+            />
+          </div>
+          <div class="input-box">
+            <label for="f" class="label-text">First Name</label><br />
+            <input type="text" id="first_name" placeholder="Type your first name" required />
+          </div>
+          <div class="input-box">
+            <label for="f" class="label-text">Last Name</label><br />
+            <input type="text" id="last_name" placeholder="Type your last name" required />
+          </div>
+          <div class="input-box">
+            <label for="e" class="label-text">Email</label><br />
+            <input
+              type="email"
+              id="email"
+              placeholder="Type your email"
+              required
+            />
+          </div>
+          <div class="input-box">
+            <label for="p" class="label-text">Password</label><br />
+            <input
+              type="password"
+              id="password"
+              placeholder="Type your password"
+              required
+            />
+          </div>
+          <div class="input-box">
+            <label for="c" class="label-text">Confirm Password</label><br />
+            <input
+              type="password"
+              id="confirm_password"
+              placeholder="Confirm your password"
+              required
+            />
+          </div>
+          <button  type="submit" class="btn">Sign Up</button>
+          <div class="login-link">
+            <p>Already have an account? <a href="#">Login</a></p>
+          </div>
+        </form>
+      </div>
+    </main>
+
+    <footer class="footer_box">
+      <div class="f_container">
+        <div class="row">
+          <div class="col">
+            <h2>Smartcare</h2>
+            <p>
+              Lorem, ipsum dolor sit amet consectetur adipisicing ecessitatibus
+              minus vitae autem obcaecati nihil doloribus!
+            </p>
+            <div class="social">
+              <h4>Follow us</h4>
+              <a href="#"><i class="fab fa-facebook"></i></a>
+              <a href="#"><i class="fab fa-instagram"></i></a>
+              <a href="#"><i class="fab fa-youtube"></i></a>
+              <a href="#"><i class="fab fa-twitter"></i></a>
+              <a href="#"><i class="fab fa-linkedin"></i></a>
+            </div>
+          </div>
+          <div class="col" id="services">
+            <h3>Company</h3>
+            <div class="links">
+              <a href="index.html">Home</a>
+              <a href="contact.html">Contact us</a>
+              <a href="service.html">Service</a>
+              <a href="index.html#blog-container">Blog</a>
+            </div>
+          </div>
+          <div class="col" id="useful_links">
+            <h3>Support</h3>
+            <div class="links">
+              <a href="contact.html">Help Center</a>
+              <a href="privacy_policy.html">Privacy policy</a>
+              <a href="term_of_service.html">Terms of Services</a>
+              <a href="faq.html">FAQ</a>
+            </div>
+          </div>
+          <div class="col" id="contact">
+            <h3>Contact</h3>
+            <div class="contact_details">
+              <i class="fa fa-location"></i>
+              <p>Tower-4,CDA Avenue,Chattogram</p>
+            </div>
+            <div class="contact_details">
+              <i class="fa fa-phone"></i>
+              <p>+8801298374653</p>
+            </div>
+            <div class="contact_details">
+              <i class="fa fa-envelope"></i>
+              <p>smartcare@gmail.com</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <hr />
+      <p class="footer-bottom-text">
+        Copyright © Smartcare. All Rights Reserved
+      </p>
+    </footer>
+    <script src="auth.js"></script>
+    <script src="logout.js"></script>
+  </body>
+</html>

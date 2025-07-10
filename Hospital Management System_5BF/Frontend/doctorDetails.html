@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Doctors Details</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="doctorDetails.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    />
+  </head>
+  <body>
+    <header>
+      <nav class="navbar">
+        <div class="logo-container">
+          <img height="45px" src="Images/stethoscope 1.png" alt="" />
+          <h3 style="font-size: 28px">𝓢𝓶𝓪𝓻𝓽𝓒𝓪𝓻𝓮</h3>
+        </div>
+        <ul class="nav-menu">
+          <li class="nav-item">
+            <a href="index.html" class="nav-link">Home</a>
+          </li>
+          <li class="nav-item">
+            <a href="service.html" class="nav-link">Services</a>
+          </li>
+          <li class="nav-item">
+            <a href="doctors.html" class="nav-link">Our Doctors</a>
+          </li>
+          <li class="nav-item">
+            <a href="index.html#blog-container" class="nav-link">Blog</a>
+          </li>
+          <li class="nav-item">
+            <a href="contact.html" class="nav-link">Contact us</a>
+          </li>
+          <li class="nav-item guest-nav">
+            <a
+              href="login.html"
+              class="nav-link"
+              style="color: whitesmoke; background-color: #037589"
+              >Login</a
+            >
+          </li>
+          <li
+            class="nav-item profile-dropdown user-nav"
+            style="display: none; position: relative"
+          >
+            <a href="#" class="profile-dropdown-btn">Profile</a>
+            <ul class="profile-dropdown-menu">
+              <li><a href="profile.html">Profile</a></li>
+              <li><a href="appointments.html">All Appointments</a></li>
+              <li><a href="serviceBookings.html">Booked Services</a></li>
+              <li><a href="editProfile.html">Edit Profile</a></li>
+              <li><a href="changePass.html">Change Password</a></li>
+            </ul>
+          </li>
+
+          <li class="nav-item user-nav" style="display: none">
+            <a
+              href="#"
+              class="nav-link"
+              onclick="handlelogOut()"
+              style="color: whitesmoke; background-color: #037589"
+              >Logout</a
+            >
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <h1 class="title">Doctor Details</h1>
+      <div class="doctor-card">
+        <img id="doc-image" class="doctor-img" src="" alt="Doctor Image" />
+        <h2 id="doc-name"></h2>
+        <h4 id="doc-specialization"></h4>
+        <p id="doc-bio"></p>
+        <h4 id="doc-fee"></h4>
+        <button id="take-appointment-btn" onclick="openModal()">
+          Take Appointment
+        </button>
+      </div>
+
+      <!-- Review Form -->
+      <div
+        class="review-form-container"
+        id="reviewFormContainer"
+        style="display: none"
+      >
+        <h2>Write a Review</h2>
+        <form id="reviewForm">
+          <select id="rating" name="rating" required>
+            <option value="">Select rating</option>
+            <option value="⭐">⭐</option>
+            <option value="⭐⭐">⭐⭐</option>
+            <option value="⭐⭐⭐">⭐⭐⭐</option>
+            <option value="⭐⭐⭐⭐">⭐⭐⭐⭐</option>
+            <option value="⭐⭐⭐⭐⭐">⭐⭐⭐⭐⭐</option>
+          </select>
+
+          <label for="body">Review:</label>
+          <textarea id="body" name="body" rows="4" required></textarea>
+
+          <div class="button-wrapper">
+            <button onclick="submitReview" type="submit">Submit Review</button>
+          </div>
+        </form>
+      </div>
+
+      <h2 style="text-align: center">Patient Reviews</h2>
+      <div id="carousel" class="review-container">
+      </div>
+
+      <!-- Model -->
+      <div id="appointment-modal" class="appointment-modal">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title">Take Appointment</h1>
+            <span onclick="closeModal()" class="close-btn">&times;</span>
+          </div>
+          <div class="modal-body">
+            <div class="radio-group">
+              <label class="radio-option">
+                <input type="radio" name="status" value="Offline" /> Offline
+              </label>
+              <label class="radio-option">
+                <input type="radio" name="status" value="Online" /> Online
+              </label>
+            </div>
+            <input id="symptom" type="text" placeholder="Type your symptom" />
+            <br />
+            <select id="time-container" class="p-2 mt-2"></select>
+          </div>
+
+          <div class="modal-footer">
+            <button type="button" class="btn-secondary" onclick="closeModal()">
+              Close
+            </button>
+            <button
+              onclick="handleAppointment()"
+              type="button"
+              class="btn-primary"
+            >
+              Take Appointment
+            </button>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <footer class="footer_box">
+      <div class="f_container">
+        <div class="row">
+          <div class="col">
+            <h2>Smartcare</h2>
+            <p>
+              Lorem, ipsum dolor sit amet consectetur adipisicing ecessitatibus
+              minus vitae autem obcaecati nihil doloribus!
+            </p>
+            <div class="social">
+              <h4>Follow us</h4>
+              <a href="#"><i class="fab fa-facebook"></i></a>
+              <a href="#"><i class="fab fa-instagram"></i></a>
+              <a href="#"><i class="fab fa-youtube"></i></a>
+              <a href="#"><i class="fab fa-twitter"></i></a>
+              <a href="#"><i class="fab fa-linkedin"></i></a>
+            </div>
+          </div>
+          <div class="col" id="services">
+            <h3>Company</h3>
+            <div class="links">
+              <a href="index.html">Home</a>
+              <a href="contact.html">Contact us</a>
+              <a href="service.html">Service</a>
+              <a href="index.html#blog-container">Blog</a>
+            </div>
+          </div>
+          <div class="col" id="useful_links">
+            <h3>Support</h3>
+            <div class="links">
+              <a href="contact.html">Help Center</a>
+              <a href="privacy_policy.html">Privacy policy</a>
+              <a href="term_of_service.html">Terms of Services</a>
+              <a href="faq.html">FAQ</a>
+            </div>
+          </div>
+          <div class="col" id="contact">
+            <h3>Contact</h3>
+            <div class="contact_details">
+              <i class="fa fa-location"></i>
+              <p>Tower-4,CDA Avenue,Chattogram</p>
+            </div>
+            <div class="contact_details">
+              <i class="fa fa-phone"></i>
+              <p>+8801298374653</p>
+            </div>
+            <div class="contact_details">
+              <i class="fa fa-envelope"></i>
+              <p>smartcare@gmail.com</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <hr />
+      <p class="footer-bottom-text">
+        Copyright © Smartcare. All Rights Reserved
+      </p>
+    </footer>
+
+    <script>
+      window.addEventListener("DOMContentLoaded", () => {
+        const params = new URLSearchParams(window.location.search);
+        const doctorId = params.get("id");
+
+        fetch(`http://127.0.0.1:8000/doctor/list/${doctorId}/`)
+          .then((res) => res.json())
+          .then((doctor) => {
+            // Update the page with doctor data
+            document.getElementById("doc-name").innerText = doctor.full_name;
+            document.getElementById("doc-specialization").innerText =
+              doctor.specialization;
+            document.getElementById("doc-fee").innerText = `Fee: ${doctor.fee}`;
+            document.getElementById("doc-bio").innerText = doctor.bio;
+            document.getElementById("doc-image").src = doctor.image;
+          })
+          .catch((err) => {
+            console.error("Error fetching doctor:", err);
+            document.body.innerHTML = "<p>Failed to load doctor details.</p>";
+          });
+      });
+    </script>
+    <script src="logout.js"></script>
+    <script src="doctorDetails.js"></script>
+    <!-- <script src="doctors.js"></script> -->
+    <script>
+      window.addEventListener("DOMContentLoaded", () => {
+        const token = localStorage.getItem("token");
+
+        if (token) {
+          document
+            .querySelectorAll(".user-nav")
+            .forEach((el) => (el.style.display = "inline-block"));
+          document
+            .querySelectorAll(".guest-nav")
+            .forEach((el) => (el.style.display = "none"));
+        } else {
+          document
+            .querySelectorAll(".user-nav")
+            .forEach((el) => (el.style.display = "none"));
+          document
+            .querySelectorAll(".guest-nav")
+            .forEach((el) => (el.style.display = "inline-block"));
+        }
+      });
+
+      //profile dropdown
+      document
+        .querySelector(".profile-dropdown-btn")
+        .addEventListener("click", function (event) {
+          event.preventDefault();
+          document.querySelector(".profile-dropdown").classList.toggle("show");
+        });
+
+      document.addEventListener("click", function (event) {
+        if (!event.target.closest(".profile-dropdown")) {
+          document.querySelector(".profile-dropdown").classList.remove("show");
+        }
+      });
+    </script>
+  </body>
+</html>

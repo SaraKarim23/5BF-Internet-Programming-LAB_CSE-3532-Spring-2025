@@ -1,0 +1,48 @@
+.doctors-container {
+  width: 1500px;
+  padding: 50px;
+  margin: 20 40 40 40px;
+  align-items: center;
+}
+.spe-name {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.spe-name h1 {
+  white-space: nowrap;
+  padding: 10px;
+  font-size: 40px;
+}
+
+.spe-name hr {
+  flex-grow: 1;
+  height: 2px;
+  border: none;
+  background-color: rgb(58, 58, 58);
+}
+.docs {
+  width: 100%;
+  padding: 50px;
+  display: flex;
+  justify-content: center; 
+  flex-wrap: wrap; 
+  gap: 50px;
+}
+.search-container{
+  margin-left: 400px;
+  margin-top: 25px;
+}
+
+#Searched-doctors {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  padding: 30px;
+  margin: 20px 40px 50px 50px;
+}
+/* .doc-card{
+  margin: 29px;
+} */

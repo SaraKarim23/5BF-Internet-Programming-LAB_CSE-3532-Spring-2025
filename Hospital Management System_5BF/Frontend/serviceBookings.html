@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Booked Services</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="appointments.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    />
+  </head>
+  <body>
+    <header>
+      <nav class="navbar">
+        <div class="logo-container">
+          <img height="45px" src="Images/stethoscope 1.png" alt="" />
+          <h3 style="font-size: 28px">𝓢𝓶𝓪𝓻𝓽𝓒𝓪𝓻𝓮</h3>
+        </div>
+        <ul class="nav-menu">
+          <li class="nav-item">
+            <a href="index.html" class="nav-link">Home</a>
+          </li>
+          <li class="nav-item">
+            <a href="service.html" class="nav-link">Services</a>
+          </li>
+          <li class="nav-item">
+            <a href="doctors.html" class="nav-link">Our Doctors</a>
+          </li>
+          <li class="nav-item">
+            <a href="index.html#blog-container" class="nav-link">Blog</a>
+          </li>
+          <li class="nav-item">
+            <a href="contact.html" class="nav-link">Contact us</a>
+          </li>
+          <li class="nav-item profile-dropdown">
+            <a href="#" class="profile-dropdown-btn">Profile </a>
+            <ul class="profile-dropdown-menu">
+              <li><a href="profile.html">Profile</a></li>
+              <li><a href="appointments.html">All Appointments</a></li>
+              <li><a href="serviceBookings.html">Booked Services</a></li>
+              <li><a href="editProfile.html">Edit Profile</a></li>
+              <li><a href="changePass.html">Change Password</a></li>
+            </ul>
+          </li>
+          <li class="nav-item">
+            <a
+              href="index.html"
+              class="nav-link"
+              onclick="handlelogOut()"
+              style="color: whitesmoke; background-color: #037589"
+              >Logout</a
+            >
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <h2 class="title">Total Appointments</h2>
+    <div class="table-container">
+      <table>
+        <thead>
+          <tr>
+            <th>NO.</th>
+            <th>Service</th>
+            <th>Booked At</th>
+            <th>Preferable Date</th>
+            <th>Scheduled Date</th>
+            <th>Confirmation</th>
+          </tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+    </div>
+
+    <footer class="footer_box">
+      <div class="f_container">
+        <div class="row">
+          <div class="col">
+            <h2>Smartcare</h2>
+            <p>
+              Lorem, ipsum dolor sit amet consectetur adipisicing ecessitatibus
+              minus vitae autem obcaecati nihil doloribus!
+            </p>
+            <div class="social">
+              <h4>Follow us</h4>
+              <a href="#"><i class="fab fa-facebook"></i></a>
+              <a href="#"><i class="fab fa-instagram"></i></a>
+              <a href="#"><i class="fab fa-youtube"></i></a>
+              <a href="#"><i class="fab fa-twitter"></i></a>
+              <a href="#"><i class="fab fa-linkedin"></i></a>
+            </div>
+          </div>
+          <div class="col" id="services">
+            <h3>Company</h3>
+            <div class="links">
+              <a href="Home.html">Home</a>
+              <a href="contact.html">Contact us</a>
+              <a href="service.html">Service</a>
+              <a href="index.html#blog-container">Blog</a>
+            </div>
+          </div>
+          <div class="col" id="useful_links">
+            <h3>Support</h3>
+            <div class="links">
+              <a href="contact.html">Help Center</a>
+              <a href="privacy_policy.html">Privacy policy</a>
+              <a href="term_of_service.html">Terms of Services</a>
+              <a href="faq.html">FAQ</a>
+            </div>
+          </div>
+          <div class="col" id="contact">
+            <h3>Contact</h3>
+            <div class="contact_details">
+              <i class="fa fa-location"></i>
+              <p>Tower-4,CDA Avenue,Chattogram</p>
+            </div>
+            <div class="contact_details">
+              <i class="fa fa-phone"></i>
+              <p>+8801298374653</p>
+            </div>
+            <div class="contact_details">
+              <i class="fa fa-envelope"></i>
+              <p>smartcare@gmail.com</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <hr />
+      <p class="footer-bottom-text">
+        Copyright © Smartcare. All Rights Reserved
+      </p>
+    </footer>
+
+    <script src="serviceBookings.js"></script>
+    <script src="logout.js"></script>
+    <script>
+      window.addEventListener("DOMContentLoaded", () => {
+        const token = localStorage.getItem("token");
+
+        if (token) {
+          document
+            .querySelectorAll(".user-nav")
+            .forEach((el) => (el.style.display = "inline-block"));
+          document
+            .querySelectorAll(".guest-nav")
+            .forEach((el) => (el.style.display = "none"));
+        } else {
+
+          document
+            .querySelectorAll(".user-nav")
+            .forEach((el) => (el.style.display = "none"));
+          document
+            .querySelectorAll(".guest-nav")
+            .forEach((el) => (el.style.display = "inline-block"));
+        }
+      });
+
+      //profile dropdown
+      document
+        .querySelector(".profile-dropdown-btn")
+        .addEventListener("click", function (event) {
+          event.preventDefault();
+          document.querySelector(".profile-dropdown").classList.toggle("show");
+        });
+
+      // Close dropdown when clicking outside
+      document.addEventListener("click", function (event) {
+        if (!event.target.closest(".profile-dropdown")) {
+          document.querySelector(".profile-dropdown").classList.remove("show");
+        }
+      });
+    </script>
+  </body>
+</html>

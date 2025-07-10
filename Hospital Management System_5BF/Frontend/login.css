@@ -1,0 +1,113 @@
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: url("Images/loginpic.jpg") no-repeat center center;
+  background-size: cover;
+  height: 85vh;
+}
+
+.login-container {
+  width: 420px;
+  text-align: center;
+  align-items: center;
+  background: transparent;
+  border: none;
+  border-radius: 12px;
+  padding: 30px 40px;
+  backdrop-filter: blur(2px);
+  box-shadow: 0 4px 10px black;
+  margin: 30px;
+}
+
+.login-container h1 {
+  font-size: 40px;
+  color: white;
+}
+
+.login-container .input_box {
+  width: 100%;
+  height: 50px;
+  margin: 30px 0;
+  position: relative;
+}
+
+.input_box input {
+  width: 100%;
+  height: 100%;
+  background: transparent;
+  outline: none;
+  border: 2px solid rgba(255, 255, 255, 0.7);
+  border-radius: 40px;
+  border-style: outset;
+  font-size: 17px;
+  padding: 20px 45px 20px 20px;
+}
+
+.input_box input::placeholder {
+  color: rgb(15, 64, 82);
+}
+
+.input_box i {
+  position: absolute;
+  right: 20px;
+  top: 25%;
+  transform: translate(-50%);
+  font-size: 24px;
+  color: black
+}
+
+.login-container .forgot {
+  display: flex;
+  justify-content: space-between;
+  font-size: 15.5px;
+  margin: -15px 0px 15px;
+}
+
+.forgot label input {
+  accent-color: #0c3f61;
+  margin-right: 3px;
+}
+
+.forgot a {
+  font-weight: 600;
+  color: rgb(10, 10, 10);
+}
+
+.forgot a:hover,
+.sign a:hover {
+  text-decoration: underline;
+  color:white
+}
+
+.login-container .btn {
+  width: 60%;
+  height: 45px;
+  background: #2b8f91;
+  color: white;
+  border: none;
+  outline: none;
+  border-radius: 40px;
+  cursor: pointer;
+  font-size: 20px;
+  font-weight: 650;
+  margin: 0 auto;
+  transition: all 0.3s ease-in-out;
+}
+
+.btn:hover {
+  background-color: #037589;
+  transform: translateY(4px);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+.sign {
+  font-size: 17px;
+  margin: 20px 0 15px;
+}
+
+.sign a {
+  text-decoration: none;
+  font-weight: 600;
+  color: rgb(10, 10, 10);
+}

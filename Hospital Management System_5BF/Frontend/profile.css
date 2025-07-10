@@ -1,0 +1,23 @@
+main{
+    height: 90vh;
+}
+.profile-container {
+    width:60%;
+    margin: auto;
+    display: flex;
+    padding: 20px;
+    border:none;
+    box-shadow: 0 4px 10px black;
+    border-radius: 10px;
+    box-shadow: 8px rgba(190, 186, 186, 0.1);
+}
+
+.image-container{
+    width: 50%;
+}
+.image-container img{
+    width: 200px;
+}
+.info-container{
+    width: 50%;
+}
