@@ -1,0 +1,162 @@
+.contact {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    text-align: center;
+    padding: 100px 8%;
+    background: linear-gradient(to right, #f8f9fa, #f1f3f5); 
+}
+
+.contact-container {
+    max-width: 900px;
+    width: 100%;
+    padding: 50px;
+    background: white;
+    border-radius: 20px;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.contact-container:hover {
+    transform: translateY(-3px);
+}
+
+.contact h1 {
+    font-size: 36px;
+    color: #7f3ce0;
+    margin-bottom: 10px;
+    font-weight: 700;
+}
+
+.contact p {
+    font-size: 17px;
+    color: #555;
+    margin-bottom: 25px;
+    line-height: 1.6;
+}
+
+.contact-info {
+  text-align: center;
+  margin-top: 30px;
+}
+
+.contact-info h3 {
+  font-size: 22px;
+  color: #7f3ce0;
+  margin-bottom: 10px;
+}
+
+.contact-info p {
+  margin: 5px 0;
+  font-size: 16px;
+  color: #555;
+}
+
+.btn {
+    background-color: #7f3ce0;
+    color: white;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.btn:hover {
+    background-color: #5d2cc4;
+}
+
+.social-media {
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+}
+
+.social-media a {
+    font-size: 36px;
+    color: #7f3ce0;
+    transition: transform 0.3s, color 0.3s;
+}
+
+.social-media a:hover {
+    color: #5d2cc4;
+    transform: scale(1.1);
+}
+
+.jobs {
+    margin-top: 40px;
+}
+
+.jobs p:first-child {
+    font-size: 18px;
+    font-weight: 600;
+    color: #333;
+}
+
+.jobs .first {
+    color: #666;
+    font-size: 15px;
+    margin: 10px 0 20px;
+}
+
+.jobs .explore {
+    padding: 12px 28px;
+    font-size: 15px;
+    font-weight: 500;
+    color: black;
+    border: 2px solid black;
+    border-radius: 8px;
+    cursor: pointer;
+    background-color: transparent;
+    transition: all 0.3s ease;
+}
+
+.jobs .explore:hover {
+    background-color: black;
+    color: white;
+}
+.careers-section {
+  margin-top: 60px;
+  padding: 40px;
+  background-color: #f4f6f8;
+  border-radius: 8px;
+  text-align: left;
+}
+
+.careers-section h2 {
+  font-size: 26px;
+  margin-bottom: 15px;
+  color: #333;
+}
+
+.careers-section p {
+  font-size: 16px;
+  color: #555;
+  margin-bottom: 15px;
+}
+
+.careers-section ul {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 20px;
+}
+
+.careers-section ul li {
+  margin-bottom: 10px;
+  font-size: 16px;
+  padding-left: 20px;
+  position: relative;
+  text-decoration: none;
+}
+.careers-section ul li {
+  text-decoration: none !important;
+}
+
+
+
+
+

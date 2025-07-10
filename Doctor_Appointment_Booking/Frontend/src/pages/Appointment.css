@@ -1,0 +1,173 @@
+.appointment-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 100px;
+}
+
+.appointment-card {
+  display: flex;
+  max-width: 900px;
+  width: 100%;
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  background-color: white;
+  gap: 30px;
+}
+
+.appointment-img {
+  width: 250px;
+  height: 250px;
+  border-radius: 10px;
+  object-fit: cover;
+}
+
+.appointment-info {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.doctor-name {
+  font-size: 24px;
+  font-weight: bold;
+  color: blueviolet;
+}
+
+.doctor-name i {
+  color: blueviolet;
+}
+
+.doctor-meta p {
+  font-size: 16px;
+  margin: 5px 0;
+}
+
+.experience-btn {
+  margin-top: 10px;
+  padding: 8px 15px;
+  background-color: blueviolet;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: default;
+}
+
+.doctor-about {
+  margin-top: 20px;
+}
+
+.about-title {
+  font-weight: bold;
+  font-size: 18px;
+  margin-bottom: 8px;
+}
+
+.about-text {
+  font-size: 15px;
+  color: #555;
+}
+
+.fee {
+  font-size: 16px;
+  color: rgba(0, 0, 0, 0.756);
+}
+
+.booking {
+  margin-left: 500px;
+  padding: 4px;
+  font-size: medium;
+  color: gray;
+}
+
+.slot {
+  font-size: 20px;
+  margin-top: 20px;
+  font-weight: 600;
+  margin-bottom: 25px;
+  color: black;
+}
+
+.booking-slots-wrapper {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+
+.booking-slot {
+  text-align: center;
+  width: 60px;
+  height: 90px;
+  border-radius: 40px;
+  border: 1px solid #ccc;
+  cursor: pointer;
+  padding: 20px 0px;
+  transition: all 0.3s ease;
+  font-family: sans-serif;
+  color: #333;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+.booking-slot p:first-child {
+  font-size: 18px;
+  font-weight: 600;
+  margin: 0;
+  color: #555;
+}
+
+.booking-slot p:last-child {
+  font-size: 18px;
+  font-weight: 500;
+  margin: 4px 0 0;
+}
+
+.booking-slot.active {
+  background-color: blueviolet;
+  color: white;
+  border: none;
+}
+
+.booking-slot.active p {
+  color: white;
+}
+
+.booking-time {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  flex-wrap: nowrap;
+  overflow-x: scroll;
+  margin-top: 20px;
+}
+
+.time {
+  font-size: small;
+  cursor: pointer;
+  flex-shrink: 0;
+  padding: 10px 16px;
+  border-radius: 40px;
+  border: 1px solid #ccc;
+  color: #555;
+  font-size: 16px;
+  transition: all 0.3s ease;
+}
+
+.time.active {
+  background-color: blueviolet;
+  color: white;
+  border: none;
+}
+
+.book {
+  background-color: blueviolet;
+  color: white;
+  display: inline-block;
+  margin-top: 30px;
+  font-size: 18px;
+  padding: 12px 24px;
+  border-radius: 25px;
+  text-decoration: none;
+  transition: 0.3s;
+  border: none;
+}

@@ -1,0 +1,171 @@
+.appointment-container1 {
+  max-width: 900px;
+  margin: 80px auto 40px;
+  padding: 20px;
+}
+
+.appointment-heading {
+  font-size: 28px;
+  font-weight: 600;
+  margin-bottom: 30px;
+  color: #333;
+  border-bottom: 2px solid #ccc;
+  padding-bottom: 10px;
+}
+
+.appointments-list {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.appointment-card {
+  display: flex;
+  gap: 20px;
+  border: 1px solid #ddd;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+  background-color: #fff;
+  align-items: flex-start;
+}
+
+.appointment-image-section {
+  flex-shrink: 0;
+}
+
+.appointment-doctor-img {
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 12px;
+  border: 3px solid #eee;
+}
+
+.appointment-details {
+  flex: 1;
+}
+
+.doctor-name1 {
+  font-size: 20px;
+  font-weight: 600;
+  color: blueviolet;
+  margin: 0 0 5px;
+}
+
+.doctor-speciality1 {
+  font-size: 16px;
+  color: #666;
+  margin-bottom: 8px;
+}
+
+.doctor-label {
+  font-weight: 500;
+  margin-top: 4px;
+}
+
+.doctor-address {
+  font-size: 14px;
+  color: #333;
+}
+
+.appointment-date-time {
+  margin-top: 12px;
+  font-size: 15px;
+  font-weight: 500;
+  color: #444;
+}
+
+.appointment-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.pay-button,
+.cancel-button,
+.cancel,
+.completed {
+  padding: 8px 16px;
+  border: none;
+  border-radius: 6px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.pay-button {
+  background-color: rgba(137, 43, 226, 0.736);
+  color: white;
+}
+
+.pay-button:hover {
+  background-color: blueviolet;
+}
+
+.cancel-button {
+  background-color: rgba(255, 0, 0, 0.771);
+  color: white;
+}
+.cancel{
+  background-color: rgba(255, 0, 0, 0.877);
+  color: white;
+}
+
+.cancel-button:hover {
+  background-color: red;
+}
+
+.pay-method-buttons {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 15px;
+}
+
+.pay-option {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  cursor: pointer;
+  text-align: center;
+}
+
+.pay-option img {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid #ddd;
+  transition: transform 0.2s ease;
+}
+
+.pay-option:hover img {
+  transform: scale(1.10);
+  
+}
+
+.pay-option span {
+  margin-top: 8px;
+  font-size: 14px;
+  color: #333;
+}
+
+.completed {
+  background-color: #28a745;
+  color: #fff;
+}
+
+.confirm{
+    padding: 6px 10px;
+  border: none;
+  border-radius: 6px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: 0.3s;
+  background-color: cadetblue;
+  color:#fff;
+}
+
+

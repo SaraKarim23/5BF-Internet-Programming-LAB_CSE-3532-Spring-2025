@@ -1,0 +1,44 @@
+.doctor{
+    display:flex;
+    margin-top: 150px;
+    gap: 50px;
+}
+.left-side-doctor p{
+    font-size: 17px;
+}
+.specialist li {
+    list-style: none;
+    margin: 10px 0;
+    padding: 10px;
+    width: 300px;
+    border: 2px solid #ccc;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.3s;
+    text-align: center;
+    font-size: 16px
+    
+}
+
+.specialist li:hover {
+    border-color: blueviolet;
+    text-decoration: none;
+    color: black;
+}
+
+.specialist li:active {
+    background-color: blueviolet;
+    color: white;
+    border-color: blueviolet;
+    transition: 0.2s;
+}
+.right-side-doctor{
+    flex:3;
+    display: grid;
+     grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+     gap: 20px;
+ 
+}
+
+
+
