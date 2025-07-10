@@ -1,0 +1,110 @@
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 8%;
+    background: rgba(255, 255, 255, 0.9);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .logo {
+    font-size: 25px;
+    color: blueviolet;
+    text-decoration: none;
+    font-weight: 600;
+  }
+  
+  .navbar a {
+    font-size: 18px;
+    color: black;
+    font-weight: 500;
+    text-decoration: none;
+    margin: 0 20px;
+    transition: 0.3s;
+  }
+  
+  .navbar a:hover {
+    color: blue;
+  }
+  .navbar a.active {
+    color: blue;
+    font-weight: bold;
+}
+  .btn {
+    display: inline-block;
+    padding: 12px 40px;
+    font-size: 18px;
+    color: white;
+    background-color: blueviolet;
+    border-radius: 25px;
+    text-decoration: none;
+    transition: 0.3s;
+    margin-top: 10px;
+}
+
+.btn:hover {
+    background-color: darkviolet;
+}
+.actiiva {
+    background-color: #6A5ACD;  
+    color: white;
+    font-weight: bold;
+    border-radius: 8px;
+}
+.profile-container {
+  position: relative; 
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+}
+
+.profile {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.dropdown-icon {
+  font-size: 16px;
+  color: #333;
+}
+
+.dropdown-manu {
+  position: absolute;
+  top: 70%;  
+  left: 30px;     
+  background-color: #fff;
+  font-size: 16px; 
+  font-weight: 500;  
+  color: #333;      
+  z-index: 20;    
+  display: none;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 6px;
+  min-width: 160px;
+  padding: 8px 0;
+}
+
+.profile-container:hover .dropdown-manu {
+  display: block;
+}
+
+.dropdown-manu p {
+  padding: 8px 16px;
+  margin: 0;
+  background-color: transparent;
+  transition: background-color 0.2s;
+  cursor: pointer;
+}
+
+.dropdown-manu p:hover {
+  background-color: #f0f0f0;
+}
+
