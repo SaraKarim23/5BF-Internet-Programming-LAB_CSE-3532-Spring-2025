@@ -1,0 +1,76 @@
+.adminpanel {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #f8f9fa;
+    padding: 20px;
+}
+
+.panel-container {
+    max-width: 480px;
+    width: 100%;
+    padding: 30px 40px;
+    background-color: #fff;
+    border-radius: 15px;
+    box-shadow: 0px 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+form h1 {
+    font-size: 26px;
+    font-weight: bold;
+    color: blueviolet;
+    text-align: start;
+    margin-bottom: 25px;
+}
+
+form div {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+form p {
+    font-size: 16px;
+    color: #333;
+    margin: 5px 0 3px;
+}
+
+input[type="email"],
+input[type="password"] {
+    padding: 12px 15px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    outline: none;
+    transition: border 0.3s ease;
+}
+
+input[type="email"]:focus,
+input[type="password"]:focus {
+    border-color: blueviolet;
+}
+
+button {
+    margin-top: 10px;
+    padding: 12px;
+    background-color: blueviolet;
+    color: #fff;
+    font-size: 16px;
+    font-weight: bold;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+button:hover {
+    background-color: darkviolet;
+    transform: translateY(-2px);
+}
+
+.state{
+    text-decoration: underline;
+    color: blueviolet;
+}
