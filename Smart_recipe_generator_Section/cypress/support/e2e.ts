@@ -1,1 +1,0 @@
-import './commands'; // 👈 This is required to load your `cy.login()` command
