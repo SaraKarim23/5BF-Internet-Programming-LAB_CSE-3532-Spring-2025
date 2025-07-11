@@ -112,9 +112,11 @@
 
 4. **Create a `.env` file** in the server folder and add your environment variables:
 
+    ```
+   MONGO_URI=mongodb://localhost:27017
+  
    ```
-  MONGO_URI=mongodb://localhost:27017
-   ```
+
 
 5. **Run the backend**
 
