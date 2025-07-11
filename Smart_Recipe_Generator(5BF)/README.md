@@ -5,7 +5,6 @@ An intelligent and user-friendly cooking assistant that generates personalized r
 ## 🚀 Key Features
 
 ### 👨‍🍳 For Users:
-- 🖼️ **Image to Recipe** – Upload an image of ingredients to receive a full recipe.
 - ✍️ **Text-Based Input** – Enter available ingredients or dish ideas to generate recipes.
 - 🧠 **AI-Generated Recipes** – OpenAI GPT suggests personalized, natural language instructions.
 - 💡 **Instant Suggestions** – Fast, real-time recipe generation with no reloads.
@@ -14,7 +13,6 @@ An intelligent and user-friendly cooking assistant that generates personalized r
 ### 🛠️ For Developers/Admins:
 - 🧰 **Modular Codebase** – Clean React components and backend APIs for easy updates.
 - 🔐 **Authentication** – Firebase Auth (Google, GitHub, Email/Password) for personalized features.
-- 📤 **Image Upload Preview** – Upload images via Firebase/ImgBB with preview before submit.
 - 📊 **Scalable Backend** – Node.js & Express with OpenAI integration.
 
 ## 🧰 Tech Stack
@@ -22,7 +20,7 @@ An intelligent and user-friendly cooking assistant that generates personalized r
 ### ⚛️ Frontend
 - React.js  
 - Tailwind CSS  
-- DaisyUI (optional)  
+- DaisyUI  
 - Axios  
 
 ### 🌐 Backend
@@ -30,7 +28,7 @@ An intelligent and user-friendly cooking assistant that generates personalized r
 - OpenAI GPT API  
 
 ### ☁️ Image Handling
-- Firebase Storage / ImgBB API  
+- Firebase Storage  
 
 ### 🔐 Authentication
 - Firebase Auth (Google, GitHub, Email/Password)
@@ -39,7 +37,6 @@ An intelligent and user-friendly cooking assistant that generates personalized r
 
 - 🧑‍🍳 Recipe Generation  
 - 🗂️ User Login  
-- 🖼️ Image Upload with Preview  
 - ⚙️ AI Text Generation  
 
 ## 🖼️ Core Pages
@@ -48,8 +45,7 @@ An intelligent and user-friendly cooking assistant that generates personalized r
 - 🍽️ Make Recipe  
 - 🔐 Login / Register  
 - 📜 Recipe Result  
-- 👤 Profile / My Recipes (optional)  
-- 🧑‍💻 Admin Dashboard (optional)
+- 👤 Profile / My Recipes 
 
 ## 👩‍💻 Team Members
 
