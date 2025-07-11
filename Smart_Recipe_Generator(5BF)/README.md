@@ -1,3 +1,3 @@
 
-# 🍳 Smart Recipe Generator - AI-Powered Recipe App
+# 🍳 Smart Recipe Generator 
 
