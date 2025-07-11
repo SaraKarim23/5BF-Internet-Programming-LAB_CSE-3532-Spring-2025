@@ -56,3 +56,7 @@ An intelligent and user-friendly cooking assistant that generates personalized r
 | Tahmina Siddika Diya| C231458
 
 
+<img width="975" height="444" alt="image" src="https://github.com/user-attachments/assets/1eed38a2-7691-4266-8309-ab45ddcb1002" />
+
+<img width="975" height="460" alt="image" src="https://github.com/user-attachments/assets/43a678a9-1c71-41bf-90ff-bba07efc05c8" />
+
