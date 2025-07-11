@@ -58,5 +58,33 @@ An intelligent and user-friendly cooking assistant that generates personalized r
 
 <img width="975" height="444" alt="image" src="https://github.com/user-attachments/assets/1eed38a2-7691-4266-8309-ab45ddcb1002" />
 
+
 <img width="975" height="460" alt="image" src="https://github.com/user-attachments/assets/43a678a9-1c71-41bf-90ff-bba07efc05c8" />
+
+
+<img width="975" height="467" alt="image" src="https://github.com/user-attachments/assets/fa8873ec-77df-49ed-8499-1fef76d4eaa6" />
+
+
+<img width="975" height="463" alt="image" src="https://github.com/user-attachments/assets/f8381ec3-58a5-4324-a446-75e94fb27a64" />
+
+
+<img width="975" height="467" alt="image" src="https://github.com/user-attachments/assets/84a59263-a975-44ae-8cf1-b60bc5203810" />
+
+
+<img width="975" height="469" alt="image" src="https://github.com/user-attachments/assets/162bc323-60b5-457c-be4c-dd569f04ea39" />
+
+
+
+<img width="975" height="473" alt="image" src="https://github.com/user-attachments/assets/2d58dd96-aefc-44c7-bbe6-f0838f173aa0" />
+
+
+<img width="975" height="463" alt="image" src="https://github.com/user-attachments/assets/8cc54c16-0b56-4ca6-97fe-7fc9fc0663c0" />
+
+
+<img width="975" height="471" alt="image" src="https://github.com/user-attachments/assets/43fc0d7a-6a7b-4228-8c6a-003e04234a75" />
+
+
+<img width="975" height="454" alt="image" src="https://github.com/user-attachments/assets/4906a654-b0a2-48de-983f-b71d0c1bd5a6" />
+
+
 
