@@ -1,0 +1,43 @@
+<!DOCTYPE html>  
+<html lang="en">  
+<head>  
+<meta charset="UTF-8">  
+<title>{% block title %}{% endblock %}</title>
+{% load static %}  
+<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"/>
+<link rel = "stylesheet" type = "text/css" href = "https://cdn.datatables.net/1.12.0/css/jquery.dataTables.min.css"/>
+<meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1"/>
+</head> 
+<body>
+<div class="container">
+   
+ <div class="row">
+   
+   <h4 style="text-align: center; font-weight: bold;">Order Details</h4>
+   <!-- Header with Home Button -->
+        <div class="row align-items-center mb-4">
+         <div class="col-md-6">
+         </div>
+         <div class="col-md-6 text-end">
+             <a href="http://127.0.0.1:5500/index.html" class="btn btn-secondary">Home</a>
+         </div>
+     </div>
+ 
+    {% block content %}{% endblock %}
+ </div>
+</div>
+ 
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+<script src = "https://cdn.datatables.net/1.12.0/js/jquery.dataTables.min.js"></script>
+<script>
+$(document).ready(function() {
+    $('#bootstrapdatatable').DataTable({     
+      "aLengthMenu": [[3, 5, 10, 25, -1], [3, 5, 10, 25, "All"]],
+        "iDisplayLength": 3
+       } 
+    );
+} );
+</script>
+</body> 
+</html>
