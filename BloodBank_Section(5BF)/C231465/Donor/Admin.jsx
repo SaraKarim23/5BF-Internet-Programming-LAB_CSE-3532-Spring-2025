@@ -1,4 +1,4 @@
-*/Donor part by C231465
+/*Donor part by C231465
 patient part by C231474*/
 
 import React, { useRef } from "react";
