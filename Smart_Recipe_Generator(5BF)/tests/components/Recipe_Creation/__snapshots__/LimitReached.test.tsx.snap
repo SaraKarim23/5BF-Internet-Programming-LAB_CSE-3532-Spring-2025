@@ -1,0 +1,45 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`The Limit Reached Component shall render 1`] = `
+<div>
+  <div
+    class="flex flex-col items-center justify-top h-full bg-gray-100 p-4"
+  >
+    <div
+      class="bg-white rounded-lg shadow-lg p-8 max-w-md text-center"
+    >
+      <svg
+        aria-hidden="true"
+        class="block m-auto h-16 w-16 text-red-500"
+        data-slot="icon"
+        fill="currentColor"
+        viewBox="0 0 24 24"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          clip-rule="evenodd"
+          d="M2.25 12c0-5.385 4.365-9.75 9.75-9.75s9.75 4.365 9.75 9.75-4.365 9.75-9.75 9.75S2.25 17.385 2.25 12ZM12 8.25a.75.75 0 0 1 .75.75v3.75a.75.75 0 0 1-1.5 0V9a.75.75 0 0 1 .75-.75Zm0 8.25a.75.75 0 1 0 0-1.5.75.75 0 0 0 0 1.5Z"
+          fill-rule="evenodd"
+        />
+      </svg>
+      <h2
+        class="text-2xl font-bold mb-2 text-gray-800"
+      >
+        Limit Reached
+      </h2>
+      <p
+        class="text-gray-600 mb-6"
+      >
+        You've reached your recipe creation limit.
+      </p>
+      <button
+        class="bg-brand-600 text-white px-4 py-2 rounded-md hover:bg-brand-500 focus:outline-none focus:ring-2 focus:ring-brand-400"
+        data-headlessui-state=""
+        type="button"
+      >
+        Go to Home
+      </button>
+    </div>
+  </div>
+</div>
+`;

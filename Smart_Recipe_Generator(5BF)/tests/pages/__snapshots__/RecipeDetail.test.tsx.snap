@@ -1,0 +1,355 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`The Recipe Detail Page shall succesfully render a recipe 1`] = `
+<div>
+  <div
+    class="min-h-screen bg-gray-100 p-4"
+  >
+    <div
+      class="max-w-4xl mx-auto bg-white shadow-lg rounded-lg overflow-hidden"
+    >
+      <div
+        class="relative w-full h-80"
+      />
+      <div
+        class="pl-6 pt-6 pr-6"
+      >
+        <h2
+          class="text-2xl font-bold mb-2 mt-2"
+        >
+          Recipe_1_name
+        </h2>
+         
+        <div
+          class="flex items-center mb-6"
+        >
+          <div
+            class="relative w-12 h-12 rounded-full overflow-hidden mr-4"
+          />
+          <div>
+            <span
+              class="text-gray-700 text-lg"
+            >
+              By 
+              <span
+                class="text-gray-600 hover:text-gray-800 hover:underline cursor-pointer"
+              >
+                user_1
+              </span>
+            </span>
+            <p
+              class="text-sm text-gray-500"
+            >
+              02 Jul 2024
+            </p>
+          </div>
+        </div>
+        <div
+          class="mb-0"
+        >
+          <h3
+            class="text-xl font-semibold mb-2"
+          >
+            Dietary Preferences
+          </h3>
+           
+          <div
+            class="flex flex-wrap gap-2"
+          >
+             
+            <span
+              class="bg-purple-100 text-purple-800 text-sm font-medium px-3 py-1 rounded-full"
+            >
+              Recipe_1_preference_1
+               
+            </span>
+            <span
+              class="bg-purple-100 text-purple-800 text-sm font-medium px-3 py-1 rounded-full"
+            >
+              Recipe_1_preference_2
+               
+            </span>
+          </div>
+        </div>
+      </div>
+       
+      <div
+        class="p-6"
+      >
+        <div
+          class="relative"
+          data-headlessui-state=""
+        >
+          <button
+            aria-expanded="false"
+            class="flex items-center justify-center w-12 h-12 ml-auto bg-gray-100 rounded-full hover:bg-gray-200 focus:outline-none focus:ring-2 focus:ring-gray-300 active:bg-gray-300 transition-all duration-200"
+            data-headlessui-state=""
+            id="headlessui-popover-button-:r1:"
+            type="button"
+          >
+            <svg
+              aria-hidden="true"
+              class="h-6 w-6 text-gray-700"
+              data-slot="icon"
+              fill="currentColor"
+              viewBox="0 0 16 16"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M2 8a1.5 1.5 0 1 1 3 0 1.5 1.5 0 0 1-3 0ZM6.5 8a1.5 1.5 0 1 1 3 0 1.5 1.5 0 0 1-3 0ZM12.5 6.5a1.5 1.5 0 1 0 0 3 1.5 1.5 0 0 0 0-3Z"
+              />
+            </svg>
+          </button>
+        </div>
+        <div
+          style="position: fixed; top: 1px; left: 1px; width: 1px; height: 0px; padding: 0px; margin: -1px; overflow: hidden; clip: rect(0px, 0px, 0px, 0px); white-space: nowrap; border-width: 0px; display: none;"
+        />
+        <div
+          class="flex flex-col"
+        >
+          <div
+            class="mb-4"
+          >
+            <h3
+              class="mb-2"
+            >
+              Ingredients
+            </h3>
+             
+            <ul
+              class="grid grid-cols-1 sm:grid-cols-2 gap-2"
+            >
+               
+              <li
+                class="flex items-center"
+              >
+                 
+                <svg
+                  aria-hidden="true"
+                  class="w-5 h-5 text-brand-500 mr-2 flex-shrink-0"
+                  data-slot="icon"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.5"
+                  viewBox="0 0 24 24"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M9 12.75 11.25 15 15 9.75M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+                 
+                <span
+                  class="text-gray-700"
+                >
+                  Recipe_1_Ingredient_1
+                   (Recipe_1_Ingredient_1_quantity_1)
+                   
+                </span>
+              </li>
+              <li
+                class="flex items-center"
+              >
+                 
+                <svg
+                  aria-hidden="true"
+                  class="w-5 h-5 text-brand-500 mr-2 flex-shrink-0"
+                  data-slot="icon"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.5"
+                  viewBox="0 0 24 24"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M9 12.75 11.25 15 15 9.75M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+                 
+                <span
+                  class="text-gray-700"
+                >
+                  Recipe_1_Ingredient_2
+                   (Recipe_1_Ingredient_2_quantity_2)
+                   
+                </span>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div
+          class="mb-4"
+        >
+          <h3
+            class="mb-2"
+          >
+            Instructions
+          </h3>
+           
+          <ol
+            class="list-decimal list-inside space-y-4"
+          >
+             
+            <li
+              class="flex items-start"
+            >
+               
+              <span
+                class="font-bold text-gray-800 mr-3"
+              >
+                1
+                .
+              </span>
+               
+              <p
+                class="text-gray-700"
+              >
+                Recipe_1_Instructions_1.
+              </p>
+               
+            </li>
+            <li
+              class="flex items-start"
+            >
+               
+              <span
+                class="font-bold text-gray-800 mr-3"
+              >
+                2
+                .
+              </span>
+               
+              <p
+                class="text-gray-700"
+              >
+                Recipe_1_Instructions_2.
+              </p>
+               
+            </li>
+          </ol>
+        </div>
+        <div
+          class="mb-6"
+        >
+          <h3
+            class="mb-4 text-gray-800"
+          >
+            Additional Information
+          </h3>
+           
+          <div
+            class="space-y-4"
+          >
+             
+            <div>
+              <h4
+                class="font-bold text-gray-700"
+              >
+                Tips:
+              </h4>
+               
+              <p
+                class="text-gray-600"
+              >
+                Recipe_1_tips
+              </p>
+               
+            </div>
+            <div>
+              <h4
+                class="font-bold text-gray-700"
+              >
+                Variations:
+              </h4>
+               
+              <p
+                class="text-gray-600"
+              >
+                Recipe_1_variations
+              </p>
+               
+            </div>
+            <div>
+              <h4
+                class="font-bold text-gray-700"
+              >
+                Serving Suggestions:
+              </h4>
+               
+              <p
+                class="text-gray-600"
+              >
+                Recipe_1_servingSuggestions
+              </p>
+               
+            </div>
+            <div>
+              <h4
+                class="font-bold text-gray-700"
+              >
+                Nutritional Information:
+              </h4>
+               
+              <p
+                class="text-gray-600"
+              >
+                Recipe_1_nutritionalInformation
+              </p>
+               
+            </div>
+          </div>
+        </div>
+        <button
+          class="w-14 h-14 mb-3 hover:text-brand-600 hover:scale-105 hover:shadow rounded-full flex items-center justify-center"
+          data-testid="like_button"
+          disabled=""
+        >
+          <svg
+            aria-hidden="true"
+            class="size-8 text-gray-500"
+            data-slot="icon"
+            fill="currentColor"
+            viewBox="0 0 16 16"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M2.09 15a1 1 0 0 0 1-1V8a1 1 0 1 0-2 0v6a1 1 0 0 0 1 1ZM5.765 13H4.09V8c.663 0 1.218-.466 1.556-1.037a4.02 4.02 0 0 1 1.358-1.377c.478-.292.907-.706.989-1.26V4.32a9.03 9.03 0 0 0 0-2.642c-.028-.194.048-.394.224-.479A2 2 0 0 1 11.09 3c0 .812-.08 1.605-.235 2.371a.521.521 0 0 0 .502.629h1.733c1.104 0 2.01.898 1.901 1.997a19.831 19.831 0 0 1-1.081 4.788c-.27.747-.998 1.215-1.793 1.215H9.414c-.215 0-.428-.035-.632-.103l-2.384-.794A2.002 2.002 0 0 0 5.765 13Z"
+            />
+          </svg>
+        </button>
+        <div
+          class="flex items-center"
+        >
+          <div
+            class="flex flex-wrap items-center gap-2"
+          >
+            <div
+              class="flex items-center space-x-2"
+            >
+               
+              <div
+                class="relative w-8 h-8 rounded-full overflow-hidden"
+              >
+                 
+              </div>
+              <span
+                class="text-gray-700"
+              >
+                <span
+                  class="text-gray-600 hover:text-gray-800 hover:underline cursor-pointer"
+                >
+                  user_2
+                </span>
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;

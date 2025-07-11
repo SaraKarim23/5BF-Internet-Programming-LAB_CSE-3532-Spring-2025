@@ -1,0 +1,621 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`The step component shall render the diet preference selection 1`] = `
+<div>
+  <div
+    class="mt-8"
+  >
+    <div
+      class="w-full p-4 sm:p-6 bg-white shadow-md rounded-xl animate-fadeInUp"
+    >
+      <h2
+        class="text-xl font-medium text-gray-800 mb-2 sm:text-2xl"
+      >
+        Dietary Preferences
+      </h2>
+      <p
+        class="text-sm text-gray-500 mb-4"
+      >
+        Choose as many preferences as you like—your recipes will match them!
+      </p>
+      <div
+        class="flex items-center mb-4"
+      >
+        <span
+          aria-checked="false"
+          aria-disabled="true"
+          aria-label="No Dietary Preference"
+          class="h-5 w-5 rounded border border-gray-300 flex items-center justify-center bg-white focus:outline-none focus:ring-2 focus:ring-brand-500"
+          data-disabled=""
+          data-headlessui-state="disabled"
+          id="headlessui-checkbox-:r5:"
+          role="checkbox"
+          tabindex="0"
+        />
+        <span
+          class="ml-3 text-gray-700"
+        >
+          No Preference
+        </span>
+      </div>
+      <hr
+        class="mb-4"
+      />
+      <div
+        class="grid grid-cols-2 md:grid-cols-3 gap-3"
+      >
+        <div
+          class="flex items-center p-2 sm:p-3 rounded-lg border transition-colors cursor-pointer bg-white border-gray-200 hover:bg-gray-50 opacity-50 cursor-not-allowed"
+          title="No meat or fish"
+        >
+          <span
+            aria-checked="false"
+            aria-disabled="true"
+            aria-label="Vegetarian"
+            class="shrink-0 h-5 w-5 rounded border flex items-center justify-center bg-white border-gray-300 focus:outline-none focus:ring-2 focus:ring-brand-500 transition-colors"
+            data-disabled=""
+            data-headlessui-state="disabled"
+            id="headlessui-checkbox-:r6:"
+            role="checkbox"
+            tabindex="0"
+          />
+          <svg
+            aria-hidden="true"
+            class="shrink-0 w-4 h-4 text-brand-600 ml-3"
+            data-slot="icon"
+            fill="currentColor"
+            viewBox="0 0 24 24"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              clip-rule="evenodd"
+              d="M9 4.5a.75.75 0 0 1 .721.544l.813 2.846a3.75 3.75 0 0 0 2.576 2.576l2.846.813a.75.75 0 0 1 0 1.442l-2.846.813a3.75 3.75 0 0 0-2.576 2.576l-.813 2.846a.75.75 0 0 1-1.442 0l-.813-2.846a3.75 3.75 0 0 0-2.576-2.576l-2.846-.813a.75.75 0 0 1 0-1.442l2.846-.813A3.75 3.75 0 0 0 7.466 7.89l.813-2.846A.75.75 0 0 1 9 4.5ZM18 1.5a.75.75 0 0 1 .728.568l.258 1.036c.236.94.97 1.674 1.91 1.91l1.036.258a.75.75 0 0 1 0 1.456l-1.036.258c-.94.236-1.674.97-1.91 1.91l-.258 1.036a.75.75 0 0 1-1.456 0l-.258-1.036a2.625 2.625 0 0 0-1.91-1.91l-1.036-.258a.75.75 0 0 1 0-1.456l1.036-.258a2.625 2.625 0 0 0 1.91-1.91l.258-1.036A.75.75 0 0 1 18 1.5ZM16.5 15a.75.75 0 0 1 .712.513l.394 1.183c.15.447.5.799.948.948l1.183.395a.75.75 0 0 1 0 1.422l-1.183.395c-.447.15-.799.5-.948.948l-.395 1.183a.75.75 0 0 1-1.422 0l-.395-1.183a1.5 1.5 0 0 0-.948-.948l-1.183-.395a.75.75 0 0 1 0-1.422l1.183-.395c.447-.15.799-.5.948-.948l.395-1.183A.75.75 0 0 1 16.5 15Z"
+              fill-rule="evenodd"
+            />
+          </svg>
+          <span
+            class="ml-2 text-gray-700"
+            title="No meat or fish"
+          >
+            Vegetarian
+          </span>
+        </div>
+        <div
+          class="flex items-center p-2 sm:p-3 rounded-lg border transition-colors cursor-pointer bg-white border-gray-200 hover:bg-gray-50 opacity-50 cursor-not-allowed"
+          title="No animal products"
+        >
+          <span
+            aria-checked="false"
+            aria-disabled="true"
+            aria-label="Vegan"
+            class="shrink-0 h-5 w-5 rounded border flex items-center justify-center bg-white border-gray-300 focus:outline-none focus:ring-2 focus:ring-brand-500 transition-colors"
+            data-disabled=""
+            data-headlessui-state="disabled"
+            id="headlessui-checkbox-:r7:"
+            role="checkbox"
+            tabindex="0"
+          />
+          <svg
+            aria-hidden="true"
+            class="shrink-0 w-4 h-4 text-brand-600 ml-3"
+            data-slot="icon"
+            fill="currentColor"
+            viewBox="0 0 24 24"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M12.378 1.602a.75.75 0 0 0-.756 0L3 6.632l9 5.25 9-5.25-8.622-5.03ZM21.75 7.93l-9 5.25v9l8.628-5.032a.75.75 0 0 0 .372-.648V7.93ZM11.25 22.18v-9l-9-5.25v8.57a.75.75 0 0 0 .372.648l8.628 5.033Z"
+            />
+          </svg>
+          <span
+            class="ml-2 text-gray-700"
+            title="No animal products"
+          >
+            Vegan
+          </span>
+        </div>
+        <div
+          class="flex items-center p-2 sm:p-3 rounded-lg border transition-colors cursor-pointer bg-white border-gray-200 hover:bg-gray-50 opacity-50 cursor-not-allowed"
+          title="No wheat, barley or rye"
+        >
+          <span
+            aria-checked="false"
+            aria-disabled="true"
+            aria-label="Gluten-Free"
+            class="shrink-0 h-5 w-5 rounded border flex items-center justify-center bg-white border-gray-300 focus:outline-none focus:ring-2 focus:ring-brand-500 transition-colors"
+            data-disabled=""
+            data-headlessui-state="disabled"
+            id="headlessui-checkbox-:r8:"
+            role="checkbox"
+            tabindex="0"
+          />
+          <svg
+            aria-hidden="true"
+            class="shrink-0 w-4 h-4 text-brand-600 ml-3"
+            data-slot="icon"
+            fill="currentColor"
+            viewBox="0 0 24 24"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              clip-rule="evenodd"
+              d="M12.963 2.286a.75.75 0 0 0-1.071-.136 9.742 9.742 0 0 0-3.539 6.176 7.547 7.547 0 0 1-1.705-1.715.75.75 0 0 0-1.152-.082A9 9 0 1 0 15.68 4.534a7.46 7.46 0 0 1-2.717-2.248ZM15.75 14.25a3.75 3.75 0 1 1-7.313-1.172c.628.465 1.35.81 2.133 1a5.99 5.99 0 0 1 1.925-3.546 3.75 3.75 0 0 1 3.255 3.718Z"
+              fill-rule="evenodd"
+            />
+          </svg>
+          <span
+            class="ml-2 text-gray-700"
+            title="No wheat, barley or rye"
+          >
+            Gluten-Free
+          </span>
+        </div>
+        <div
+          class="flex items-center p-2 sm:p-3 rounded-lg border transition-colors cursor-pointer bg-white border-gray-200 hover:bg-gray-50 opacity-50 cursor-not-allowed"
+          title="No milk or dairy products"
+        >
+          <span
+            aria-checked="false"
+            aria-disabled="true"
+            aria-label="Dairy-Free"
+            class="shrink-0 h-5 w-5 rounded border flex items-center justify-center bg-white border-gray-300 focus:outline-none focus:ring-2 focus:ring-brand-500 transition-colors"
+            data-disabled=""
+            data-headlessui-state="disabled"
+            id="headlessui-checkbox-:r9:"
+            role="checkbox"
+            tabindex="0"
+          />
+          <svg
+            aria-hidden="true"
+            class="shrink-0 w-4 h-4 text-brand-600 ml-3"
+            data-slot="icon"
+            fill="currentColor"
+            viewBox="0 0 24 24"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="m15 1.784-.796.795a1.125 1.125 0 1 0 1.591 0L15 1.784ZM12 1.784l-.796.795a1.125 1.125 0 1 0 1.591 0L12 1.784ZM9 1.784l-.796.795a1.125 1.125 0 1 0 1.591 0L9 1.784ZM9.75 7.547c.498-.021.998-.035 1.5-.042V6.75a.75.75 0 0 1 1.5 0v.755c.502.007 1.002.021 1.5.042V6.75a.75.75 0 0 1 1.5 0v.88l.307.022c1.55.117 2.693 1.427 2.693 2.946v1.018a62.182 62.182 0 0 0-13.5 0v-1.018c0-1.519 1.143-2.829 2.693-2.946l.307-.022v-.88a.75.75 0 0 1 1.5 0v.797ZM12 12.75c-2.472 0-4.9.184-7.274.54-1.454.217-2.476 1.482-2.476 2.916v.384a4.104 4.104 0 0 1 2.585.364 2.605 2.605 0 0 0 2.33 0 4.104 4.104 0 0 1 3.67 0 2.605 2.605 0 0 0 2.33 0 4.104 4.104 0 0 1 3.67 0 2.605 2.605 0 0 0 2.33 0 4.104 4.104 0 0 1 2.585-.364v-.384c0-1.434-1.022-2.7-2.476-2.917A49.138 49.138 0 0 0 12 12.75ZM21.75 18.131a2.604 2.604 0 0 0-1.915.165 4.104 4.104 0 0 1-3.67 0 2.605 2.605 0 0 0-2.33 0 4.104 4.104 0 0 1-3.67 0 2.605 2.605 0 0 0-2.33 0 4.104 4.104 0 0 1-3.67 0 2.604 2.604 0 0 0-1.915-.165v2.494c0 1.035.84 1.875 1.875 1.875h15.75c1.035 0 1.875-.84 1.875-1.875v-2.494Z"
+            />
+          </svg>
+          <span
+            class="ml-2 text-gray-700"
+            title="No milk or dairy products"
+          >
+            Dairy-Free
+          </span>
+        </div>
+        <div
+          class="flex items-center p-2 sm:p-3 rounded-lg border transition-colors cursor-pointer bg-white border-gray-200 hover:bg-gray-50 opacity-50 cursor-not-allowed"
+          title="Low-carb, high-fat"
+        >
+          <span
+            aria-checked="false"
+            aria-disabled="true"
+            aria-label="Keto"
+            class="shrink-0 h-5 w-5 rounded border flex items-center justify-center bg-white border-gray-300 focus:outline-none focus:ring-2 focus:ring-brand-500 transition-colors"
+            data-disabled=""
+            data-headlessui-state="disabled"
+            id="headlessui-checkbox-:ra:"
+            role="checkbox"
+            tabindex="0"
+          />
+          <svg
+            aria-hidden="true"
+            class="shrink-0 w-4 h-4 text-brand-600 ml-3"
+            data-slot="icon"
+            fill="currentColor"
+            viewBox="0 0 24 24"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              clip-rule="evenodd"
+              d="M14.615 1.595a.75.75 0 0 1 .359.852L12.982 9.75h7.268a.75.75 0 0 1 .548 1.262l-10.5 11.25a.75.75 0 0 1-1.272-.71l1.992-7.302H3.75a.75.75 0 0 1-.548-1.262l10.5-11.25a.75.75 0 0 1 .913-.143Z"
+              fill-rule="evenodd"
+            />
+          </svg>
+          <span
+            class="ml-2 text-gray-700"
+            title="Low-carb, high-fat"
+          >
+            Keto
+          </span>
+        </div>
+        <div
+          class="flex items-center p-2 sm:p-3 rounded-lg border transition-colors cursor-pointer bg-white border-gray-200 hover:bg-gray-50 opacity-50 cursor-not-allowed"
+          title="Halal-certified ingredients"
+        >
+          <span
+            aria-checked="false"
+            aria-disabled="true"
+            aria-label="Halal"
+            class="shrink-0 h-5 w-5 rounded border flex items-center justify-center bg-white border-gray-300 focus:outline-none focus:ring-2 focus:ring-brand-500 transition-colors"
+            data-disabled=""
+            data-headlessui-state="disabled"
+            id="headlessui-checkbox-:rb:"
+            role="checkbox"
+            tabindex="0"
+          />
+          <svg
+            aria-hidden="true"
+            class="shrink-0 w-4 h-4 text-brand-600 ml-3"
+            data-slot="icon"
+            fill="currentColor"
+            viewBox="0 0 24 24"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M21.721 12.752a9.711 9.711 0 0 0-.945-5.003 12.754 12.754 0 0 1-4.339 2.708 18.991 18.991 0 0 1-.214 4.772 17.165 17.165 0 0 0 5.498-2.477ZM14.634 15.55a17.324 17.324 0 0 0 .332-4.647c-.952.227-1.945.347-2.966.347-1.021 0-2.014-.12-2.966-.347a17.515 17.515 0 0 0 .332 4.647 17.385 17.385 0 0 0 5.268 0ZM9.772 17.119a18.963 18.963 0 0 0 4.456 0A17.182 17.182 0 0 1 12 21.724a17.18 17.18 0 0 1-2.228-4.605ZM7.777 15.23a18.87 18.87 0 0 1-.214-4.774 12.753 12.753 0 0 1-4.34-2.708 9.711 9.711 0 0 0-.944 5.004 17.165 17.165 0 0 0 5.498 2.477ZM21.356 14.752a9.765 9.765 0 0 1-7.478 6.817 18.64 18.64 0 0 0 1.988-4.718 18.627 18.627 0 0 0 5.49-2.098ZM2.644 14.752c1.682.971 3.53 1.688 5.49 2.099a18.64 18.64 0 0 0 1.988 4.718 9.765 9.765 0 0 1-7.478-6.816ZM13.878 2.43a9.755 9.755 0 0 1 6.116 3.986 11.267 11.267 0 0 1-3.746 2.504 18.63 18.63 0 0 0-2.37-6.49ZM12 2.276a17.152 17.152 0 0 1 2.805 7.121c-.897.23-1.837.353-2.805.353-.968 0-1.908-.122-2.805-.353A17.151 17.151 0 0 1 12 2.276ZM10.122 2.43a18.629 18.629 0 0 0-2.37 6.49 11.266 11.266 0 0 1-3.746-2.504 9.754 9.754 0 0 1 6.116-3.985Z"
+            />
+          </svg>
+          <span
+            class="ml-2 text-gray-700"
+            title="Halal-certified ingredients"
+          >
+            Halal
+          </span>
+        </div>
+        <div
+          class="flex items-center p-2 sm:p-3 rounded-lg border transition-colors cursor-pointer bg-white border-gray-200 hover:bg-gray-50 opacity-50 cursor-not-allowed"
+          title="Prepared according to Jewish dietary laws"
+        >
+          <span
+            aria-checked="false"
+            aria-disabled="true"
+            aria-label="Kosher"
+            class="shrink-0 h-5 w-5 rounded border flex items-center justify-center bg-white border-gray-300 focus:outline-none focus:ring-2 focus:ring-brand-500 transition-colors"
+            data-disabled=""
+            data-headlessui-state="disabled"
+            id="headlessui-checkbox-:rc:"
+            role="checkbox"
+            tabindex="0"
+          />
+          <svg
+            aria-hidden="true"
+            class="shrink-0 w-4 h-4 text-brand-600 ml-3"
+            data-slot="icon"
+            fill="currentColor"
+            viewBox="0 0 24 24"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="m11.645 20.91-.007-.003-.022-.012a15.247 15.247 0 0 1-.383-.218 25.18 25.18 0 0 1-4.244-3.17C4.688 15.36 2.25 12.174 2.25 8.25 2.25 5.322 4.714 3 7.688 3A5.5 5.5 0 0 1 12 5.052 5.5 5.5 0 0 1 16.313 3c2.973 0 5.437 2.322 5.437 5.25 0 3.925-2.438 7.111-4.739 9.256a25.175 25.175 0 0 1-4.244 3.17 15.247 15.247 0 0 1-.383.219l-.022.012-.007.004-.003.001a.752.752 0 0 1-.704 0l-.003-.001Z"
+            />
+          </svg>
+          <span
+            class="ml-2 text-gray-700"
+            title="Prepared according to Jewish dietary laws"
+          >
+            Kosher
+          </span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`The step component shall render the ingredient selection form 1`] = `
+<div>
+  <div
+    class="mt-8"
+  >
+    <div
+      class="w-full p-4 sm:p-6 bg-gradient-to-br from-slate-50 to-stone-100 shadow-md rounded-xl animate-fadeInUp"
+    >
+      <div
+        class="flex justify-end w-full"
+      >
+        <button
+          class="inline-flex items-center px-5 py-2.5 bg-brand-600 text-white text-sm font-medium rounded-full hover:bg-brand-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-brand-500 shadow-md transition duration-300"
+          data-headlessui-state=""
+          type="button"
+        >
+          <svg
+            aria-hidden="true"
+            class="block mr-2 h-6 w-6"
+            data-slot="icon"
+            fill="currentColor"
+            viewBox="0 0 24 24"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              clip-rule="evenodd"
+              d="M12 2.25c-5.385 0-9.75 4.365-9.75 9.75s4.365 9.75 9.75 9.75 9.75-4.365 9.75-9.75S17.385 2.25 12 2.25ZM12.75 9a.75.75 0 0 0-1.5 0v2.25H9a.75.75 0 0 0 0 1.5h2.25V15a.75.75 0 0 0 1.5 0v-2.25H15a.75.75 0 0 0 0-1.5h-2.25V9Z"
+              fill-rule="evenodd"
+            />
+          </svg>
+          Add New Ingredient
+        </button>
+        <div
+          style="position: fixed; top: 1px; left: 1px; width: 1px; height: 0px; padding: 0px; margin: -1px; overflow: hidden; clip: rect(0px, 0px, 0px, 0px); white-space: nowrap; border-width: 0px; display: none;"
+        />
+      </div>
+      <div
+        class="mt-4 w-full"
+      >
+        <div
+          class="relative w-full"
+        >
+          <div
+            class="relative w-full"
+          >
+            <svg
+              aria-hidden="true"
+              class="w-5 h-5 text-gray-400 absolute left-3 top-1/2 -translate-y-1/2 pointer-events-none"
+              data-slot="icon"
+              fill="currentColor"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                clip-rule="evenodd"
+                d="M10.5 3.75a6.75 6.75 0 1 0 0 13.5 6.75 6.75 0 0 0 0-13.5ZM2.25 10.5a8.25 8.25 0 1 1 14.59 5.28l4.69 4.69a.75.75 0 1 1-1.06 1.06l-4.69-4.69A8.25 8.25 0 0 1 2.25 10.5Z"
+                fill-rule="evenodd"
+              />
+            </svg>
+            <input
+              aria-autocomplete="list"
+              aria-expanded="false"
+              class="w-full rounded-lg border border-gray-300 bg-white py-3 pr-10 pl-9 text-base text-gray-700 shadow-sm focus:outline-none focus:ring-2 focus:ring-brand-500 focus:border-brand-500 transition-all duration-300"
+              data-disabled=""
+              data-headlessui-state="disabled"
+              disabled=""
+              id="headlessui-combobox-input-:r2:"
+              placeholder="Select an existing ingredient"
+              role="combobox"
+              type="text"
+              value=""
+            />
+            <button
+              aria-expanded="false"
+              aria-haspopup="listbox"
+              class="absolute inset-y-0 right-0 flex items-center pr-3"
+              data-disabled=""
+              data-headlessui-state="disabled"
+              disabled=""
+              id="headlessui-combobox-button-:r3:"
+              tabindex="-1"
+              type="button"
+            >
+              <svg
+                aria-hidden="true"
+                class="w-5 h-5 text-gray-400"
+                data-slot="icon"
+                fill="currentColor"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  clip-rule="evenodd"
+                  d="M12.53 16.28a.75.75 0 0 1-1.06 0l-7.5-7.5a.75.75 0 0 1 1.06-1.06L12 14.69l6.97-6.97a.75.75 0 1 1 1.06 1.06l-7.5 7.5Z"
+                  fill-rule="evenodd"
+                />
+              </svg>
+            </button>
+          </div>
+        </div>
+        <div
+          class="mt-3"
+        >
+          <div
+            class="h-2 w-full bg-gray-200 rounded-full overflow-hidden"
+          >
+            <div
+              class="h-full bg-brand-500 transition-all"
+              style="width: 20%;"
+            />
+          </div>
+          <p
+            class="text-right text-xs text-gray-500 mt-1"
+          >
+            2
+            /10 ingredients selected
+          </p>
+        </div>
+      </div>
+      <div
+        class="mt-6 w-full"
+      >
+        <h2
+          class="text-lg font-semibold text-brand-600 mb-3"
+        >
+          Selected Ingredients:
+        </h2>
+        <div
+          class="flex flex-wrap max-h-32 overflow-y-auto"
+        >
+          <div
+            class="flex items-center bg-brand-500 text-white text-sm font-medium px-3 py-1.5 rounded-full m-1 transition transform hover:scale-105"
+          >
+            <span>
+              undefined
+            </span>
+            <button
+              class="ml-2 focus:outline-none"
+            >
+              <svg
+                aria-hidden="true"
+                class="w-4 h-4 text-white hover:text-gray-200"
+                data-slot="icon"
+                fill="currentColor"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  clip-rule="evenodd"
+                  d="M5.47 5.47a.75.75 0 0 1 1.06 0L12 10.94l5.47-5.47a.75.75 0 1 1 1.06 1.06L13.06 12l5.47 5.47a.75.75 0 1 1-1.06 1.06L12 13.06l-5.47 5.47a.75.75 0 0 1-1.06-1.06L10.94 12 5.47 6.53a.75.75 0 0 1 0-1.06Z"
+                  fill-rule="evenodd"
+                />
+              </svg>
+            </button>
+          </div>
+          <div
+            class="flex items-center bg-brand-500 text-white text-sm font-medium px-3 py-1.5 rounded-full m-1 transition transform hover:scale-105"
+          >
+            <span>
+              undefined
+            </span>
+            <button
+              class="ml-2 focus:outline-none"
+            >
+              <svg
+                aria-hidden="true"
+                class="w-4 h-4 text-white hover:text-gray-200"
+                data-slot="icon"
+                fill="currentColor"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  clip-rule="evenodd"
+                  d="M5.47 5.47a.75.75 0 0 1 1.06 0L12 10.94l5.47-5.47a.75.75 0 1 1 1.06 1.06L13.06 12l5.47 5.47a.75.75 0 1 1-1.06 1.06L12 13.06l-5.47 5.47a.75.75 0 0 1-1.06-1.06L10.94 12 5.47 6.53a.75.75 0 0 1 0-1.06Z"
+                  fill-rule="evenodd"
+                />
+              </svg>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`The step component shall render the review inputs section 1`] = `
+<div>
+  <div
+    class="mt-8"
+  >
+    <div
+      class="w-full p-4 sm:p-6 bg-gradient-to-br from-slate-50 to-stone-100 shadow-md rounded-xl animate-fadeInUp overflow-y-auto"
+      style="max-height: 608px;"
+    >
+      <div
+        class="px-1 py-1"
+      >
+        <div
+          class="text-center mb-6"
+        >
+          <h2
+            class="text-2xl font-medium text-gray-800 sm:text-3xl"
+          >
+            Submit Your Recipe Choices
+          </h2>
+          <p
+            class="text-sm text-gray-500 mt-1"
+          >
+            Here's a recap of your choices. Use the switch on each recipe generated to select the recipes you want to submit.
+          </p>
+          <p
+            class="text-sm text-red-500 mt-2"
+          >
+            Please select at least 3 ingredients to proceed with recipe creation.
+          </p>
+        </div>
+        <div
+          class="mb-6"
+        >
+          <h3
+            class="text-gray-700 font-semibold text-lg mb-2"
+          >
+            2 Ingredients:
+          </h3>
+          <ul
+            class="flex flex-wrap gap-2 w-full sm:max-h-none sm:overflow-y-visible overflow-y-auto"
+            style="max-height: 60px;"
+          >
+            <li
+              class="flex items-center bg-brand-100 text-brand-800 text-sm font-medium px-3 py-1 rounded-full"
+            >
+              <svg
+                aria-hidden="true"
+                class="w-4 h-4 mr-1 text-brand-600"
+                data-slot="icon"
+                fill="currentColor"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  clip-rule="evenodd"
+                  d="M2.25 12c0-5.385 4.365-9.75 9.75-9.75s9.75 4.365 9.75 9.75-4.365 9.75-9.75 9.75S2.25 17.385 2.25 12Zm13.36-1.814a.75.75 0 1 0-1.22-.872l-3.236 4.53L9.53 12.22a.75.75 0 0 0-1.06 1.06l2.25 2.25a.75.75 0 0 0 1.14-.094l3.75-5.25Z"
+                  fill-rule="evenodd"
+                />
+              </svg>
+            </li>
+            <li
+              class="flex items-center bg-brand-100 text-brand-800 text-sm font-medium px-3 py-1 rounded-full"
+            >
+              <svg
+                aria-hidden="true"
+                class="w-4 h-4 mr-1 text-brand-600"
+                data-slot="icon"
+                fill="currentColor"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  clip-rule="evenodd"
+                  d="M2.25 12c0-5.385 4.365-9.75 9.75-9.75s9.75 4.365 9.75 9.75-4.365 9.75-9.75 9.75S2.25 17.385 2.25 12Zm13.36-1.814a.75.75 0 1 0-1.22-.872l-3.236 4.53L9.53 12.22a.75.75 0 0 0-1.06 1.06l2.25 2.25a.75.75 0 0 0 1.14-.094l3.75-5.25Z"
+                  fill-rule="evenodd"
+                />
+              </svg>
+            </li>
+          </ul>
+        </div>
+        <div
+          class="mb-6"
+        >
+          <h3
+            class="text-gray-700 font-semibold text-lg mb-2"
+          >
+            2 Dietary Preferences:
+          </h3>
+          <div
+            class="flex flex-wrap gap-2 overflow-y-auto"
+            style="max-height: 70px;"
+          >
+            <span
+              class="flex items-center bg-purple-100 text-purple-800 text-sm font-medium px-3 py-1 rounded-full"
+            >
+              <svg
+                aria-hidden="true"
+                class="w-4 h-4 mr-1 text-brand-600"
+                data-slot="icon"
+                fill="currentColor"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  clip-rule="evenodd"
+                  d="M9 4.5a.75.75 0 0 1 .721.544l.813 2.846a3.75 3.75 0 0 0 2.576 2.576l2.846.813a.75.75 0 0 1 0 1.442l-2.846.813a3.75 3.75 0 0 0-2.576 2.576l-.813 2.846a.75.75 0 0 1-1.442 0l-.813-2.846a3.75 3.75 0 0 0-2.576-2.576l-2.846-.813a.75.75 0 0 1 0-1.442l2.846-.813A3.75 3.75 0 0 0 7.466 7.89l.813-2.846A.75.75 0 0 1 9 4.5ZM18 1.5a.75.75 0 0 1 .728.568l.258 1.036c.236.94.97 1.674 1.91 1.91l1.036.258a.75.75 0 0 1 0 1.456l-1.036.258c-.94.236-1.674.97-1.91 1.91l-.258 1.036a.75.75 0 0 1-1.456 0l-.258-1.036a2.625 2.625 0 0 0-1.91-1.91l-1.036-.258a.75.75 0 0 1 0-1.456l1.036-.258a2.625 2.625 0 0 0 1.91-1.91l.258-1.036A.75.75 0 0 1 18 1.5ZM16.5 15a.75.75 0 0 1 .712.513l.394 1.183c.15.447.5.799.948.948l1.183.395a.75.75 0 0 1 0 1.422l-1.183.395c-.447.15-.799.5-.948.948l-.395 1.183a.75.75 0 0 1-1.422 0l-.395-1.183a1.5 1.5 0 0 0-.948-.948l-1.183-.395a.75.75 0 0 1 0-1.422l1.183-.395c.447-.15.799-.5.948-.948l.395-1.183A.75.75 0 0 1 16.5 15Z"
+                  fill-rule="evenodd"
+                />
+              </svg>
+              preference-1
+            </span>
+            <span
+              class="flex items-center bg-purple-100 text-purple-800 text-sm font-medium px-3 py-1 rounded-full"
+            >
+              <svg
+                aria-hidden="true"
+                class="w-4 h-4 mr-1 text-brand-600"
+                data-slot="icon"
+                fill="currentColor"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  clip-rule="evenodd"
+                  d="M9 4.5a.75.75 0 0 1 .721.544l.813 2.846a3.75 3.75 0 0 0 2.576 2.576l2.846.813a.75.75 0 0 1 0 1.442l-2.846.813a3.75 3.75 0 0 0-2.576 2.576l-.813 2.846a.75.75 0 0 1-1.442 0l-.813-2.846a3.75 3.75 0 0 0-2.576-2.576l-2.846-.813a.75.75 0 0 1 0-1.442l2.846-.813A3.75 3.75 0 0 0 7.466 7.89l.813-2.846A.75.75 0 0 1 9 4.5ZM18 1.5a.75.75 0 0 1 .728.568l.258 1.036c.236.94.97 1.674 1.91 1.91l1.036.258a.75.75 0 0 1 0 1.456l-1.036.258c-.94.236-1.674.97-1.91 1.91l-.258 1.036a.75.75 0 0 1-1.456 0l-.258-1.036a2.625 2.625 0 0 0-1.91-1.91l-1.036-.258a.75.75 0 0 1 0-1.456l1.036-.258a2.625 2.625 0 0 0 1.91-1.91l.258-1.036A.75.75 0 0 1 18 1.5ZM16.5 15a.75.75 0 0 1 .712.513l.394 1.183c.15.447.5.799.948.948l1.183.395a.75.75 0 0 1 0 1.422l-1.183.395c-.447.15-.799.5-.948.948l-.395 1.183a.75.75 0 0 1-1.422 0l-.395-1.183a1.5 1.5 0 0 0-.948-.948l-1.183-.395a.75.75 0 0 1 0-1.422l1.183-.395c.447-.15.799-.5.948-.948l.395-1.183A.75.75 0 0 1 16.5 15Z"
+                  fill-rule="evenodd"
+                />
+              </svg>
+              preference-2
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
