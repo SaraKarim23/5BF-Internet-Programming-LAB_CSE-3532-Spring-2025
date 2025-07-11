@@ -1,0 +1,845 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Architecture and Interior Design</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+    <style>
+        .projects-section,
+        .team-section {
+            padding: 20px;
+            text-align: center;
+            background-color: #fff;
+            border-radius: 8px;
+        }
+        
+        .project-buttons {
+            display: flex;
+            /* Using flexbox for alignment */
+            justify-content: center;
+            /* Centering buttons */
+            gap: 20px;
+            /* Spacing between buttons */
+            margin-bottom: 20px;
+            /* Space between buttons and project details */
+        }
+        
+        .project-buttons button {
+            background-color: #b38355;
+            /* Coffee color */
+            color: white;
+            /* Text color */
+            border: none;
+            /* Removing border */
+            padding: 10px 20px;
+            /* Padding for buttons */
+            border-radius: 5px;
+            /* Rounded corners */
+            cursor: pointer;
+            /* Pointer on hover */
+            font-size: 16px;
+            /* Font size */
+            transition: background-color 0.3s;
+            /* Smooth transition */
+        }
+        
+        .project-buttons button:hover {
+            background-color: #a37147;
+            /* Darker shade on hover */
+        }
+        
+        #project-details {
+            /* Styles for the project details section */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 20px;
+        }
+        
+        .project-buttons {
+            margin-bottom: 20px;
+        }
+        
+        .project-buttons button {
+            width: 150px;
+            height: 80px;
+            font-size: 1.2em;
+            margin: 10px;
+            padding: 10px;
+            border: none;
+            border-radius: 8px;
+            background-color: #b38355;
+            color: white;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        
+        .project-buttons button:hover {
+            background-color: #b38355;
+        }
+        
+        #project-details img {
+            max-width: 30%;
+            border-radius: 8px;
+            margin: 5px;
+        }
+        
+        .team-member {
+            display: inline-block;
+            margin: 10px;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            width: 200px;
+            text-align: center;
+        }
+        
+        .team-member img {
+            width: 200%;
+            border-radius: 50%;
+        }
+        
+        .social-icons a {
+            display: flex;
+            /* Use flex for proper centering */
+            justify-content: center;
+            /* Center the logo */
+            align-items: center;
+            /* Center vertically */
+            transition: transform 0.3s ease;
+            text-decoration: none;
+            /* Remove underline from links */
+            color: black;
+            /* Set icon color to black */
+        }
+        
+        .team-member h4 {
+            margin: 10px 0 5px;
+        }
+        
+        .team-member p {
+            color: #666;
+            font-size: 0.9em;
+        }
+        
+        .team-section {
+            padding: 50px 0;
+            background-color: #f9f9f9;
+            text-align: center;
+        }
+        
+        .team-section h2 {
+            margin-bottom: 40px;
+            font-size: 2.5em;
+            color: #333;
+        }
+        
+        .team-members {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+        }
+        
+        .team-member {
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            text-align: center;
+            transition: transform 0.3s ease;
+            width: calc(25% - 20px);
+            /* Adjust for 4 in a row */
+        }
+        
+        .team-member:hover {
+            transform: translateY(-5px);
+        }
+        
+        .image-container {
+            position: relative;
+            overflow: hidden;
+            border-radius: 8px 8px 0 0;
+        }
+        
+        .image-container img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+        
+        h3 {
+            margin: 15px 0 5px;
+            font-size: 1.5em;
+            color: #f1eaea;
+        }
+        
+        p {
+            margin-bottom: 15px;
+            color: #777;
+        }
+        
+        .social-icons {
+            margin-top: 10px;
+            display: flex;
+            /* Use flexbox to align items */
+            justify-content: center;
+            /* Center align icons */
+            gap: 10px;
+            /* Space between icons */
+        }
+        
+        .social-icons a {
+            display: flex;
+            /* Use flex for proper centering */
+            justify-content: center;
+            /* Center the logo */
+            align-items: center;
+            /* Center vertically */
+            transition: transform 0.3s ease;
+            text-decoration: none;
+            /* Remove underline from links */
+        }
+        
+        .social-icons a:hover {
+            transform: scale(1.1);
+            /* Slightly enlarge the icon on hover */
+        }
+        
+        .social-logo {
+            width: 30px;
+            /* Adjust size as needed */
+            height: auto;
+            filter: brightness(0) invert(1);
+            /* Invert colors for white backgrounds */
+        }
+        
+        .social-icons a:hover .social-logo {
+            filter: drop-shadow(0 0 2px #b38355);
+            /* Coffee color hover effect */
+        }
+        /* Testimonials Section */
+        
+        .testimonials-section {
+            text-align: center;
+            padding: 50px;
+            background-color: #f5f5f5;
+        }
+        
+        .testimonials-section h2 {
+            font-size: 2.5em;
+            color: #333;
+        }
+        
+        .carousel-container {
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .carousel-items {
+            display: flex;
+            transition: transform 1s ease-in-out;
+        }
+        
+        .carousel-item {
+            width: 100%;
+            flex-shrink: 0;
+            padding: 20px;
+            text-align: center;
+        }
+        
+        .carousel-item img {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+        }
+        
+        .testimonial-text {
+            font-style: italic;
+        }
+        /* Modal Styles */
+        
+        #clientModal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            z-index: 1000;
+        }
+        
+        .modal-content {
+            background: white;
+            padding: 20px;
+            margin: 10% auto;
+            width: 60%;
+            text-align: center;
+        }
+        
+        #modal-img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+        }
+        
+        button {
+            margin-top: 10px;
+        }
+        /* Modal Styles */
+        
+        #clientModal {
+            display: none;
+            /* Hidden by default */
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            /* Semi-transparent background */
+            z-index: 1000;
+            /* Make sure it appears above other elements */
+            justify-content: center;
+            align-items: center;
+            display: flex;
+            /* This ensures the modal content is centered */
+        }
+        /* Content of the Modal */
+        
+        .modal-content {
+            background: white;
+            padding: 20px;
+            margin: 10% auto;
+            width: 60%;
+            text-align: center;
+            border-radius: 8px;
+            /* Optional: for rounded corners */
+        }
+        
+        #modal-img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            /* Optional: for rounded images */
+        }
+        
+        button {
+            margin-top: 10px;
+        }
+        
+        .client {
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            padding: 20px;
+            margin-bottom: 20px;
+            background-color: #f9f9f9;
+            width: 300px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        
+        .client img {
+            width: 100%;
+            border-radius: 8px;
+        }
+        
+        .client-text {
+            font-size: 14px;
+            color: #555;
+            margin-top: 10px;
+            line-height: 1.5;
+            height: 60px;
+            /* To ensure 3 lines */
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+        
+        .rating {
+            font-size: 18px;
+            font-weight: bold;
+            margin-top: 10px;
+        }
+        
+        .property-rating {
+            font-size: 14px;
+            color: #888;
+            margin-top: 5px;
+        }
+        /* Style for the orange rating */
+        
+        .rating {
+            color: orange;
+        }
+        
+        .slider-container {
+            position: relative;
+            width: 100%;
+            height: 100vh;
+            overflow: hidden;
+        }
+        
+        .slider {
+            display: flex;
+            transition: transform 0.5s ease-in-out;
+            width: 400%;
+        }
+        
+        .slide {
+            position: relative;
+            width: 100vw;
+            height: 100vh;
+        }
+        
+        .slider img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center;
+        }
+        
+        .content {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+            color: white;
+            font-family: Arial, sans-serif;
+            font-weight: bold;
+            padding: 20px;
+            background: rgba(0, 0, 0, 0.5);
+            border-radius: 10px;
+        }
+        
+        .content h2 {
+            font-size: 3rem;
+        }
+        
+        .content p {
+            font-size: 1.5rem;
+            margin-top: 10px;
+        }
+        
+        .controls {
+            position: absolute;
+            top: 50%;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            transform: translateY(-50%);
+        }
+        
+        .control-btn {
+            background-color: rgba(0, 0, 0, 0.5);
+            color: white;
+            padding: 10px;
+            border: none;
+            cursor: pointer;
+            font-size: 24px;
+        }
+        
+        .control-btn:hover {
+            background-color: rgba(0, 0, 0, 0.8);
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="logo">
+            <img src="logo2.jpg" alt="Architecture Logo">
+            <h1>SSL Architecture and Interior Design </h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="http://127.0.0.1:5500/index.html" target="_blank">Home</a></li>
+                <li><a href="http://127.0.0.1:5500/service.html" target="_blank">Services</a></li>
+                <li><a href="http://127.0.0.1:5500/project.html" target="_blank">Projects</a></li>
+                <li><a href="http://127.0.0.1:5500/contact.html" target="_blank">Contact</a></li>
+                <li><a href="http://127.0.0.1:8000/" target="_blank">Order</a></li>
+
+            </ul>
+        </nav>
+        <div class="user-actions">
+            <a href="#" class="login-btn">Login</a>
+            <a href="#" class="signup-btn">Signup</a>
+        </div>
+    </header>
+
+    <!-- Modal for Login -->
+    <div id="login-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn">&times;</span>
+            <h2>Login</h2>
+            <form action="">
+                <input type="email" placeholder="Email" required>
+                <input type="password" placeholder="Password" required>
+                <button type="submit">Login</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Modal for Signup -->
+    <div id="signup-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn">&times;</span>
+            <h2>Signup</h2>
+            <form action="">
+                <input type="text" placeholder="Full Name" required>
+                <input type="email" placeholder="Email" required>
+                <input type="password" placeholder="Password" required>
+                <button type="submit">Signup</button>
+            </form>
+        </div>
+    </div>
+
+    <div class="slider-container">
+        <div class="slider">
+            <!-- Slide 1: Introduction to SSL Architecture -->
+            <div class="slide">
+                <img src="wp11.jpg" alt="Architecture Image 1">
+                <div class="content">
+                    <h2>Introduction to SSL Architecture</h2>
+                    <p>SSL Architecture combines innovative design with functional spaces, creating environments that inspire.</p>
+                </div>
+            </div>
+            <!-- Slide 2: Interior Design Services -->
+            <div class="slide">
+                <img src="wp3.jpeg" alt="Interior Design Image 2">
+                <div class="content">
+                    <h2>Interior Design Services</h2>
+                    <p>We provide comprehensive interior design services for both residential and commercial spaces.</p>
+                </div>
+            </div>
+            <!-- Slide 3: Project Portfolio -->
+            <div class="slide">
+                <img src="wp8.jpg" alt="Portfolio Image 3">
+                <div class="content">
+                    <h2>Project Portfolio</h2>
+                    <p>Take a look at our portfolio showcasing the best of our design work, blending aesthetics with practicality.</p>
+                </div>
+            </div>
+
+        </div>
+        <div class="controls">
+            <button class="control-btn" id="prev">❮</button>
+            <button class="control-btn" id="next">❯</button>
+        </div>
+    </div>
+
+
+    <!-- <section id="projects" class="projects-section">
+        <h2>Our Projects</h2>
+        <div class="project-gallery">
+            <img src="wp13.jpg" alt="Project 1">
+            <img src="wp14.avif" alt="Project 2">
+            <img src="dd.jpg" alt="Project 3">
+
+
+        </div>
+    </section> -->
+
+
+
+    <!-- Team Members Section -->
+    <section class="team-section">
+        <h2>Meet Our Team</h2>
+        <div class="team-members">
+            <div class="team-member">
+                <div class="image-container">
+                    <img src="engineer1.jpg" alt="Team Member">
+                </div>
+                <h3>Saima Sultana Lamisa</h3>
+                <p class="job-title" style="color: #b38355;">Software Engineer</p>
+                <div class="social-icons">
+                    <a href="https://www.facebook.com" title="facebook"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://www.Twitter.com" title="Twitter"><i class="fab fa-twitter"></i></a>
+                    <a href="https://www.Instagram.com" title="Instagram"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+            <div class="team-member">
+                <div class="image-container">
+                    <img src="engineer3.jpg" alt="Team Member">
+                </div>
+                <h3>Faiza Mehjabin Sabiha</h3>
+                <p class="job-title" style="color: #b38355;">Web Developer</p>
+                <div class="social-icons">
+                    <a href="https://www.facebook.com" title="facebook"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://www.Twitter.com" title="Twitter"><i class="fab fa-twitter"></i></a>
+                    <a href="https://www.Instagram.com" title="Instagram"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+            <div class="team-member">
+                <div class="image-container">
+                    <img src="engineer2.jpg" alt="Team Member">
+                </div>
+                <h3>Tasnim Subah</h3>
+                <p class="job-title" style="color: #b38355;">Web Developer</p>
+                <div class="social-icons">
+                    <a href="https://www.facebook.com" title="facebook"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://www.Twitter.com" title="Twitter"><i class="fab fa-twitter"></i></a>
+                    <a href="https://www.Instagram.com" title="Instagram"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Testimonials Section -->
+    <section class="testimonials-section">
+        <h2>What Our Clients Say</h2>
+
+        <!-- Client Slider -->
+        <div class="carousel-container" id="carousel-container">
+            <div class="carousel-items" id="carousel-items">
+                <div class="carousel-item" data-client="1">
+                    <img src="1.1 (1).jpeg" alt="Client 1">
+                    <h5>Jane Doe</h5>
+                    <p class="testimonial-text">"Amazing service, highly recommended! The team was professional and attentive..."</p>
+                </div>
+                <div class="carousel-item" data-client="2">
+                    <img src="1.1 (1).jpg" alt="Client 2">
+                    <h5>Jane Smith</h5>
+                    <p class="testimonial-text">"Fabulous experience with great attention to detail. I love my new home and the design..."</p>
+                </div>
+                <div class="carousel-item" data-client="3">
+                    <img src="1.1 (2).jpg" alt="Client 3">
+                    <h5>Michael Lee</h5>
+                    <p class="testimonial-text">"I’m beyond satisfied with the results! My office space looks stunning, and it was a smooth..."</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Modal for Client Details -->
+    <div id="clientModal" style="display: none;">
+        <div class="modal-content">
+            <img id="modal-img" src="" alt="Client Image">
+            <p id="modal-text"></p>
+            <p id="modal-rating"></p>
+            <p id="property-rating"></p>
+            <button id="modalClose">Close</button>
+        </div>
+    </div>
+
+
+
+
+
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2024 SSL Architecture and Interior Design. We shape your buildings, thereafter they shape us.</p>
+            <p>Address: Nasirabad,Chittagong,Bangladesh</p>
+            <div class="social-icons">
+                <a href="https://instagram.com" target="_blank" class="social-icon"><i class="fab fa-instagram"></i></a>
+                <a href="https://twitter.com" target="_blank" class="social-icon"><i class="fab fa-twitter"></i></a>
+                <a href="https://facebook.com" target="_blank" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+            </div>
+        </div>
+    </footer>
+    <script>
+        let currentIndex = 0;
+        const slides = document.querySelectorAll('.slider .slide');
+        const slider = document.querySelector('.slider');
+
+        const nextButton = document.getElementById('next');
+        const prevButton = document.getElementById('prev');
+
+        function changeSlide(index) {
+            if (index < 0) {
+                currentIndex = slides.length - 1;
+            } else if (index >= slides.length) {
+                currentIndex = 0;
+            } else {
+                currentIndex = index;
+            }
+            slider.style.transform = `translateX(-${currentIndex * 100}vw)`; // Move slider based on index
+        }
+
+        nextButton.addEventListener('click', () => changeSlide(currentIndex + 1));
+        prevButton.addEventListener('click', () => changeSlide(currentIndex - 1));
+
+        // Automatically change slides every 3 seconds
+        setInterval(() => {
+            changeSlide(currentIndex + 1);
+        }, 3000);
+
+
+
+        // Modal functionality
+        const loginModal = document.getElementById('login-modal');
+        const signupModal = document.getElementById('signup-modal');
+        const loginBtn = document.querySelector('.login-btn');
+        const signupBtn = document.querySelector('.signup-btn');
+        const closeBtns = document.querySelectorAll('.close-btn');
+
+        // Show modals when buttons are clicked
+        loginBtn.onclick = () => loginModal.style.display = 'flex';
+        signupBtn.onclick = () => signupModal.style.display = 'flex';
+
+        // Close modals when 'x' is clicked
+        closeBtns.forEach(btn => btn.onclick = () => {
+            loginModal.style.display = 'none';
+            signupModal.style.display = 'none';
+        });
+
+        // Close modal when clicking outside the modal content
+        window.onclick = (event) => {
+            if (event.target === loginModal) {
+                loginModal.style.display = 'none';
+            } else if (event.target === signupModal) {
+                signupModal.style.display = 'none';
+            }
+        };
+
+        function showProject(project) {
+            const projectDetails = document.getElementById('project-details');
+            let content = '';
+
+            switch (project) {
+                case 'project1':
+                    content = `
+                                <img src="modern4.jpg" alt="Project 1 Image 1">
+                                <img src="modern2.jpg" alt="Project 1 Image 2">
+                                <img src="modern3.jpg" alt="Project 1 Image 3">
+                            `;
+                    break;
+
+                case 'project2':
+                    content = `
+                                <img src="wp13.jpg" alt="Project 1 Image 1">
+                                <img src="wp14.avif" alt="Project 1 Image 2">
+                                <img src="medium1.jpg" alt="Project 1 Image 3">
+                            `;
+                    break;
+                case 'project3':
+                    content = `
+                                <img src="max1.jpg" alt="Project 1 Image 1">
+                                <img src="max2.jpg" alt="Project 1 Image 2">
+                                <img src="max3.jpg" alt="Project 1 Image 3">
+                            `;
+                    break;
+                case 'project4':
+                    content = `
+                                 <img src="shop1.jpg" alt="Project 1 Image 1">
+                                <img src="shop2.jpg" alt="Project 1 Image 2">
+                                <img src="shop3.jpg" alt="Project 1 Image 3">
+                            `;
+                    break;
+                default:
+                    content = '';
+            }
+
+            projectDetails.innerHTML = content;
+        }
+
+
+
+
+
+        // Carousel functionality
+        const carouselItems = document.getElementById('carousel-items');
+        let currentSlide = 0;
+        const totalSlides = document.querySelectorAll('.carousel-item').length;
+        let isForward = true;
+
+        // Function to show a slide based on the index
+        function showSlide(index) {
+            currentSlide = index;
+            carouselItems.style.transition = 'transform 1s ease-in-out';
+            carouselItems.style.transform = `translateX(-${index * 100}%)`;
+        }
+
+        // Function to auto-slide the carousel
+        function autoSlide() {
+            if (isForward) {
+                currentSlide++;
+                if (currentSlide >= totalSlides) {
+                    currentSlide = totalSlides - 1;
+                    isForward = false;
+                }
+            } else {
+                currentSlide--;
+                if (currentSlide < 0) {
+                    currentSlide = 0;
+                    isForward = true;
+                }
+            }
+            showSlide(currentSlide);
+        }
+
+        // Start auto-slide every 4 seconds
+        setInterval(autoSlide, 4000);
+
+        // Modal functionality
+        const modal = document.getElementById('clientModal');
+        const modalClose = document.getElementById('modalClose');
+        const modalImg = document.getElementById('modal-img');
+        const modalText = document.getElementById('modal-text');
+        const modalRating = document.getElementById('modal-rating');
+        const propertyRating = document.getElementById('property-rating');
+
+        // Dummy data for clients
+        // Dummy data for clients
+        const clients = {
+            1: {
+                img: '1.1 (1).jpeg',
+                text: '"Amazing service, highly recommended! The team was professional and attentive throughout the project. The result exceeded my expectations, and I couldn’t be happier with the outcome..."',
+                rating: '★★★★★',
+                propertyRating: '5/5',
+                ratingColor: 'orange' // Adding rating color
+            },
+            2: {
+                img: '1.1 (1).jpg',
+                text: '"Fabulous experience with great attention to detail. I love my new home and the design. The team made sure every part of the process was smooth and handled with care. Highly recommend their services..."',
+                rating: '★★★★☆',
+                propertyRating: '4/5',
+                ratingColor: 'orange' // Adding rating color
+            },
+            3: {
+                img: '1.1 (2).jpg',
+                text: '"I’m beyond satisfied with the results! My office space looks stunning, and it was a smooth process from start to finish. The team was easy to work with, and I’m thrilled with the transformation..."',
+                rating: '★★★★★',
+                propertyRating: '5/5',
+                ratingColor: 'orange' // Adding rating color
+            }
+        };
+
+
+
+        // Open the modal when a client card is clicked
+        document.querySelectorAll('.carousel-item').forEach(card => {
+            card.addEventListener('click', () => {
+                const clientId = card.dataset.client;
+                const client = clients[clientId];
+                modalImg.src = client.img;
+                modalText.textContent = client.text;
+                modalRating.textContent = client.rating;
+                propertyRating.textContent = client.propertyRating;
+                modal.style.display = 'flex';
+            });
+        });
+
+        // Close the modal
+        modalClose.addEventListener('click', () => {
+            modal.style.display = 'none';
+        });
+
+        // Close modal when clicking outside of the modal content
+        window.addEventListener('click', (event) => {
+            if (event.target === modal) {
+                modal.style.display = 'none';
+            }
+        });
+    </script>
+    <script src="script.js"></script>
+
+</body>
+
+</html>
