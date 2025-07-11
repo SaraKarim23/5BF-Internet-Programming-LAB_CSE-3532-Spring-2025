@@ -19,6 +19,30 @@
 | *Meharunnasa Mukta* | Developer | C231446 |
 
 ---
+## 👥 Team Contributions:
+
+### 🧑‍💻 Umme Habiba Anha (ID: C231441)
+- Implemented **Edit** and **Delete Password** functionalities.
+- Contributed to the **Home Page** layout and logic.
+- Developed the **Secure Notes Page**, enabling users to:
+  - Store sensitive notes (e.g., **PINs**, **license keys**, **recovery codes**).
+  - Keep notes **encrypted and private**.
+  - Access notes across sessions when saved to the **MongoDB** backend.
+- Handled **saving passwords to Local Storage** for quick client-side access.
+- Integrated **MongoDB backend** to securely store user passwords.
+
+### 🧑‍💻 Meharunnasa Mukta (ID: C231446)
+- Developed the **Security Audit Page**, featuring:
+  - **Weak password** alerts.
+  - **Reused password** detection.
+  - **Secure storage** indicators.
+- Built the **Settings Page**, including:
+  - **Master password update**.
+  - **Dark mode** toggle.
+  - **Password strength configuration**.
+  - **Delete account** option.
+- Contributed to the **Home Page** design and logic.
+
 
 ## 🎯 Features
 
@@ -89,8 +113,7 @@
 4. **Create a `.env` file** in the server folder and add your environment variables:
 
    ```
-   MONGO_URI=your_mongodb_connection_string
-   JWT_SECRET=your_secret_key
+  MONGO_URI=mongodb://localhost:27017
    ```
 
 5. **Run the backend**
@@ -120,16 +143,6 @@
 * Integrate biometric or 2FA authentication.
 * Add export/import feature for saved passwords.
 
----
-
-## 🤝 Contributing
-
-Contributions are welcome! Please follow these steps:
-
-1. Fork the repository.
-2. Create a new branch.
-3. Make your changes and commit them.
-4. Submit a pull request.
 
 ---
 
