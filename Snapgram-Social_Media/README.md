@@ -38,13 +38,14 @@ A modern, responsive social media web application built using **React**, **Appwr
 
 ## 📸 Screenshots
 
-![image](https://github.com/user-attachments/assets/c9bf7c2b-600b-4858-81f3-8294b1d0f723)
-![image](https://github.com/user-attachments/assets/23a0922e-137f-4944-9928-357b236e4317)
-![image](https://github.com/user-attachments/assets/f48074c8-5a72-4791-a4f9-3ef50e0262db)
-![image](https://github.com/user-attachments/assets/0214c401-180d-4cd0-9bb9-fdd6f01028ee)
-![image](https://github.com/user-attachments/assets/81884547-f7a4-4d77-abee-0e23f130a4fc)
-![image](https://github.com/user-attachments/assets/aee1b9f3-64ea-433c-8500-d93cf9a5113f)
-![image](https://github.com/user-attachments/assets/28f77eb0-100e-4366-a552-dc9e59821da6)
+<img width="370" height="220" alt="image" src="https://github.com/user-attachments/assets/f14df90a-816c-4ef3-8f1b-8c5213d5abb1" />
+<img width="370" height="220" alt="image" src="https://github.com/user-attachments/assets/863ad351-c910-4cb4-81a0-ca871a2ffc93" />
+<img width="263" height="542" alt="image" src="https://github.com/user-attachments/assets/97b496c0-10b9-43ce-8d02-a471f0c0b563" />
+<img width="258" height="542" alt="image" src="https://github.com/user-attachments/assets/91031f05-2ba2-4d13-9887-1ef321cc6253" />
+<img width="358" height="504" alt="image" src="https://github.com/user-attachments/assets/d6ccd5ed-dce7-48bf-b719-04bec2b837af" />
+<img width="624" height="283" alt="image" src="https://github.com/user-attachments/assets/de534e7d-62e1-4f48-b207-308221bdcf8d" />
+
+
 
 ## 🧪 Getting Started
 
