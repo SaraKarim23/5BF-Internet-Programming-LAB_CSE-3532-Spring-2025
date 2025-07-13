@@ -68,7 +68,7 @@ Course Details page:
 <img width="1840" height="838" alt="coursedetail2" src="https://github.com/user-attachments/assets/e9ef46ef-eb75-467a-b265-b54462766773" />
 Billing Page(purchase course form):
 <img width="1860" height="786" alt="billing" src="https://github.com/user-attachments/assets/c6416e4f-2490-443a-baf8-22b1d0c27c84" />
-Course Progress Page(where student can watch lectures):
+Course Progress Page:
 <img width="1873" height="857" alt="courseprogress" src="https://github.com/user-attachments/assets/74781490-fb7b-47d3-8d52-ad55035e1f50" />
 
 
@@ -103,30 +103,20 @@ CLOUDINARY_CLOUD_NAME=your_cloud_name
 CLOUDINARY_API_KEY=your_api_key
 CLOUDINARY_API_SECRET=your_api_secret
 For client (/client/.env):
-bash
-Copy
-Edit
+
 VITE_API_BASE_URL=http://localhost:5000/api
 3️⃣ Install Dependencies
 Server:
-bash
-Copy
-Edit
 cd server
 npm install
 npm start
 Client:
-bash
-Copy
-Edit
+
 cd client
 npm install
 npm run dev
 🌐 Cloudinary Integration
 Videos are uploaded to Cloudinary during lecture creation. The backend stores the secure_url from the Cloudinary response and passes it to the frontend, where it's rendered in a <video> tag.
-
-
-
 
 
 📄 License
