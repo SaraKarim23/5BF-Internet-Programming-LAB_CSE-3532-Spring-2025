@@ -122,13 +122,4 @@ Videos are uploaded to Cloudinary during lecture creation. The backend stores th
 📄 License
 This project is open-source and available under the MIT License.
 
-yaml
-Copy
-Edit
 
----
-
-Let me know if you also want:
-- A `LICENSE` file
-- To change the GitHub link above to your real profile
-- To include a badge (build status, license, etc.) at the top
