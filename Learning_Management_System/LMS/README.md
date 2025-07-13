@@ -52,9 +52,8 @@ A full-featured Learning Management System built with modern web technologies. T
 │ └── server.js
 ├── README.md
 
-bash
-Copy
-Edit
+<img width="1895" height="853" alt="home" src="https://github.com/user-attachments/assets/b6ed35e1-48b6-4cd6-812c-b4b9e05c06aa" />
+
 
 ## 🧪 Setup Instructions
 
@@ -97,10 +96,6 @@ npm run dev
 🌐 Cloudinary Integration
 Videos are uploaded to Cloudinary during lecture creation. The backend stores the secure_url from the Cloudinary response and passes it to the frontend, where it's rendered in a <video> tag.
 
-📸 Screenshots
-
-
-<img width="1895" height="853" alt="home" src="https://github.com/user-attachments/assets/97c2ce61-0da5-4423-9a51-bdff13c82afe" />
 
 
 
