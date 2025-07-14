@@ -1,0 +1,45 @@
+{% extends 'app/base.html' %}
+{% block title %}Baby Wear{% endblock %}
+{% block main-content %}
+<div class="container my-5">
+    <div class="row">
+        <div class="col-sm-3">
+            <div class="list-group">
+                <!-- All Wear link -->
+                <a href="{% url 'baby_wear' %}" class="list-group-item list-group-item-action">All Wear</a>
+
+                <!-- Top Wear link -->
+                <a href="{% url 'baby_wear_subcategory' 'Topwear' %}" class="list-group-item list-group-item-action">Top Wear</a>
+
+                <!-- Bottom Wear link -->
+                <a href="{% url 'baby_wear_subcategory' 'Bottomwear' %}" class="list-group-item list-group-item-action">Bottom Wear</a>
+            </div>
+        </div>
+
+        <div class="col-sm-9">
+            <div class="row">
+                {% for product in products %}
+                <div class="col-sm-4 text-center mb-4">
+                    <!-- Product detail link -->
+                    <a href="{% url 'product_detail' product.id %}" class="btn">
+                        <div class="item">
+                            <!-- Product Image -->
+                            <img src="{{ product.product_image.url }}" alt="{{ product.title }}" height="250px" class="img-fluid">
+                            <!-- Product Title -->
+                            <div class="fw-bold">{{ product.title }}</div>
+                            <!-- Product Price -->
+                            <div class="fw-bold">Price: {{ product.discounted_price }} ৳</div>
+                            <!-- Original Price -->
+                            <small class="fw-light text-decoration-line-through">{{ product.selling_price }}</small>
+                        </div>
+                    </a>
+                </div>
+                {% empty %}
+                <!-- Message when no products are available -->
+                <p>No products available in this category.</p>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

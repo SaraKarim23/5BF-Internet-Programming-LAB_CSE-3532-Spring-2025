@@ -1,0 +1,43 @@
+{% extends 'app/base.html' %}
+{% load static %}
+
+{% block title %}Product Detail{% endblock title %}
+
+{% block main-content %}
+<div class="container my-5">
+    <div class="row">
+        <!-- Product Image -->
+        <div class="col-sm-6 text-center align-self-center">
+            <img src="{{ product.product_image.url }}" alt="{{ product.title }}" class="img-fluid img-thumbnail">
+        </div>
+
+        <!-- Product Information -->
+        <div class="col-sm-5 offset-sm-1">
+            <h2>Product Title: {{ product.title }}</h2>
+            <hr>
+            <p>{{ product.description }}</p> <br>
+            <h4>Price: {{ product.discounted_price }} ৳
+                <small class="fw-light text-decoration-line-through">{{ product.selling_price }}</small>
+            </h4> <br>
+
+            <!-- Add to Cart Form -->
+            <form action="{% url 'add-to-cart' %}" method="GET" class="d-inline">
+                <input type="hidden" name="prod_id" value="{{ product.id }}" id="prod_id">
+                <button type="submit" class="btn btn-primary shadow px-5 py-2">Add to Cart</button>
+            </form>
+
+            <!-- Buy Now Button -->
+            <a href="{% url 'buy-now' %}" class="btn btn-danger shadow px-5 py-2 ms-4">Buy Now</a>
+
+            <!-- Available Offers Section -->
+            <h5 class="mt-5">Available Offers</h5>
+            <ul>
+                <li>Bank Offer: 5% Unlimited Cashback on Warehouse UCB Bank Credit</li>
+                <li>Special Price: Get extra 3000 ৳ off (price inclusive of discount)</li>
+                <li>No cost EMI: 1,667 ৳/month. Standard EMI also available</li>
+                <li>Partner Offer: 2000৳ bKash Gift Card on Every 1000th Transaction with a new Visa Debit/Credit Card</li>
+            </ul>
+        </div>
+    </div>
+</div>
+{% endblock %}

@@ -1,0 +1,268 @@
+<!-- @format -->
+
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1"
+      crossorigin="anonymous" />
+
+    <!--Owl Carousel CSS-->
+    <link rel="stylesheet" href="{% static 'app/css/owl.carousel.min.css' %}" />
+
+    <!--FontAwesome CSS-->
+    <link rel="stylesheet" href="{% static 'app/css/all.min.css' %}" />
+
+    <!--Custom CSS-->
+    <link rel="stylesheet" href="{% static 'app/css/style.css' %}" />
+    <link rel="stylesheet" href="{% static 'app/css/chatbot.css' %}" />
+
+    <title>Warehouse | {% block title %} {% endblock title %}</title>
+  </head>
+  <body>
+    <nav
+      class="navbar navbar-expand-lg navbar-dark"
+      style="background-color: rgb(21, 43, 43)">
+      <div class="container">
+        <a class="navbar-brand" href="/"
+          ><img src="{% static 'app/images/logo11.png' %}" alt=""
+        /></a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="/">Home</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle text-white"
+                href="#"
+                id="electronicsDropdown"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false">
+                Electronics
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="electronicsDropdown">
+                <li>
+                  <a class="dropdown-item" href="{% url 'mobile' %}">Mobile</a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="{% url 'laptop' %}">Laptop</a>
+                </li>
+              </ul>
+            </li>
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle text-white"
+                href="#"
+                id="fashionDropdown"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false">
+                Fashion
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="fashionDropdown">
+                <li>
+                  <a class="dropdown-item" href="{% url 'man_wear' %}"
+                    >Man Wear</a
+                  >
+                </li>
+                <li>
+                  <a class="dropdown-item" href="{% url 'women_wear' %}"
+                    >Women Wear</a
+                  >
+                </li>
+                <li>
+                  <a class="dropdown-item" href="{% url 'baby_wear' %}"
+                    >Baby Wear</a
+                  >
+                </li>
+              </ul>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-white" href="{% url 'aboutus' %}"
+                >About Us</a
+              >
+            </li>
+          </ul>
+          <form class="d-flex">
+            <input
+              class="form-control me-2"
+              type="search"
+              placeholder="Search"
+              aria-label="Search" />
+            {% if user.is_authenticated %}
+            <button class="btn btn-warning" type="submit">
+              {{ request.user.username.split.0.split.0 | capfirst }}
+            </button>
+            {% else %}
+            <button class="btn btn-warning" type="submit">Search</button>
+            {% endif %}
+          </form>
+
+          <div>
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              {% if user.is_authenticated %}
+              <li class="nav-item dropdown mx-2">
+                <a
+                  class="nav-link dropdown-toggle text-white"
+                  href="#"
+                  id="profileDropdown"
+                  role="button"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false">
+                  {{request.user.username | capfirst}}
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="profileDropdown">
+                  <li>
+                    <a class="dropdown-item" href="{% url 'profile' %}"
+                      >Profile</a
+                    >
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="{% url 'orders' %}"
+                      >Orders</a
+                    >
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="{% url 'changepassword' %}"
+                      >Change Password</a
+                    >
+                  </li>
+                  <li>
+                    <form action="{% url 'logout' %}" method="post">
+                      {% csrf_token %}
+                      <button type="submit" class="dropdown-item">
+                        Logout
+                      </button>
+                    </form>
+                  </li>
+                </ul>
+              </li>
+              <li class="nav-item mx-2">
+                <a href="{% url 'showcart' %}" class="nav-link text-white"
+                  ><span class="badge bg-danger"></span> Cart
+                </a>
+              </li>
+              {% else %}
+
+              <li class="nav-item mx-2">
+                <a href="{% url 'login' %}" class="nav-link text-white"
+                  >Login</a
+                >
+              </li>
+              <li class="nav-item mx-2">
+                <a
+                  href="{% url 'customerregistration' %}"
+                  class="nav-link text-white"
+                  >Registration</a
+                >
+              </li>
+              {% endif %}
+            </ul>
+          </div>
+        </div>
+      </div>
+    </nav>
+    {% block banner_slider %} {% endblock banner_slider %} {% block livesale %}
+    {% endblock livesale %} {% block main-content %} {% endblock main-content %}
+
+    <!-- Message Icon to open the chat -->
+    <div id="chatbot-icon" onclick="toggleChatbox()">
+      <i class="fas fa-comment-dots"></i> Chat
+    </div>
+
+    <!-- Chat Popup -->
+    <div
+      id="chat-popup"
+      style="
+        display: none;
+        flex-direction: column;
+        position: fixed;
+        bottom: 80px;
+        right: 30px;
+        width: 300px;
+        height: 400px;
+        background: #fff;
+        border: 1px solid #ccc;
+        z-index: 9999;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+      ">
+      <div
+        id="chat-header"
+        style="
+          background: #222;
+          color: #fff;
+          padding: 10px;
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+        ">
+        <span>Chatbot</span>
+        <span id="chat-close" onclick="toggleChatbox()" style="cursor: pointer"
+          >&times;</span
+        >
+      </div>
+      <div
+        id="chat-body"
+        style="flex: 1; overflow-y: auto; padding: 10px"></div>
+      <div id="chat-footer" style="padding: 10px; display: flex">
+        <input
+          type="text"
+          id="chat-message"
+          placeholder="Type a message..."
+          style="flex: 1; margin-right: 5px"
+          onkeydown="if(event.key==='Enter'){sendMessage();}" />
+        <button id="send-btn" onclick="sendMessage()">Send</button>
+      </div>
+    </div>
+
+    <!-- Start Footer -->
+    <footer class="container-fluid bg-dark text-center p-2 mt-5">
+      <small class="text-white"
+        >Copyright &copy; 2025 || Designed By Maksuda Islam ||
+      </small>
+      <img
+        src="{% static 'app/images/payment2.png' %}"
+        alt=""
+        srcset=""
+        class="img-fluid"
+        height="2px" />
+    </footer>
+    <!-- End Footer -->
+
+    <!-- Jquery -->
+    <script
+      src="https://code.jquery.com/jquery-3.5.1.min.js"
+      integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0="
+      crossorigin="anonymous"></script>
+    <!-- Bootstrap Bundle with Popper -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW"
+      crossorigin="anonymous"></script>
+
+    <script src="{% static 'app/js/owl.carousel.min.js' %}"></script>
+    <script src="{% static 'app/js/all.min.js' %}"></script>
+    <script src="{% static 'app/js/myscript.js' %}"></script>
+    <script src="{% static 'app/js/chatbot.js' %}"></script>
+  </body>
+</html>

@@ -1,0 +1,19 @@
+{% extends 'app/base.html' %}
+
+{% block title %}Product Detail{% endblock %}
+
+{% block main-content %}
+<div class="container my-5">
+    <div class="row">
+        <div class="col-sm-6">
+            <img src="{{ product.product_image.url }}" alt="{{ product.title }}" class="img-fluid img-thumbnail">
+        </div>
+        <div class="col-sm-6">
+            <h2>{{ product.title }}</h2>
+            <p>{{ product.description }}</p>
+            <h4>Price: {{ product.discounted_price }} ৳</h4>
+            <small class="text-decoration-line-through">{{ product.selling_price }} ৳</small>
+        </div>
+    </div>
+</div>
+{% endblock %}
