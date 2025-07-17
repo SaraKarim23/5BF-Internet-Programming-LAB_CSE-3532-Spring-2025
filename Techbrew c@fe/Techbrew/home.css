@@ -1,0 +1,579 @@
+/* styles.css */
+/* Import Google Font CDN link */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+
+:root {
+    --primary-color: #9a98f7;
+    --decent-color: #d6e8db;
+    --accent-color: #fff;
+    --secondary-color: rgb(9, 189, 9);
+    --font-family: 'Poppins', sans-serif;
+    --text-color: gray;
+}
+
+.navbar {
+  background-color: #000000;
+  padding: 10px 20px;
+  font-family: Arial, sans-serif;
+}
+
+.navbar-brand {
+  font-family: 'Cursive', sans-serif;
+  font-size: 24px;
+  font-style: italic;
+  color: #ff9900;
+}
+
+.nav-link {
+  font-size: 16px;
+  color: #ffffff;
+  margin: 0 10px;
+  transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+  color: #ffcc66;
+}
+
+.navbar-toggler {
+  border: none;
+}
+
+.navbar-toggler-icon {
+  background-color: #fff;
+}
+
+.btn-outline-light:hover {
+  background-color: #fff;
+  color: #000;
+}
+
+section{
+  padding: 0 14%;
+
+}
+
+.hero{
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  background-size: cover;
+  background-position: center;
+}
+
+.btn:hover {
+  background-color: #fff;
+  color: #000;
+  border: 1px solid #000;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+}
+
+/* Hero Section Styles */
+.hero {
+  position: relative;
+  overflow: hidden;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start; /* Align content to the left */
+  text-align: left;
+  color: white;
+  padding-left: 50px;
+}
+
+.hero video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ensures the video covers the entire background */
+  z-index: 1;
+}
+
+.hero-text {
+  position: relative;
+  z-index: 2;
+  max-width: 600px;
+}
+
+.hero h5 {
+  font-weight: bold;
+  color: #ff6600; /* Changed to orange */
+  margin-bottom: 20px;
+}
+
+.hero h1,
+.hero h2,
+.hero p {
+  margin: 10px 0;
+}
+
+.hero .btn {
+  margin-top: 20px;
+  background-color: #8B4513; /* Changed to brown */
+  color: white;
+  padding: 10px 20px;
+  text-decoration: none;
+  font-size: 1.2rem;
+  border: none;
+  border-radius: 5px;
+  z-index: 2;
+  position: relative;
+}
+
+.hero .btn:hover {
+  background-color: #5A3210;
+}
+
+.media-icons {
+  margin-top: 20px;
+  display: flex;
+  gap: 15px;
+}
+
+.media-icons a {
+  color: white;
+  font-size: 1.5rem;
+  text-decoration: none;
+}
+
+.media-icons a:hover {
+  color: #ff6600;
+}
+
+/* Search Input Styles */
+.search-container {
+  position: relative;
+  z-index: 2;
+  margin-top: 20px;
+}
+
+.search-input {
+  width: 100%;
+  max-width: 300px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.search-button {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  color: #ff6600;
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+
+.search-button:hover {
+  color: #ff4500;
+}
+
+
+/* Service Section */
+.bg-service {
+  display: flex;
+  justify-content: space-between;
+  margin: 50px 0;
+}
+
+.service-one {
+  position: relative;
+  width: 30%;
+}
+
+.service-one img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.service-one:hover .overlay {
+  opacity: 1;
+}
+
+.over-txt p {
+  font-size: 18px;
+}
+
+.over-txt h4 {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+
+ /* General Shop Section */
+ 
+ .bg-shop {
+  padding: 20px;
+  background: #f9f9f9;
+}
+.shop-links {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+.shop-links h2 {
+  margin: 0;
+}
+.links li {
+  display: inline;
+  margin: 0 10px;
+  cursor: pointer;
+  text-transform: capitalize;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+.links li:hover {
+  color: orange;
+  transform: scale(1.1);
+}
+.shop-flex {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  justify-content: space-around;
+}
+.shop1 {
+  background: #fff;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  text-align: center;
+  width: 200px;
+  position: relative;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.shop1:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+.shop-image {
+  overflow: hidden;
+  border-radius: 8px;
+}
+.shop-image img {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+.shop-image img:hover {
+  transform: scale(1.1);
+}
+.price {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: #ff5f5f;
+  color: #fff;
+  padding: 5px;
+  border-radius: 4px;
+}
+.add-to-cart {
+  background: orange;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 4px;
+  color: white;
+  cursor: pointer;
+  margin-top: 10px;
+  transition: background 0.3s ease;
+}
+.add-to-cart:hover {
+  background: darkorange;
+}
+.hidden {
+  display: none;
+}
+.category-bg {
+  width: 100%;
+  height: 200px;
+  background-size: cover;
+  background-position: center;
+  border-radius: 8px;
+  margin-bottom: 20px;
+}
+ 
+ /* Popular item container */
+.popular-item {
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  width: 250px;
+  transition: transform 0.3s ease-in-out;
+  opacity: 0;
+  animation: fadeInUp 2s ease-out forwards;
+}
+
+/* Apply staggered animation delays to each item */
+.popular-item:nth-child(1) {
+  animation-delay: 0.2s;
+}
+
+.popular-item:nth-child(2) {
+  animation-delay: 0.4s;
+}
+
+.popular-item:nth-child(3) {
+  animation-delay: 0.6s;
+}
+
+/* Hover effect on popular items */
+.popular-item:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Ensure images are the same size */
+.popular-item img {
+  width: 100%;
+  height: 200px; /* Fixed height */
+  object-fit: cover; /* Ensure images cover the area without distorting */
+  border-radius: 8px;
+  margin-bottom: 15px; /* Add space below the image */
+}
+
+.popular-info {
+  margin-top: 15px;
+}
+
+.popular-info h3 {
+  font-size: 1.5rem;
+  color: #333;
+  margin: 10px 0;
+}
+
+.popular-info .price {
+  font-size: 1.25rem;
+  color: #b05f0d;
+  font-weight: bold;
+}
+
+.popular-info button {
+  background-color: #ff6600;
+  color: white;
+  border: none;
+  padding: 10px;
+  font-size: 1rem;
+  border-radius: 5px;
+  width: 100%;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.popular-info button:hover {
+  background-color: #cc5200;
+}
+
+/* Fade-in-up effect for elements */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+.menu-section {
+  text-align: center;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.menu-text {
+  font-size: 20px;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 15px;
+}
+
+.menu-button {
+  background-color: orange;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  font-size: 18px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.menu-button:hover {
+  background-color: #e69500;
+  transform: scale(1.05);
+}
+
+.menu-button:active {
+  transform: scale(1);
+  background-color: #cc7a00;
+}
+
+/* Membership Section */
+#membership {
+  background-color: #f9f9f9; /* Light background color */
+  padding: 30px 15px; /* Add some padding */
+  border-radius: 10px; /* Rounded corners */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+/* Title of Membership Section */
+#membership h2 {
+  font-size: 2rem;
+  color: #333;
+  font-weight: bold;
+  text-align: center;
+}
+
+/* Membership List */
+.list-group {
+  margin-top: 20px;
+  padding: 0;
+  list-style: none; /* Remove default list styling */
+}
+
+/* Individual Membership Item */
+.list-group-item {
+  background-color: white; /* White background for each item */
+  padding: 15px; /* Add padding inside each item */
+  margin-bottom: 15px; /* Space between items */
+  border-radius: 8px; /* Rounded corners */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Shadow effect */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition on hover */
+}
+
+.list-group-item:hover {
+  transform: translateY(-5px); /* Lift the item on hover */
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2); /* Increase shadow on hover */
+}
+
+/* Membership Item Name */
+.list-group-item h5 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #444;
+  margin-bottom: 5px;
+}
+
+/* Membership Item Email */
+.list-group-item p {
+  font-size: 1rem;
+  color: #777;
+  margin: 0;
+}
+
+/* Handle case with no members */
+#membership p {
+  text-align: center;
+  font-size: 1.1rem;
+  color: #555;
+}
+
+
+  /* Footer Styles */
+.footer {
+  background-color: #333; /* Dark background for contrast */
+  color: #f8f9fa; /* Light text for readability */
+  padding: 40px 0;
+}
+
+.footer h5 {
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+.footer p {
+  font-size: 0.9rem; /* Smaller text for footer details */
+}
+
+.footer a {
+  text-decoration: none;
+  color: #ff6600; /* Orange color for links */
+  transition: color 0.3s ease; /* Smooth color change */
+}
+
+.footer a:hover {
+  color: #ff4500; /* Brighter orange on hover */
+}
+
+/* Social Media Icons */
+.social-icons a {
+  font-size: 1.5rem; /* Slightly larger icons */
+  margin-right: 10px;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.social-icons a:hover {
+  transform: scale(1.2); /* Enlarge icon on hover */
+  color: #ff6600; /* Change color on hover */
+}
+
+/* Responsive clickable phone number */
+.footer .list-unstyled {
+  list-style: none; /* Remove bullets */
+  padding: 0;
+}
+
+.footer .list-unstyled li {
+  margin-bottom: 10px;
+}
+
+/* Keyframes for shake animation */
+@keyframes shake {
+  0% {
+    transform: rotate(-5deg);
+  }
+  100% {
+    transform: rotate(5deg);
+  }
+}
+
+@media (hover: hover) {
+  .social-icon:hover {
+    animation: shake 0.5s infinite alternate; /* Add shake effect */
+  }
+}
+
+/* Responsive Design Adjustments */
+@media (max-width: 768px) {
+  .footer {
+    text-align: center;
+  }
+
+  .footer .row {
+    flex-direction: column;
+  }
+
+  .social-icons {
+    justify-content: center;
+  }
+}

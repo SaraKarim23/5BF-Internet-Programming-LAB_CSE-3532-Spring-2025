@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu and Shopping Cart</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f9fa;
+        }
+        .menu, .cart {
+            max-width: 600px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: white;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        .menu h1, .cart h1 {
+            font-size: 24px;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        .menu-item, .cart-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 15px;
+        }
+        .menu-item button {
+            padding: 5px 10px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 3px;
+            cursor: pointer;
+        }
+        .menu-item button:hover {
+            background-color: #0056b3;
+        }
+        .quantity-controls {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+        .quantity-controls button {
+            background-color: #6c757d;
+            color: white;
+            border: none;
+            border-radius: 3px;
+            padding: 2px 6px;
+            font-size: 14px;
+            cursor: pointer;
+        }
+        .quantity-controls button:hover {
+            background-color: #5a6268;
+        }
+        .total-price {
+            font-size: 18px;
+            font-weight: bold;
+            margin-top: 20px;
+            text-align: center;
+        }
+        .checkout-button {
+            display: block;
+            width: 100%;
+            padding: 10px;
+            background-color: #28a745;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        .checkout-button:hover {
+            background-color: #218838;
+        }
+    </style>
+</head>
+<body>
+
+<div class="menu">
+    <h1>Menu</h1>
+    <div class="menu-item">
+        <span>Pizza</span>
+        <span>$12 <button onclick="addItem('Pizza', 12)">Add to Cart</button></span>
+    </div>
+    <div class="menu-item">
+        <span>Burger</span>
+        <span>$8 <button onclick="addItem('Burger', 8)">Add to Cart</button></span>
+    </div>
+    <div class="menu-item">
+        <span>Pasta</span>
+        <span>$10 <button onclick="addItem('Pasta', 10)">Add to Cart</button></span>
+    </div>
+    <div class="menu-item">
+        <span>Salad</span>
+        <span>$6 <button onclick="addItem('Salad', 6)">Add to Cart</button></span>
+    </div>
+</div>
+
+<div class="cart">
+    <h1>Shopping Cart</h1>
+    <div id="cart-items">
+        <!-- Items added to the cart will appear here -->
+    </div>
+    <div class="total-price" id="total-price">Total: $0</div>
+    <button class="checkout-button" onclick="checkout()">Checkout</button>
+</div>
+
+<script>
+    let totalPrice = 0;
+    const cartItems = document.getElementById('cart-items');
+
+    const cart = {}; // Object to store cart items with quantity
+
+    function addItem(name, price) {
+        if (cart[name]) {
+            // If item already exists, increment the quantity
+            cart[name].quantity += 1;
+        } else {
+            // Add a new item to the cart
+            cart[name] = { price, quantity: 1 };
+        }
+        updateCart();
+    }
+
+    function updateCart() {
+        cartItems.innerHTML = ''; // Clear the cart items container
+        totalPrice = 0; // Reset total price
+
+        for (const [name, item] of Object.entries(cart)) {
+            const { price, quantity } = item;
+            totalPrice += price * quantity; // Update total price
+
+            // Create a cart item element
+            const cartItem = document.createElement('div');
+            cartItem.className = 'cart-item';
+            cartItem.innerHTML = `
+                <span>${name}</span>
+                <span>
+                    $${price} x ${quantity}
+                    <div class="quantity-controls">
+                        <button onclick="incrementItem('${name}')">+</button>
+                        <button onclick="decrementItem('${name}')">-</button>
+                    </div>
+                </span>
+            `;
+            cartItems.appendChild(cartItem);
+        }
+
+        document.getElementById('total-price').innerText = `Total: $${totalPrice}`;
+    }
+
+    function incrementItem(name) {
+        cart[name].quantity += 1; // Increment the quantity
+        updateCart();
+    }
+
+    function decrementItem(name) {
+        if (cart[name].quantity > 1) {
+            cart[name].quantity -= 1; // Decrement the quantity
+        } else {
+            delete cart[name]; // Remove the item if quantity reaches 0
+        }
+        updateCart();
+    }
+
+    function checkout() {
+        if (totalPrice > 0) {
+            alert(`Your total is $${totalPrice}. Proceeding to checkout.`);
+        } else {
+            alert("Your cart is empty. Add items before checking out.");
+        }
+    }
+</script>
+
+</body>
+</html>

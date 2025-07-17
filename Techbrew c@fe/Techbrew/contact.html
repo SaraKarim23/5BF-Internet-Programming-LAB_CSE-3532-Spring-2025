@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Techbrew Cafe - Contact</title>
+    <link rel="stylesheet" href="home.css">
+    <script>
+        // Check if user is logged in
+        function checkLogin() {
+            const isLoggedIn = sessionStorage.getItem('isLoggedIn'); // Simulating login status
+            if (!isLoggedIn) {
+                alert('Please log in to send a message.');
+                window.location.href = 'login.html'; // Redirect to login page
+            }
+        }
+
+        // Validate form
+        function validateForm(event) {
+            event.preventDefault(); // Prevent default submission
+            const email = document.getElementById('email').value;
+            const message = document.getElementById('message').vaalue;
+
+            if (email === '' || message === '') {
+                alert('All fields are required.');
+                return;
+            }
+
+            if (!validateEmail(email)) {
+                alert('Please enter a valid registered email.');
+                return;
+            }
+
+            alert('Message sent successfully!');
+            document.getElementById('contactForm').reset();
+        }
+
+        // Email validation
+        function validateEmail(email) {
+            const regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            return regex.test(email);
+        }
+    </script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        nav {
+            background-color: #333;
+            color: white;
+            padding: 10px;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 10px;
+            cursor: pointer;
+        }
+
+        .contact-page {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            background: linear-gradient(to bottom, #f8f9fa, #e9ecef);
+            animation: fadeIn 2s;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        form {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            max-width: 400px;
+        }
+
+        form input, form textarea {
+            width: 100%;
+            margin-bottom: 15px;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        form button {
+            width: 100%;
+            padding: 10px;
+            background-color: orange;
+            border: none;
+            border-radius: 5px;
+            color: white;
+            font-size: 16px;
+            cursor: pointer;
+            transition: transform 0.3s ease;
+        }
+
+        form button:hover {
+            transform: scale(1.1);
+        }
+
+        form button:active {
+            transform: scale(1);
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <span>Techbrew Cafe</span>
+        <div>
+            <a href="home.php">Home</a>
+            <a href="#contact" onclick="checkLogin();">Contact</a>
+        </div>
+    </nav>
+
+    <div id="contact" class="contact-page">
+        <form id="contactForm" onsubmit="validateForm(event);">
+            <h2>Contact Us</h2>
+            <label for="email">Registered Email:</label>
+            <input type="email" id="email" name="email" placeholder="Enter your registered email" required>
+            
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" rows="5" placeholder="Write your message here..." required></textarea>
+            
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+</body>
+</html>

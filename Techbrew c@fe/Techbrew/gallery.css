@@ -1,0 +1,103 @@
+body {
+    padding: 0;
+    margin: 0;
+    font-family: sans-serif;
+}
+
+.banner1, .banner2, .banner3, .banner4 {
+    height: 100vh;
+    width: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    opacity: 0; /* Initially hide all banners */
+    transition: opacity 1s ease-in-out; /* Smooth fade-in/fade-out */
+}
+
+img {
+    width: 80%;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.text-box {
+    width: 600px;
+    position: absolute;
+    top: 200px;
+    left: 100px;
+    color: #fff;
+}
+
+.text-box h1 {
+    margin-bottom: 40px;
+}
+
+.text-box p {
+    font-size: 14px;
+    line-height: 18px;
+    margin-top: 80px;
+}
+
+.text-box span {
+    background: red;
+    height: 1px;
+    width: 100px;
+    position: absolute;
+    left: 0;
+}
+
+/* Keyframes to manage opacity changes for each banner */
+@keyframes gallery1 {
+    0%, 100% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0;
+    }
+}
+
+@keyframes gallery2 {
+    0%, 100% {
+        opacity: 1;
+    }
+    25%, 75% {
+        opacity: 0;
+    }
+}
+
+@keyframes gallery3 {
+    0%, 100% {
+        opacity: 0;
+    }
+    50%, 100% {
+        opacity: 1;
+    }
+}
+
+@keyframes gallery4 {
+    0%, 100% {
+        opacity: 0;
+    }
+    75% {
+        opacity: 1;
+    }
+}
+
+/* Apply the animations */
+.banner1 {
+    animation: gallery1 30s linear infinite;
+}
+
+.banner2 {
+    animation: gallery2 30s linear infinite;
+}
+
+.banner3 {
+    animation: gallery3 30s linear infinite;
+}
+
+.banner4 {
+    animation: gallery4 30s linear infinite;
+}

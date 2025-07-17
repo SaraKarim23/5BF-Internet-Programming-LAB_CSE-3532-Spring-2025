@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TechBrew Cafe</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Bootstrap Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+  <!-- Custom CSS -->
+  <link href="home.css" rel="stylesheet">
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg bg-black navbar-dark">
+    <div class="container">
+      <a class="navbar-brand fs-3 fw-bold fst-italic" href="#">𝒯𝑒𝒸𝒽𝒷𝓇𝑒𝓌 𝒞@𝒻𝑒'</a>
+      <!-- Toggle Button for Mobile -->
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav mx-auto text-center">
+          <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+          
+          <li class="nav-item"><a class="nav-link" href="events">Events</a></li>
+          <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+        </ul>
+
+            <!-- Search, Sign In, and Cart (Visible in both small and large screens) -->
+            <div class="d-flex align-items-center mt-3 mt-lg-0">
+              <input type="text" class="form-control me-2 d-none d-lg-inline" id="searchInput" placeholder="Search...">
+              <button class="btn btn-outline-light me-2" id="searchBtn">
+                <i class="bi bi-search"></i>
+              </button>
+              <a href="cart.html" class="btn btn-outline-light me-2" aria-label="Cart">
+                <i class="bi bi-cart"></i>
+              </a>
+               
+              <button class="btn btn-outline-light">Sign In</button>
+            </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <video src="v7.mp4" autoplay muted loop></video>
+    <div class="hero-text">
+      <h5>Just Brew It at the C@fe!</h5>
+      <h1>Welcome to TechBrew C@fe.</h1>
+      <h2>Where coffee meets community and learning.</h2>
+      <p>Our mission is to blend the warmth of a cafe with the excitement of lifelong education. Whether you're here to learn, share, or relax, this is your hub for creativity and growth. Let’s brew something amazing together!</p>
+      <a href="#" class="btn btn-primary">Order Now</a>
+      <!-- Social Media Icons -->
+      <div class="media-icons">
+        <a href="#" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
+        <a href="#" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+        <a href="#" aria-label="Twitter"><i class="bi bi-twitter"></i></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section Two -->
+  <div class="bg-service">
+    <div class="service-one">
+      <img src="img1.jpg" alt="">
+      <div class="overlay">
+        <div class="over-txt">
+          <p>for drinks</p>
+          <h4>coffee & drinks</h4>
+        </div>
+      </div>
+    </div>
+    <div class="service-one">
+      <img src="img2.jpg" alt="">
+      <div class="overlay">
+        <div class="over-txt">
+          <p>for entertainment</p>
+          <h4>beans & sweets</h4>
+        </div>
+      </div>
+    </div>
+    <div class="service-one">
+      <img src="img3.jpg" alt="">
+      <div class="overlay">
+        <div class="over-txt">
+          <p>for food</p>
+          <h4>croissant & cakes</h4>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!--PRODUCT SECTION-->
+  <div class="bg-shop" id="shop">
+    <div class="shop-links">
+      <div>
+        <h2>Products</h2>
+      </div>
+      <div class="links">
+        <li data-filter="all">All</li>
+        <li data-filter="coffee">Coffee</li>
+        <li data-filter="machines">Machines</li>
+        <li data-filter="sweets">Sweets</li>
+      </div>
+    </div>
+    <div class="category-bg hidden" id="coffee-bg"></div>
+    <div class="shop-flex">
+      <!-- Coffee Products -->
+      <div class="shop1 coffee hidden" data-category="black">
+        <div class="shop-image">
+          <img src="black-coffee.jpg" alt="Black Coffee">
+          <div class="price">$45.00</div>
+        </div>
+        <h2>Black Coffee</h2>
+        
+      </div>
+
+      <div class="shop1 coffee hidden" data-category="green">
+        <div class="shop-image">
+          <img src="green-coffee.jpg" alt="Green Coffee">
+          <div class="price">$50.00</div>
+        </div>
+        <h2>Green Coffee</h2>
+        
+      </div>
+
+      <!-- Machines -->
+      <div class="shop1 machines hidden">
+        <div class="shop-image">
+          <img src="coffee-machine-1.jpg" alt="Coffee Machine">
+          <div class="price">$150.00</div>
+        </div>
+        <h2>Coffee Machine 1</h2>
+        
+      </div>
+      <div class="shop1 machines hidden">
+        <div class="shop-image">
+          <img src="coffee-machine-2.jpg" alt="Coffee Machine">
+          <div class="price">$200.00</div>
+        </div>
+        <h2>Coffee Machine 2</h2>
+        
+      </div>
+      <div class="shop1 machines hidden">
+        <div class="shop-image">
+          <img src="coffee-machine-3.jpg" alt="Coffee Machine">
+          <div class="price">$250.00</div>
+        </div>
+        <h2>Coffee Machine 3</h2>
+        
+      </div>
+
+      <!-- Sweets -->
+      <div class="shop1 sweets hidden">
+        <div class="shop-image">
+          <img src="sweet-1.jpg" alt="Sweet 1">
+          <div class="price">$10.00</div>
+        </div>
+        <h2>Sweet 1</h2>
+        
+      </div>
+      <div class="shop1 sweets hidden">
+        <div class="shop-image">
+          <img src="sweet-2.jpg" alt="Sweet 2">
+          <div class="price">$12.00</div>
+        </div>
+        <h2>Sweet 2</h2>
+        
+      </div>
+      <div class="shop1 sweets hidden">
+        <div class="shop-image">
+          <img src="sweet-3.jpg" alt="Sweet 3">
+          <div class="price">$15.00</div>
+        </div>
+        <h2>Sweet 3</h2>
+        
+      </div>
+      <div class="shop1 sweets hidden">
+        <div class="shop-image">
+          <img src="sweet-4.jpg" alt="Sweet 4">
+          <div class="price">$18.00</div>
+        </div>
+        <h2>Sweet 4</h2>
+        
+      </div>
+    </div>
+  </div>
+
+   <!--END OF PRODUCT SECTION -->
+
+   <!-- Most Popular Items Section -->
+<section class="popular-items py-5 bg-light" id="popular-items">
+  <div class="container">
+    <h2 class="text-center mb-4">Most Popular Items</h2>
+    <div class="row row-cols-1 row-cols-md-3 g-4">
+
+      <!-- Item 1 -->
+      <div class="col">
+        <div class="card h-100 popular-item">
+          <div class="item-image">
+            <img src="cup7.jpg" alt="Cappuccino">
+          </div>
+          <div class="card-body text-center">
+            <h5 class="card-title">Cappuccino</h5>
+            <p class="card-text">A classic blend of espresso, steamed milk, and foam.</p>
+            <p class="fw-bold">$4.99</p>
+            <i class="bi bi-cart-plus add-to-cart-icon" data-name="Cappuccino" data-price="4.99"></i>
+          </div>
+        </div>
+      </div>
+
+      <!-- Item 2 -->
+      <div class="col">
+        <div class="card h-100 popular-item">
+          <div class="item-image">
+            <img src="pastry3.jpg" alt="Latte">
+          </div>
+          <div class="card-body text-center">
+            <h5 class="card-title">Latte</h5>
+            <p class="card-text">Rich espresso mixed with creamy steamed milk.</p>
+            <p class="fw-bold">$5.49</p>
+            <i class="bi bi-cart-plus add-to-cart-icon" data-name="Latte" data-price="5.49"></i>
+          </div>
+        </div>
+      </div>
+
+      <!-- Item 3 -->
+      <div class="col">
+        <div class="card h-100 popular-item">
+          <div class="item-image">
+            <img src="cup3.jpeg" alt="Cold Brew">
+          </div>
+          <div class="card-body text-center">
+            <h5 class="card-title">Cold Brew</h5>
+            <p class="card-text">Smooth and refreshing coffee, brewed cold for hours.</p>
+            <p class="fw-bold">$4.49</p>
+            <i class="bi bi-cart-plus add-to-cart-icon" data-name="Cold Brew" data-price="4.49"></i>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<div class="menu-section">
+  <p class="menu-text">Here is the most exciting menu of Tech Brew!</p>
+  <button class="menu-button" onclick="redirectToMenu()">Menu</button>
+</div>
+
+
+
+  <!-- Bootstrap JS Bundle -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    // Search Input and Button References
+    const searchBtn = document.getElementById('searchBtn');
+    const searchInput = document.getElementById('searchInput');
+
+    // Toggle the visibility of the search bar
+    searchBtn.addEventListener('click', () => {
+      searchInput.classList.toggle('d-none');
+      if (!searchInput.classList.contains('d-none')) {
+        searchInput.focus();
+      }
+    });
+
+
+
+
+  document.addEventListener("DOMContentLoaded", () => {
+    const addToCartIcons = document.querySelectorAll(".add-to-cart-icon");
+
+    addToCartIcons.forEach(icon => {
+      icon.addEventListener("click", () => {
+        // Add animation on click
+        icon.classList.add("clicked");
+        setTimeout(() => {
+          icon.classList.remove("clicked");
+        }, 300);
+
+        // Simulate adding to cart and redirect to cart page
+        setTimeout(() => {
+          window.location.href = "cart.html"; // Replace with your cart page URL
+        }, 500);
+      });
+    });
+  });
+ 
+  function redirectToMenu() {
+    window.location.href = "menu.html"; // Redirect to menu.html
+}
+
+
+
+  const categoryBg = document.getElementById('coffee-bg');
+  const products = document.querySelectorAll('.shop1');
+
+  // Function to show initial products
+  function showInitialProducts() {
+    products.forEach((product, index) => {
+      product.classList.add('hidden'); // Hide all products
+      if (index < 3) {
+        product.classList.remove('hidden'); // Show only the first three
+      }
+    });
+  }
+
+  // Call function to show initial products on page load
+  showInitialProducts();
+
+  // Handle filter click events
+  document.querySelectorAll('.links li').forEach(filter => {
+    filter.addEventListener('click', () => {
+      const category = filter.dataset.filter;
+
+      // Reset the background for the coffee category
+      if (category === 'coffee') {
+        categoryBg.style.backgroundImage = 'url("coffee-bg.jpg")';
+        categoryBg.classList.remove('hidden');
+      } else {
+        categoryBg.classList.add('hidden');
+      }
+
+      // Show/hide products based on the selected category
+      products.forEach(product => {
+        product.classList.toggle(
+          'hidden',
+          category !== 'all' && !product.classList.contains(category)
+        );
+      });
+    });
+  });
+
+  // Add-to-cart functionality
+  document.querySelectorAll('.add-to-cart').forEach(button => {
+    button.addEventListener('click', () => {
+      alert('Product added to cart!');
+    });
+  });
+
+
+   
+ 
+ 
+  </script>
+</body>
+</html>

@@ -1,0 +1,237 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
+}
+
+nav {
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+nav ul li {
+    margin-right: 15px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.event-page {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: url('background.jpg') no-repeat center center/cover;
+}
+
+.overlay {
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 20px;
+    border-radius: 8px;
+    color: #fff;
+    text-align: center;
+    max-width: 400px;
+    width: 90%;
+}
+
+.overlay input, 
+.overlay textarea, 
+.overlay button, 
+.overlay select {
+    width: 100%;
+    margin: 10px 0;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+}
+
+.overlay button {
+    background-color: #28a745;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
+
+.overlay button:hover {
+    background-color: #218838;
+}
+
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+nav {
+    background-color: #333;
+    padding: 10px;
+}
+
+nav ul {
+    display: flex;
+    justify-content: space-around;
+    list-style-type: none;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    padding: 10px;
+}
+
+.event-page {
+    position: relative;
+    min-height: 100vh; /* Full viewport height */
+    background-image: url('eventbackground.jpg'); /* Replace with your image path */
+    background-size: cover; /* Ensures the image covers the area */
+    background-position: center; /* Centers the image */
+    background-attachment: fixed; /* Keeps the background fixed during scrolling */
+    display: flex; /* Enables layout control */
+    flex-direction: column; /* Aligns children vertically */
+    align-items: center; /* Centers horizontally */
+    justify-content: flex-start; /* Pushes content from the top */
+    padding: 20px;
+    color: white;
+    text-align: center;
+    overflow: hidden; /* Prevents content from overflowing */
+}
+
+.overlay {
+    width: 100%;
+    max-width: 600px; /* Controls the form's width */
+    background: rgba(0, 0, 0, 0.6); /* Semi-transparent background for readability */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+h1 {
+    color: orange;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+input, textarea, button, select {
+    margin: 10px 0;
+    padding: 10px;
+    width: 100%; /* Full width inside the overlay */
+    max-width: 500px; /* Limits field size */
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+textarea {
+    height: 100px;
+}
+
+button {
+    background-color: orange;
+    color: white;
+    padding: 15px;
+    width: 200px; /* Fixed width for the button */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    animation: pulse 1s infinite;
+    margin-top: 20px;
+}
+
+button:hover {
+    background-color: darkorange;
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+#decoration-image {
+    margin-top: 10px;
+    padding: 10px;
+    border-radius: 5px;
+    background-color: #f7f7f7;
+    width: 100%; /* Consistent size */
+    max-width: 500px;
+}
+
+#decoration-image:focus {
+    outline: none;
+    border: 2px solid orange;
+}
+
+#decoration-image + label {
+    display: inline-block;
+    font-size: 14px;
+    color: #888;
+    margin-top: 5px;
+    cursor: pointer;
+}
+
+/* Uploaded Image Preview Section */
+#preview-image {
+    max-width: 100%; /* Image fits within the overlay */
+    max-height: 200px; /* Prevents image from being too tall */
+    margin: 15px 0; /* Space around the preview */
+    border: 2px solid #ddd;
+    border-radius: 5px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 5px;
+    display: none; /* Initially hidden */
+}
+
+#preview-image-container {
+    width: 100%; /* Fits the overlay width */
+    max-width: 500px; /* Restricts the maximum size */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px; /* Spacing before the button */
+}
+
+.payment-page {
+    display: none;
+    padding: 20px;
+    text-align: center;
+}
+
+.payment-page select {
+    padding: 10px;
+    margin: 20px;
+    border-radius: 5px;
+}
+
+.payment-page button {
+    background-color: green;
+}
+
+.payment-page button:hover {
+    background-color: darkgreen;
+}

@@ -1,0 +1,93 @@
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #f8f9fa;
+}
+
+.about-section {
+    background-image: url('about-bg.jpg'); /* Optional: Add a background image */
+    background-size: cover;
+    background-position: center;
+    color: white;
+}
+
+h1, h3 {
+    color: #ffc107;
+}
+
+p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+}
+
+/* Navbar Styles */
+.navbar {
+    background-color: #000000; /* Keep the black background */
+    padding: 10px 20px;
+    font-family: Arial, sans-serif;
+    position: sticky; /* Make navbar stick to top on scroll */
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4); /* Subtle shadow */
+}
+
+/* Brand Styles */
+.navbar-brand {
+    font-family: 'Cursive', sans-serif;
+    font-size: 24px;
+    font-style: italic;
+    color: #ff9900; /* Orange color for Techbrew Cafe */
+    text-shadow: 1px 1px 2px rgba(255, 153, 0, 0.7); /* Subtle glow */
+}
+
+/* Nav Links */
+.nav-link {
+    font-size: 16px;
+    color: #ffffff;
+    margin: 0 10px;
+    transition: color 0.3s ease;
+    text-decoration: none; /* Remove underline */
+}
+
+.nav-link:hover {
+    color: #ffcc66; /* Lighter orange on hover */
+}
+
+/* Toggler Button */
+.navbar-toggler {
+    border: none;
+    background: none;
+    color: #ffffff; /* White icon */
+}
+
+.navbar-toggler-icon {
+    background-image: url('data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="white" class="bi bi-list" viewBox="0 0 16 16"%3E%3Cpath fill-rule="evenodd" d="M2.5 12.5A.5.5 0 0 1 3 12h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-5A.5.5 0 0 1 3 7h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-5A.5.5 0 0 1 3 2h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"%3E%3C/path%3E%3C/svg%3E');
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 1.5rem;
+    height: 1.5rem;
+}
+
+/* Navbar Collapse */
+.navbar-collapse {
+    justify-content: space-between; /* Even spacing between brand and links */
+    align-items: center;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .navbar-brand {
+        font-size: 20px;
+    }
+
+    .navbar-nav {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .nav-link {
+        font-size: 18px;
+        padding: 10px;
+    }
+}
