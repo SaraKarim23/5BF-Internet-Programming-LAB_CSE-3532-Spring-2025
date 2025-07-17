@@ -1,0 +1,23 @@
+Session:,"2024 SPRING SEMESTER"
+Course:,"CO321-Database management system lab"
+Faculty:,"Ram Charan Baishya"
+total,1
+start,2025-07-05
+end,2025-07-05
+slno,rollno,name,attended,percent
+1,CSB21003,"Ryan Thompson",1,100
+2,CSB21004,"Sophia Williams",1,100
+3,CSB21007,"Matthew Davis",1,100
+4,CSB21008,"Emma Miller",1,100
+5,CSB21010,"Sarah Taylor",1,100
+6,CSB21012,"Ava Anderson",0,0
+7,CSM21001,"Liam Garcia",0,0
+8,CSM21002,"Isabella Rodriguez",0,0
+9,CSM21004,"Olivia Hernandez",0,0
+10,CSM21005,"Mason Lopez",1,100
+11,CSM21006,"Sophia Perez",1,100
+12,CSM21007,"Alexander Gonzalez",1,100
+13,CSM21008,"Ava Johnson",1,100
+14,CSM21009,"William Martinez",1,100
+15,CSM21010,"Emily Brown",1,100
+16,CSM21011,"James Rodriguez",1,100
