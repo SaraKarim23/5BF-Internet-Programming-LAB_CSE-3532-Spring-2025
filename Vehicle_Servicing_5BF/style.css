@@ -1,88 +1,127 @@
-.gabanav{
-    
-    background-color: rgba(0, 0, 0, 0);
-    border: 0px;
-   
-} 
-
-.navbar-fixed-top.scrolled {
-   background-color: #2f2f2f;
-  transition: background-color 200ms linear;
+*
+{
+padding:0;
+margin:0;
+box-sizing:border-box;
 }
- 
-.navbar-inverse .navbar-nav>li>a {
-    color: #eea7a7;
-}
-
-.navbar-inverse .navbar-nav>li>a:focus, .navbar-inverse .navbar-nav>li>a:hover {
-    color: #d8bcf2;
-    background-color: transparent;
+body
+{
+background-image:url(vehicle_home1.JPG);
+backgroung-size:cover;
+background-position:center;
+box-sizing:border-box;
+font-family:sans-serif;
 }
 
-@media (min-width: 768px)
-.navbar {
-    border-radius: 30px;
-} 
+.menu-bar
+{
+background:rgb(0,100,0);
+text-align:center;
+}
+.menu-bar ul
+{
+display:inline-flex;
+list-style:none;
+color:#fff;
+}
+.menu-bar ul li
+{
+width:120px;
+margin:15px;
+padding:15px;
+}
+.menu-bar ul li a
+{
+text-decoration:none;
+color:#fff;
+}
+.active,.menu-bar ul li:hover
+{
+background:#2bab0d;
+border-radius:3px;
+}
+.menu-bar .fa
+{
+margin-right:8px;
+}
 
-.jumbotron {
-    padding-top: 38px;
-    padding-bottom: 30px;
-    padding-left: 26px;
-    margin-bottom: 0px;
-    color: inherit;
-    background-color: #282931;
-} 
-.jumbotron h2 {
-    color: indianred;
-   
-} 
-.jumbotron p {
-    margin-bottom: 15px;
-    font-size: 15px;
-    font-weight: 200;
-    color: #ffffff;
-    margin-left: 0px;
-} 
+.sub-menu-1
+{
+display:none;
+}
+.menu-bar ul li:hover .sub-menu-1
+{
+display:block;
+position:absolute;
+background:rgb(0,100,0);
+margin-top:15px;
+margin-left:-15px;
+}
+.menu-bar ul li:hover .sub-menu-1 ul
+{
+display:block;
+margin:10px;
+}
+.menu-bar ul li:hover .sub-menu-1 ul li
+{
+width:150px;
+padding:10px;
+border-bottom:1px dotted #fff;
+background:transparent;
+border-radius:0;
+text-align:left;
+}
+.menu-bar ul li:hover .sub-menu-1 ul li:last-chlid
+{
+border-bottom:none;
+}
+.menu-bar ul li:hover .sub-menu-1 ul li a:hover
+{
+color:#b2ff00;
+}
+.fa-angle-right
+{
+float:right;
+}
+.title{
+position:absolute;
+top:50%;
+left:50%;
+transform:translate(-50%,-50%);
+}
+.title h3
+{
+color:red;
+font-size:50px;
+}
 
 
 
-/*slider*/
 
 
-    .slider {
-        width: 100%;
-        margin: 0px auto;
-        height: 100%;
-    }
-
-    .slick-slide {
-      margin: 0px 50px;
-    }
-
-    .slick-slide img {
-      width: 100%;
-    }
-
-    .slick-prev:before,
-    .slick-next:before {
-      color: #282931;
-    }
 
 
-    .slick-slide {
-      transition: all ease-in-out .5s;
-      opacity: .2;
-    }
-    
-    .slick-active {
-      opacity: .5;
-    }
 
-    .slick-current {
-      opacity: 1;
-    } 
-/*end slider*/
- 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
