@@ -16,15 +16,15 @@ The **Vehicle Servicing Management System** is designed to streamline vehicle se
 
 🛠 Tech Stack  
 **Frontend:**  
-- HTML5  
-- CSS3 (Tailwind Optional)  
-- JavaScript (Basic Interactivity)  
+- HTML 
+- CSS 
+- JavaScript  
 - Designed & Developed in Visual Studio Code  
 
 **Backend:**  
-- PHP (Core PHP, no framework)  
-- MySQL (Database)  
-- Apache Server (XAMPP/WAMP recommended)  
+- PHP  
+- MySQL 
+- Apache Server (XAMPP)  
 
 📜 Pages  
 1️⃣ **Home Page** – Welcome banner, featured services, contact link  
