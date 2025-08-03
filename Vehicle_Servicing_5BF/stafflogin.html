@@ -1,0 +1,148 @@
+<html>
+<head>
+<title>Login Page</title>
+<style>
+*
+{
+padding:0;
+margin:0;
+box-sizing:border-box;
+}
+body
+{
+background-image:url(f2.jpg);
+backgroung-size:cover;
+background-position:center;
+box-sizing:border-box;
+font-family:sans-serif;
+}
+
+.menu-bar
+{
+background:rgb(80,0,0);
+text-align:center;
+}
+.menu-bar ul
+{
+display:inline-flex;
+list-style:none;
+color:Firebrick;
+}
+.menu-bar ul li
+{
+width:120px;
+margin:15px;
+padding:15px;
+}
+.menu-bar ul li a
+{
+text-decoration:none;
+color:#fff;
+}
+.active,.menu-bar ul li:hover
+{
+background:Firebrick;
+border-radius:3px;
+}
+.menu-bar .fa
+{
+margin-right:8px;
+}
+
+
+</style>
+</head>
+
+<body>
+
+<div class="menu-bar">
+<ul>
+<li><a href="in.html"><i class="fa fa-sign-in"></i>Home</a></li>
+
+</ul>
+
+</div>
+<br>
+<br>
+<center><h1 style="color:white;"><b>24/7 Vehicle Servicing</b></h1></center>
+<center>
+<form>
+<table width="50%" height="50%" bgcolor="brown" align="center">
+
+<tr>
+<td colspan=2><center><font size=4 style="color:white;"><b>STAFF LOGIN PAGE</b></font></center></td>
+</tr>
+
+<tr>
+<td><h3 style="color:white;">Username:</h3></td>
+<td><input type="text" size=25 name="userid"></td>
+</tr>
+
+<tr>
+<td><h3 style="color:white;">Password:</h3></td>
+<td><input type="Password" size=25 name="pwd"></td>
+</tr>
+
+<tr>
+<td ><input type="Reset"></td>
+<td><input type="submit" onclick="return check(this.form)" value="Login"></td>
+</tr>
+
+<tr>
+<td>
+<a style="color:white;" href="forget.html">forgot password</a></td>
+<td><a style="color:white;" href="new.html">create a new account</a>
+</td>
+</tr>
+</table>
+</center>
+</form>
+
+<script language="javascript">
+function check(form)
+{
+if(form.userid.value =="" && form.pwd.value =="")
+{
+            alert("kindly fill all details")
+                 return false;
+}
+else if(form.userid.value == "amin" && form.pwd.value == "123")
+{
+	window.open("staffinfo.html")
+         return true;
+}else if(form.userid.value == "kamal" && form.pwd.value == "123")
+{
+	window.open("staffinfo.html")
+           return true;
+}
+else if(form.userid.value == "emran" && form.pwd.value == "123")
+{
+	window.open("staffinfo.html")
+            return true;
+}
+else if(form.userid.value == "asif" && form.pwd.value == "123")
+{
+	window.open("staffinfo.html")
+              return true;
+}
+else if(form.userid.value == "belal" && form.pwd.value == "123")
+{
+	window.open("staffinfo.html")
+              return true;
+}
+else if(form.userid.value == "rahim" && form.pwd.value == "123")
+{
+	window.open("staffinfo.html")
+              return true;
+}
+
+else
+{
+	alert("Wrong Password or Username")
+             return false;
+}
+}
+</script>
+
+</body>
+</html>
