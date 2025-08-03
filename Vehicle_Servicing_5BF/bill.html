@@ -1,0 +1,162 @@
+<html>
+<head>
+<style>
+ *
+{
+padding:0;
+margin:0;
+box-sizing:border-box;
+}
+body
+{
+background-color:tan;
+background-size:cover;
+background-position:center;
+box-sizing:border-box;
+font-family:sans-serif;
+}
+
+.menu-bar
+{
+background:brown;
+text-align:center;
+}
+.menu-bar ul
+{
+display:inline-flex;
+list-style:none;
+color:Firebrick;
+}
+.menu-bar ul li
+{
+width:120px;
+margin:15px;
+padding:15px;
+}
+.menu-bar ul li a
+{
+text-decoration:none;
+color:#fff;
+}
+.active,.menu-bar ul li:hover
+{
+background:Firebrick;
+border-radius:3px;
+}
+.menu-bar .fa
+{
+margin-right:8px;
+}
+
+</style>
+</head>
+
+<body>
+      
+<div class="menu-bar">
+<ul>
+
+<li><a href="f.html"><i class="fa fa-sign-out"></i>Back</a></li>
+
+</ul>
+</div>
+</head>
+<center><h1 style="color:maroon;">Products Billing</h1></center>
+<center>
+<table border=1 height="150" align="center" bgcolor="bisque">
+<tr>
+<td ><b>Customer Name:</b></td>
+<td><input type="text" name="name" size="20" id="cn"> </td>
+</tr>
+
+<tr>
+<td><b>Customer Id:</b></td>
+<td><input type="number" name="address" size="20" id="ci"> </td>
+</tr>
+
+<tr>
+<td><b>Phone:</b></td>
+<td><input type="number" name="number" size="20" id="phn"> </td>
+</tr>
+
+<tr>
+<td><b>Date:</b></td>
+<td><input type="date" name="number" size="25" id="dt"> </td>
+</tr>
+
+<tr>
+<td><b>Speedometer_(10000/-):</b></td>
+<td><input type="number" name="Speedometer" size="20" id="f1"> </td>
+</tr>
+
+<tr>
+<td><b>Oil pressure gauge_(4500/-):</b></td>
+<td><input type="number" name="Oil pressure gauge" size="20" id="f2"></td>
+</tr>
+
+<tr>
+<td><b>Hand-brake lamp_(2000/-):</b></td>
+<td><input type="number" name="Hand-brake lamp" size="20" id="f3"></td>
+</tr>
+
+<tr>
+<td><b>Airbag lamp_(2000/-):</b></td>
+<td><input type="number" name="Airbag lamp" size="20" id="f4"></td>
+</tr>
+
+<tr>
+<td><b>Battery/Charging system_(3000/-):</b></td>
+<td><input type="number" name="Battery/Charging system" size="20" id="f5"></td>
+</tr>
+
+<tr>
+<td><b>Engine service indicator_(5000/-):</b></td>
+<td><input type="number" name="indcator" size="20" id="f6"></td>
+</tr>
+
+<tr>
+<td><form action="#" method="get" target="_self">
+         <a href="bill.html" size="30">Reset
+      </form></td>
+<td><button onclick="mycal()" size="30" >Show Bill</button></td>
+</tr>
+</table>
+</center>
+<p id="demo"></p>
+
+<script>
+function mycal()
+{
+var p = document.getElementById("cn").value;
+var q = document.getElementById("ci").value;
+var r = document.getElementById("phn").value;
+var s = document.getElementById("dt").value;
+if(p==""||q==""||r==""||s=="")
+{
+alert("KINDLY FILL ALL THE DETAILS!!!");
+}
+else
+{
+var subtotal,dis,total,u,v,x,x,y,z,a,b,c,d,e,f;
+a=document.getElementById("f1").value;
+b=document.getElementById("f2").value;
+c=document.getElementById("f3").value;
+d=document.getElementById("f4").value;
+e=document.getElementById("f5").value;
+f=document.getElementById("f6").value;
+u=a*10000;
+v=b*4500;
+w=c*2000;
+x=d*2000;
+y=e*3000;
+z=f*5000;
+subtotal=u+v+w+x+y+z;
+dis=(u+v+w+x+y+z)*0.15;
+total=subtotal-dis;
+
+document.getElementById("demo").innerHTML="<center>"+"<b>"+"(After 15% Discount)"+"</b>"+"<br>"+"<br>"+"<b>"+"Total Bill"+"&nbsp&nbsp"+":"+"&nbsp&nbsp"+"</b>"+"<b>"+total+"</b>"+"<b>"+"/-"+"</b>"+"</center>";
+}
+}
+</script>
+</body>
+</html>

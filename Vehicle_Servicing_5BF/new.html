@@ -1,0 +1,116 @@
+<html>
+<head>
+<style>
+ *
+{
+padding:0;
+margin:0;
+box-sizing:border-box;
+}
+body
+{
+background-color:tan;
+backgroung-size:cover;
+background-position:center;
+box-sizing:border-box;
+font-family:sans-serif;
+}
+
+.menu-bar
+{
+background:brown;
+text-align:center;
+}
+.menu-bar ul
+{
+display:inline-flex;
+list-style:none;
+color:Firebrick;
+}
+.menu-bar ul li
+{
+width:120px;
+margin:15px;
+padding:15px;
+}
+.menu-bar ul li a
+{
+text-decoration:none;
+color:#fff;
+}
+.active,.menu-bar ul li:hover
+{
+background:Firebrick;
+border-radius:3px;
+}
+.menu-bar .fa
+{
+margin-right:8px;
+}
+
+</style>
+</head>
+
+<body>
+      
+<div class="menu-bar">
+<ul>
+
+<li><a href="in.html"><i class="fa fa-sign-out"></i>Back</a></li>
+
+</ul>
+</div>
+</head>
+<center><h1>CREATE ACCOUNT</h1></center>
+
+<form align="center">
+<p align="center">
+<pre>
+
+<b>
+FIRST NAME    :<input type="text" value="" size="30"  id="FN" onclick="fn()">
+<br>
+LAST NAME     :<input type="text" value="" size="30"  id="LN" onclick="fn2()">
+<br>
+EMAIL         :<input type="email" value="" size="30"  >
+<br>
+PHONE         :<input type="nunber" value="+88" size="30" ><br><br>
+
+SELECT ACCOUNT TYPE :<br>
+<select>
+<option value="GUEST">ADMIN</option>
+<option value="STAFF">STAFF</option>
+</select>
+</p>
+</pre>
+<center><button type="submit" onclick="proceed()">CREATE</button></center>
+</form>
+
+<script>
+ 
+function fn()
+{
+var x = document.getElementById("FN");
+x.value=x.value.toUpperCase();
+}
+
+function fn2()
+{
+var x = document.getElementById("LN");
+x.value=x.value.toUpperCase();
+}
+
+function proceed()
+{
+var x = document.getElementById("FN").value;
+var y = document.getElementById("LN").value;
+if(x==""||y=="")
+{
+alert("!!!Kindly fill all the details!!!");
+}else
+alert("hello "+x+" "+y+" successfully created your ACCOUNT");
+}
+
+</script>
+</body>
+</html?
